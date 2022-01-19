@@ -1,6 +1,6 @@
 CREATE TABLE Role (
     role_id INTEGER PRIMARY KEY auto_increment,
-    role_name VARCHAR(20)
+    role_name VARCHAR(20) UNIQUE
 );
 
 CREATE TABLE User (
@@ -10,10 +10,10 @@ CREATE TABLE User (
     profile_photo BLOB,
     birthdate DATE,
     gender VARCHAR(10),
-    email VARCHAR(50),
+    email VARCHAR(50) UNIQUE,
     password VARCHAR(512),
-    phone_no VARCHAR(20),
-    card_no VARCHAR(20),
+    phone_no VARCHAR(20) UNIQUE,
+    card_no VARCHAR(20) UNIQUE,
     role_id INTEGER,
     FOREIGN KEY (role_id) REFERENCES Role(role_id)
 );
