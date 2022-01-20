@@ -1,31 +1,31 @@
 CREATE TABLE Role (
-    role_id INTEGER PRIMARY KEY auto_increment,
-    role_name VARCHAR(20) UNIQUE
+    roleId INTEGER PRIMARY KEY auto_increment,
+    roleName VARCHAR(20) UNIQUE
 );
 
 CREATE TABLE User (
-    user_id INTEGER PRIMARY KEY auto_increment,
-    first_name VARCHAR(40),
-    last_name VARCHAR(40),
+    userId INTEGER PRIMARY KEY auto_increment,
+    firstName VARCHAR(40),
+    lastName VARCHAR(40),
     email VARCHAR(50) UNIQUE,
     password VARCHAR(512),
-    phone_no VARCHAR(20) UNIQUE,
-    profile_photo BLOB,
+    phoneNo VARCHAR(20) UNIQUE,
+    profilePhoto BLOB,
     birthdate DATE,
     gender VARCHAR(10),
-    card_no VARCHAR(20) UNIQUE,
-    role_id INTEGER,
-    FOREIGN KEY (role_id) REFERENCES Role(role_id)
+    cardNo VARCHAR(20) UNIQUE,
+    roleId INTEGER,
+    FOREIGN KEY (roleId) REFERENCES Role(roleId)
 );
 
 CREATE TABLE Address (
-    address_id INTEGER PRIMARY KEY auto_increment,
+    addressId INTEGER PRIMARY KEY auto_increment,
     details VARCHAR(255),
     area VARCHAR(20),
     city VARCHAR(20),
     state VARCHAR(20),
     pincode VARCHAR(10),
-    user_id INTEGER,
-    address_type VARCHAR(20),
-    FOREIGN KEY (user_id) REFERENCES User(user_id)
+    userId INTEGER,
+    addressType VARCHAR(20),
+    FOREIGN KEY (userId) REFERENCES User(userId)
 );

@@ -1,0 +1,6 @@
+DROP TABLE Address;
+
+DROP TABLE User;
+
+DROP TABLE Role;
+
