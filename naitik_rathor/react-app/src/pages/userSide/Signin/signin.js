@@ -17,45 +17,45 @@ const Signin = () => {
     const navigate = useNavigate()
 
     const signinUser = () => {
-        if (email.length !== 0) {
-            if (password.length !== 0) {
-                const body = {
-                    email,
-                    password
-                }
-
-                const url = `${URL}/user/signin`
-
-                axios.post(url, body).then((response) => {
-                    const result = response.data
-
-                    console.log(result)
-
-                    if (result['status'] = 'success') {
-                        toast.success('Login success')
-
-                        const { userId, firstName, lastName } = result['data']
-
-                        sessionStorage['userId'] = userId
-                        sessionStorage['firstName'] = firstName
-                        sessionStorage['lastName'] = lastName
-                        sessionStorage['loginStatus'] = 1
-
-                        navigate('/')
-                    }
-                    else {
-                        toast.error('Invalid username or password')
-                    }
-                })
-            }
-            else {
-                toast.error('Enter Password')
-            }
-        }
-        else {
+        if (email.length == 0) {
             toast.error('Enter Email')
         }
+        else if (password.length == 0) {
+            toast.error('Enter Password')
+        }
+        else {
+
+        }
+        const body = {
+            email,
+            password
+        }
+
+        const url = `${URL}/user/signin`
+
+        axios.post(url, body).then((response) => {
+            const result = response.data
+
+            console.log(result)
+
+            if (result['status'] = 'success') {
+                toast.success('Login success')
+
+                const { userId, firstName, lastName } = result['data']
+
+                sessionStorage['userId'] = userId
+                sessionStorage['firstName'] = firstName
+                sessionStorage['lastName'] = lastName
+                sessionStorage['loginStatus'] = 1
+
+                navigate('/')
+            }
+            else {
+                toast.error('Invalid username or password')
+            }
+        })
     }
+
 
 
     return (
@@ -63,7 +63,6 @@ const Signin = () => {
             <div >
                 <div className="page-margin"  >
 
-                    {/* <form> */}
                     <div className="row">
                         <div className="col">
                             <center className="" >
@@ -112,7 +111,7 @@ const Signin = () => {
                                     </div>
                                     <div className="mb-3">
                                         <div className="mb-3">
-                                            No account yet? <Link to="/signup">Signup here</Link>
+                                            No account yet? <Link to="/signup-user">Signup here</Link>
                                         </div>
                                         <button onClick={signinUser} type="submit" className="btn btn-success">
                                             Signin
@@ -123,7 +122,6 @@ const Signin = () => {
 
                         </div>
                     </div>
-                    {/* </form> */}
                 </div>
             </div>
         </>
