@@ -1,0 +1,76 @@
+
+
+  .page-margin{
+
+    position: absolute;
+    left: 10%;
+top: 10%;
+bottom: 10%;
+
+  }
+
+.signup-box{
+  /* Rectangle 5 */
+
+position: absolute;
+width: 600px;
+height: 550px;
+left: 800px;
+top: 10%;
+
+border: 1px solid #000000;
+box-sizing: border-box;
+border-radius: 20px;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+
+
+}
+  .signup-form{
+    position: absolute;
+    width: 1100px;
+    height: 450px;
+    right: 5%;
+    top: 100px; 
+    
+
+  }
+  
+
+  .signup-welcome-txt{
+
+    position: absolute;
+    width: 70%;
+    left: 10%;
+    top: 10px;
+    
+    font-family: Reggae One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 45px;
+    line-height: 70px;
+    
+    display: flex;
+    align-items: center;
+    text-align: left;
+    
+    color:  #000000;
+    
+
+  }
+
+  .signup-logo{
+    
+position: absolute;
+width: 60px;
+height: 60px;
+left: 250px;
+top: 20px;
+  }
+
+  .signup-welcome-box{
+    background: #1A8164;
+    position: absolute;
+width: 656px;
+height: 500px;
+left: 200px;
+  }
