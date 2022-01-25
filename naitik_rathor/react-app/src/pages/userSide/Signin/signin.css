@@ -1,105 +1,56 @@
 
 
-  .page-margin{
-    /* background: #1A8164; */
-    position: absolute;
-    left: 10%;
-top: 10%;
-bottom: 10%;
-
-  }
-
-.form-box{
-  /* Rectangle 5 */
-
-position: absolute;
-width: 354px;
-height: 390px;
-left: 700px;
-top: 10%;
-
-background: #FFFFFF;
-border: 1px solid #000000;
-box-sizing: border-box;
-border-radius: 20px;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-
-
+.login {   
+  background: url("../../../images/hamburger.jpg");   
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;  
 }
-  .login-form{
-    position: absolute;
-    width: 313px;
-    height: 365px;
-    left: 5%;
-    right: 5%;
-    top: 100px; 
-    
 
-  }
-  .img2{
-    position: absolute;
-    width: 359px;
-    height: 370px;
-  }
-  .img3{
-    position: absolute;
-    width: 359px;
-    height: 370px;
-  }
 
-  .img1{
-    position: absolute;
-width: 359px;
-height: 370px;
-top: 50px;
+.signintextheader{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
+}
 
-  }
+.signintextbody{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-style: oblique;
+  color: white;
+}
 
+.signinformmargin{
+  position: absolute;
+  top: 17%;
+  padding: 20px;
+  background: transparent;
+  border: 1px solid #f7efef;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  opacity: 0.7;
+}
+
+.signininputbox{
+  background: transparent !important;
+  border: none;
+  color: white;
+  border-bottom: 1px solid rgb(247, 243, 243);
   
+}
 
-  .welcome-txt{
+.signininputbox:focus{
+  color: white;
+}
 
-position: absolute;
-width: 70%;
-left: 10%;
-top: 10px;
-
-font-family: Reggae One;
-font-style: normal;
-font-weight: normal;
-font-size: 45px;
-line-height: 70px;
-
-display: flex;
-align-items: center;
-text-align: left;
-
-color:  #000000;
-
-  }
-
-  .user-logo{
-    
-position: absolute;
-width: 70px;
-height: 72px;
-left: 145px;
-top: 10px;
-  }
-
-  .welcome-box{
-    /* background: #1A8164; */
-    position: absolute;
-width: 656px;
-height: 500px;
-left: 200px;
-  }
-
-  .background{
-    background-color: #1A8164;
-    position: absolute;
-    width: 656px;
-height: 500px;
-left: 200px;
-  }
-
+input::placeholder {
+  font-size: 1.2em;
+  font-style: italic;
+  color: white;
+}

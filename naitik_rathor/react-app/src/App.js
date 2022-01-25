@@ -1,24 +1,24 @@
-import SignupEmployee from './pages/employeeSide/Signup/signup'
-import Home from './pages/userSide/Home/home'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Signin from './pages/userSide/Signin/signin'
-import SignupUser from './pages/userSide/Signup/signup'
+import SignupUser from './pages/userSide/Signup/userSignup'
+import SignupEmployee from './pages/employeeSide/Signup/employeeSignup'
+import Welcome from './pages/userSide/Welcome Page/welcome'
 
-const AuthorizeUser = () => {
-  const loginStatus = sessionStorage['loginStatus']
-  return loginStatus == '1' ? <Home /> : <Signin />
-}
+// const AuthorizeUser = () => {
+//   const loginStatus = sessionStorage['loginStatus']
+//   return loginStatus == '1' ? <Home /> : <Signin />
+// }
   function App() {
     return (
       <div className="container">
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<AuthorizeUser />} />
+            <Route path="/" element={<Welcome />} />
             <Route path="/signin" element={<Signin />} />
-            <Route path="/signup-user" element={<SignupUser />} />
-            <Route path="/signup-employee" element={<SignupEmployee />} />
+            <Route path="/signupUser" element={<SignupUser />} />
+            <Route path="/signupEmployee" element={<SignupEmployee />} />
           </Routes>
         </BrowserRouter>
         <ToastContainer theme="colored" 

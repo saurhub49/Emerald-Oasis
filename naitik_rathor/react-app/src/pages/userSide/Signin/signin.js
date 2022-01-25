@@ -1,131 +1,105 @@
-import axios from 'axios'
-import "./signin.css"
-import { useState } from 'react'
+import { useState } from "react"
 import { Link } from 'react-router-dom'
+import { toast } from 'react-toastify'
+import axios from 'axios'
 import { useNavigate } from 'react-router'
 import { URL } from '../../../config'
-import { toast } from 'react-toastify'
-import img2 from '../../../assets/userLogo.png'
-import img1 from '../../../assets/food.png'
-import img3 from '../../../assets/image12.jpeg'
+import './signin.css'
 
 
 const Signin = () => {
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
-    const navigate = useNavigate()
+  const navigate = useNavigate()
 
-    const signinUser = () => {
-        if (email.length == 0) {
-            toast.error('Enter Email')
+  const signinUser = () => {
+    if (email.length == 0) {
+      toast.warning('Enter Email')
+    } else if (password.length == 0) {
+      toast.warning('Enter Password')
+    } else {
+      const body = {
+        email,
+        password,
+      }
+
+      const url = `${URL}/user/signin`
+
+      axios.post(url, body).then((response) => {
+        const result = response.data
+        console.log(result)
+        if (result['status'] == 'success') {
+          toast.success('Welcome to the application')
+
+          const { userId, firstName, lastName } = result['data']
+
+          sessionStorage['userId'] = userId
+          sessionStorage['firstName'] = firstName
+          sessionStorage['lastName'] = lastName
+
+          navigate('/customerhome')
+        } else {
+          toast.error('Invalid user name or password')
         }
-        else if (password.length == 0) {
-            toast.error('Enter Password')
-        }
-        else {
-
-        }
-        const body = {
-            email,
-            password
-        }
-
-        const url = `${URL}/user/signin`
-
-        axios.post(url, body).then((response) => {
-            const result = response.data
-
-            console.log(result)
-
-            if (result['status'] = 'success') {
-                toast.success('Login success')
-
-                const { userId, firstName, lastName } = result['data']
-
-                sessionStorage['userId'] = userId
-                sessionStorage['firstName'] = firstName
-                sessionStorage['lastName'] = lastName
-                sessionStorage['loginStatus'] = 1
-
-                navigate('/')
-            }
-            else {
-                toast.error('Invalid username or password')
-            }
-        })
+      })
     }
+  }
 
+  return (
+    <div className="login">
+      <div className="container">
+        <div className="row">
+          <div className="col"></div>
+          <div className="col"></div>
+          <div className="col">
+            <div className="form signinformmargin">
+              <h1 className='signintextheader'>  Sign in</h1>
+              <hr className="signintextheader" />
+              <div className="user-logo" className="mb-3">
+                <label htmlFor="" className="label-control signintextbody">
+                  Email address
+                </label>
+                <input
+                  onChange={(e) => {
+                    setEmail(e.target.value)
+                  }}
+                  type="text"
+                  className="form-control signininputbox"
+                  placeholder="test@gmail.com"
+                />
+              </div>
 
+              <div className="mb-3">
+                <label htmlFor="" className="label-control signintextbody">
+                  Password
+                </label>
+                <input
+                  onChange={(e) => {
+                    setPassword(e.target.value)
+                  }}
+                  type="password"
+                  className="form-control signininputbox"
+                  placeholder="*******"
+                />
+              </div>
 
-    return (
-        <>
-            <div >
-                <div className="page-margin"  >
-
-                    <div className="row">
-                        <div className="col">
-                            <center className="" >
-                                <img className="welcome-box" src={img3} />
-                                <div className="welcome-txt">
-                                    {/* Welcome to Emerald */}
-                                    {/* <img className="img1" src={img1} alt="img3"></img> */}
-                                </div>
-                            </center>
-
-                        </div>
-                        <div className="col"></div>
-                        <div className="col" >
-                            <div className="form-box">
-                                <img className="user-logo" src={img2} alt="user logo" />
-                                <div className="login-form">
-                                    <div className="mb-3">
-                                        <div>
-                                            <label htmlFor="" className="label-control">
-                                                Email
-                                            </label>
-                                        </div>
-                                        <div>
-                                            <input
-                                                onChange={(e) => {
-                                                    setEmail(e.target.value)
-                                                }}
-                                                type="email" class="form-control"
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className="mb-3">
-                                        <div>
-                                            <label htmlFor="" className="label-control">
-                                                Password
-                                            </label>
-                                        </div>
-                                        <div>
-                                            <input
-                                                onChange={(e) => {
-                                                    setPassword(e.target.value)
-                                                }}
-                                                type="password" class="form-control"
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className="mb-3">
-                                        <div className="mb-3">
-                                            No account yet? <Link to="/signup-user">Signup here</Link>
-                                        </div>
-                                        <button onClick={signinUser} type="submit" className="btn btn-success">
-                                            Signin
-                                        </button>
-                                    </div>
-                                </div></div>
-
-
-                        </div>
-                    </div>
+              <div className="mb-3">
+                <div className='signintextbody'>
+                  No account yet? <Link to="/signupUser">Signup here</Link>
                 </div>
+                <br />
+                <button onClick={signinUser} className="btn btn-primary">
+                  Signin
+                </button>
+              </div>
             </div>
-        </>
-    )
+          </div>
+
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default Signin
