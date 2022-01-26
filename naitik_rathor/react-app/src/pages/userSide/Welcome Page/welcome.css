@@ -1,3 +1,157 @@
+
+
 .eologo {
     height: 50px;
+}
+
+.navbar-items{
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.employee-icon{
+    text-align: right;
+    font-size: 18px;
+    margin-bottom: 5%;
+    font-family: roboto;
+
+    color:  #FFFFFF;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* .employee-icon-box{
+    background-color: aqua;
+} */
+
+@media(max-width: 767px)
+{}
+.welcome-tag-line{
+    text-shadow: 3px 5px 7px black;
+    font-size: 3vw;
+    font-family: 'AvantGardeBook';
+    color: #fff;
+    margin-block-start: 8.93em;
+    margin-inline-start: 1em;
+    margin-inline-end: 1em;
+    text-align: center!important;
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+}
+
+.how-it-works-1{
+    padding-top: 30px;
+    position: relative;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-transform: uppercase;
+    
+font-style: normal;
+font-weight: 600;
+font-size: 70px;
+line-height: initial !important;
+box-sizing: border-box;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: black;
+
+}
+
+
+.how-it-works-2{
+    font-size: 22px;
+    position: relative;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    box-sizing: border-box;
+display: flex;
+align-items: center;
+text-align: center;
+
+}
+.how-it-works-3{
+    padding-bottom: 30px;
+    margin-block-end: 0.67em;
+    box-sizing: border-box;
+    font-style: oblique;
+    font-size: 23px;
+    font-family: 'AvantGardeBk';
+    box-sizing: border-box;
+    font-weight: 550;
+    line-height: initial!important;
+    color: #24262f!important;
+
+}
+
+.contactUs{
+    margin-bottom: 1vw;
+    font-size: 40px;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: initial !important;
+    text-align: right;
+    right: 0;
+    color: #24262f!important;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+
+
+
+
+
+.img-home{
+    background: url("../../../images/welcome.jpg");   
+   
+    top: auto;
+    position: absolute;
+    vertical-align: middle;
+   
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+.img-about{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: fit-content ;  
+  display: block;
+    background-color: cadetblue;
+}
+
+.img-contactUs{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 60;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    padding: 35px;
+    background-color:bisque
 }

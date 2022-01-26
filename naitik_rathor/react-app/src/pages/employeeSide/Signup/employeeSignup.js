@@ -4,7 +4,8 @@ import axios from "axios"
 import { toast } from "react-toastify"
 import { URL } from '../../../config'
 import './employeeSignup.css'
-import image from '../../../images/deliverybg.png'
+import employeeImg from '../../../images/deliverybg.png'
+import logo from '../../../assets/logo.png'
 
 
 const SignupEmployee = () => {
@@ -20,10 +21,10 @@ const SignupEmployee = () => {
 
     const signupEmployee = () => {
         if (firstName.length == 0) {
-            toast.warning('Enter First name')
+            toast.warning('Enter First Name')
         }
-        if (lastName.length == 0) {
-            toast.warning('Enter Last name')
+        else if (lastName.length == 0) {
+            toast.warning('Enter Last Name')
         }
         else if (email.length == 0) {
             toast.warning('Enter Email')
@@ -69,11 +70,26 @@ const SignupEmployee = () => {
 
     return (
         <div className="signupemployee">
+            <nav id="navbar-example2" className="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+                <div className="container-fluid navbar-items">
+                    <a className="navbar-brand  mb-0 h1" href="/"><img src={logo} className="eologo" /></a>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo2" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                    <div className="collapse navbar-collapse " id="navbarTogglerDemo2">
+                        <ul className="navbar-nav ms-auto">
+                            <li className="nav-item">
+                                <a className="nav-link " href="/">HOME</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
             <div className="container">
                 <div className="row">
                     <div className="col">
                         <div className="empdiv">
-                            <img src={image} className="picture1" alt="" />
+                            <img src={employeeImg} className="picture1" alt="" />
                         </div>
                     </div>
                     <div className="col">

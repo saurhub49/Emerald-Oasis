@@ -4,6 +4,7 @@ import axios from "axios"
 import { toast } from "react-toastify"
 import { URL } from '../../../config'
 import './userSignup.css'
+import logo from '../../../assets/logo.png'
 
 
 const SignupUser = () => {
@@ -65,6 +66,21 @@ const SignupUser = () => {
 
     return (
         <div className="signupuser">
+            <nav id="navbar-example2" className="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+                <div className="container-fluid navbar-items">
+                    <a className="navbar-brand  mb-0 h1" href="/"><img src={logo} className="eologo" /></a>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo2" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                    <div className="collapse navbar-collapse " id="navbarTogglerDemo2">
+                        <ul className="navbar-nav ms-auto">
+                            <li className="nav-item">
+                                <a className="nav-link " href="/">HOME</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
             <div className="container">
                 <div className="row">
                     <div className="col"></div>

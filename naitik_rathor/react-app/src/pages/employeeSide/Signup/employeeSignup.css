@@ -1,3 +1,11 @@
+.eologo {
+  height: 50px;
+}
+
+.navbar-items{
+  margin-left: 3%;
+  margin-right: 3%;
+}
 
 .signupemployee {   
   background:  white;

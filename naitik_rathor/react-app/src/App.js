@@ -12,7 +12,7 @@ import Welcome from './pages/userSide/Welcome Page/welcome'
 // }
   function App() {
     return (
-      <div className="container">
+      <div className="">
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Welcome />} />

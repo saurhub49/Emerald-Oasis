@@ -54,3 +54,13 @@ input::placeholder {
   font-style: italic;
   color: white;
 }
+
+
+.eologo {
+  height: 50px;
+}
+
+.navbar-items{
+  margin-left: 3%;
+  margin-right: 3%;
+}
