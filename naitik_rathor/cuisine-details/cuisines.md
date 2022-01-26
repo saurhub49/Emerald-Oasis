@@ -1,0 +1,354 @@
+1. Indian
+    - Chicken Tikka Masala
+    - Butter Chicken
+    - Chana Masala
+    - Biryani
+    - Masala Dosa
+    - Rogan Josh
+    - Palak Paneer
+    - Dal
+    - Tandoori Meats
+    - Chicken 65
+    - Aloo Gobi
+    - Malai Kofta
+    - Fish Curry
+    - Pav Bhaji
+    - Matar Paneer
+2. Italian
+    - Risotto Alla Milanese
+    - Polenta
+    - Lasagna
+    - Ravioli
+    - Osso buco
+    - Arancini
+    - Ribollita
+    - Spaghetti Alla Carbonara
+    - Neapolitan pizza
+    - Caprese salad
+    - Gnocchi
+    - Swordfish
+    - Parmigiana
+    - Tiramisu
+3. Middle Eastern
+    - Hummus
+    - Manakeesh
+    - Grilled halloumi
+    - Foul meddamas
+    - Falafel
+    - Tabouleh
+    - Moutabal/baba ghanoush
+    - Fattoush
+    - Umm Ali
+    - Shanklish
+    - Shawarma
+    - Shish tawook
+    - Dolma
+    - Kofta
+    - Quwarmah Al Dajaj
+    - Mansaf
+    - Kebab karaz
+    - Baklava
+    - Knafeh
+4. Thai
+    - Spicy Shrimp Soup
+    - Thai Chicken Coconut Soup
+    - Noodle Soup
+    - Thai-Style Fried Noodles
+    - Flat Noodles Stir-Fried
+    - Thai Fried Rice
+    - Pineapple Fried Rice
+    - Red Curry with Chicken
+    - Green Curry with Chicken
+    - Yellow Curry with Chicken
+    - Massaman Chicken Curry
+    - Panang Chicken Curry
+    - Mookata Thai BBQ
+    - Steamed Fish with Spicy Lime Sauce
+    - Minced Pork Stir-Fried with Thai Basil
+    - Spicy Green Papaya Salad
+    - Spicy Beef Salad
+    - Thai Fish Cake
+    - Thai Spring Rolls
+    - Banana Pancake
+    - Galloping Horses
+5. Greek
+    - Souvlaki
+    - Horiatiki
+    - Moussakas
+    - Spanakopita
+    - Saganaki
+    - Gemista
+    - Greek Dips and Spreads
+    - Dolmathes
+    - Fasolatha
+    - Koulouri
+    - Mastiha Submarine
+    - Glyko tou Koutaliou
+    - Rizogalo
+    - Galaktoboureko
+    - Halva
+6. Japanese
+    - Sushi
+    - Ramen
+    - Tempura
+    - Kare raisu
+    - Okonomiyaki
+    - Shabu Shabu
+    - Miso soup
+    - Yakitori
+    - Onigiri
+    - Udon
+    - Soba
+    - Gyudon
+    - Omurice
+    - Katsudon
+    - Green Tea and Flavored Sweets
+7. French
+    - Steak frites
+    - Chicken confit
+    - French onion soup
+    - Bouillabaisse
+    - Salmon en papillote
+    - Quiche Lorraine
+    - Croque monsieur
+    - Boeuf bourguignon
+    - Cassoulet
+    - Lamb shank navarin
+    - Hazelnut dacquoise
+    - Frangipane tart
+    - Tarte tatin
+    - Souffle
+    - Paris-brest
+8. Chinese
+    - Hot Pot
+    - Sweet and Sour Pork
+    - Kung Pao Chicken
+    - Dim Sum
+    - Dumplings
+    - Mo Po Tofu
+    - Char Siu
+    - Chow Mein
+    - Fried Rice
+    - Pork Slices
+    - Sichuan Pork
+    - Xiaolongbao
+    - Zhajiangmian
+    - Wonton Soup
+9. Mexican
+    - Mole Poblano
+    - Tacos al pastor
+    - Chapulines
+    - Tlayuda
+    - Menudo
+    - Tortas ahogadas
+    - Birria de Chivo
+    - Chilaquiles
+    - Aguachile
+    - Fish Zarandeado
+    - Tempura Fish Tacos
+    - Sea Snails
+    - Cochinita Pibil
+    - Chile relleno
+    - Pozole
+10. English
+    - The Full English
+    - Yorkshire pudding
+    - Black pudding
+    - Toad in the hole
+    - Jellied eels
+    - Pie and mash
+    - Shepherd's pie
+    - Fish fingers, chips and beans
+    - Scotch egg
+    - Trifle
+    - Sausage roll
+    - Eton mess
+    - Rice pudding
+    - Steak and kidney pudding
+    - Jam roly poly
+    - Scones
+    - Christmas pudding
+    - Tea
+11. Spanish
+    - Paella
+    - Tortilla
+    - Bocadillo de Tortilla
+    - Percebes
+    - Churros
+    - Gazpacho
+    - Callos a la Madrileña
+    - Angulas
+    - Calçots
+    - Jamón Ibérico
+    - Migas
+12. American
+    - Ambrosia
+    - Tuna Noodle Casserole
+    - Burgoo
+    - Gooey Butter Cake
+    - Sloppy Joes
+    - Taylor Ham
+    - Jambalaya
+    - Hoppin' John Rice
+    - Cincinnati Chili
+    - General Tso's Chicken
+    - Hotdish
+    - Shoofly Pie
+    - Green Bean Casserole
+    - Red Flannel Hash
+    - Juicy Lucy
+13. Turkish
+    - Turkish Delight
+    - İskender Kebab
+    - Manti (Turkish Ravioli)
+    - Mezze
+    - Baklava
+    - Shish Kebab
+    - Turkish Apple Tea
+    - Gözleme
+    - Kumpir (Baked Potato)
+    - Karniyarik (Stuffed Eggplant)
+    - Pottery Kebab
+    - Corn on the cob
+    - Simit
+    - Etli Ekmek (Turkish Pizza)
+    - Dondurma (Turkish Ice Cream)
+14. Lebanese
+    - Tabbouleh
+    - Fattoush
+    - Labneh
+    - Hummus
+    - Muhammara
+    - Manakish
+    - Lebanese Meat Pizza
+    - Kaak
+    - Aged Cheese
+    - Beans & Chickpeas
+    - Spiced Meat Balls
+    - Shawarma
+    - Falafel
+    - Knefe
+    - Sweet Cheese Rolls
+    - Semolina Cake
+15. Korean
+    - NAENGMYEON
+    - BULGOGI 
+    - KIMCHI
+    - SOJU
+    - DDUKBOKKI 
+    - SAMGYETANG
+    - BIBIMBAP
+    - SEAFOOD IN RASON
+    - SAMYANG CHALLENGE!
+    - TAEDONGGANG BEER
+    - SAMGYEOPSAL 
+    - CHICKEN AND HOFF
+    - TALPI
+    - GINSENG
+16. Vegetarian
+    - EMERALD DAL
+    - EGGPLANT STEAKS 
+    - BROCCOLI QUINOA CAKES!
+    - BUTTERNUT RISOTTO WITH LEEKS AND SPINACH
+    - ITALIAN BAKED BEANS AND GREENS
+    - EGGPLANT LASAGNA
+    - NASI GORENG
+    - ORECCHIETTE PASTA WITH BROCCOLI SAUCE 
+    - THE BEST PAD THAI 
+    - ROASTED CHILE RELLENOS RECIPE 
+    - FARMERS MARKET VEGETARIAN ENCHILADAS 
+    - SAGEY MUSHROOM WALNUT LOAF
+    - INDIAN-SPICED, VEGETARIAN SHEPHERD’S PIE
+    - ROASTED CAULIFLOWER PASTA
+    - CELERY SOUP
+    - OAXACAN BAKED SWEET POTATOES
+    - VEGETARIAN CHILAQUILES!
+    - CORNBREAD CASSEROLE
+    - KIMCHI FRIED RICE!
+17. Indonesian
+    - Sate Ayam
+    - Sate Padang
+    - Ayam Bakar Taliwang
+    - Ikan Bakar
+    - Pepes
+    - Babi Pangang
+    - Ayam Georeng
+    - Bebek Goreng
+    - Pecel Lele
+    - Ikan Goreng
+    - Soto Betawi
+    - Sop Kaki Kambing
+    - Sop Buntut
+    - Basko
+    - Sayur Asem
+    - Coto Makassar
+    - Sop Konro
+18. Moroccan
+    - Tagine
+    - Couscous
+    - Bastilla
+    - Maakouda
+    - Briouat
+    - Baklava
+    - Baba Ganoush
+    - Khobz
+    - Bissara
+    - Brochettes
+    - Moroccan Eggplant Fritters
+    - Snail Soup
+    - Orange Juice
+    - Moroccan salad
+    - Kefta
+19. Singaporean
+    - Hainanese chicken rice
+    - Chilli crab
+    - Laksa
+    - Char kuay teow
+    - Hokkien prawn mee
+    - Barbecued stingray
+    - Fish head curry
+    - Satay
+    - Char siew meats on rice or noodles
+    - Oyster omelette
+    - Bak kut teh and rice
+    - Kaya toast
+    - Nasi lemak
+    - Roti prata and teh tarik
+    - Desserts for the sweeth tooth
+20. Russian
+    - Russian Cabbage Soup
+    - Borscht
+    - Ukha
+    - Russian Cabbage Pie
+    - Russian Hot Honey Beverage
+    - Russian Piroshki
+    - Russian Lamb Pilaf
+    - Russian Carrot Salad
+    - Russian Blini
+    - Spiced Tea
+    - Russian Vinaigrette Salad
+    - Russian Potato Salad
+    - Kurnik: Russian Chicken Pie
+    - Russian Beef Stroganoff
+    - Russian Romanoff
+21. European
+    - Chestnut Soup
+    - Cabbage Rolls
+    - Greek Fries
+    - Margherita Pizza
+    - Ovcharaska Salad
+    - Keftedakia (Greek Meatballs)
+    - Romanian Cheese Donuts
+    - Bratkartoffeln (German Pan-Fried Potatoes)
+    - Anglesey Eggs
+    - Bangers and Mash
+    - Skordalia
+    - Escudella
+    - Apple Strudel
+    - Scottish Tablet
+    - Belgian Waffles
+    - Traditional Welsh Cake
+    - Croque Monsieur
+    - Kaiserschmarrn
+    - Swedish Meatballs
+    - Cornish Pasty
