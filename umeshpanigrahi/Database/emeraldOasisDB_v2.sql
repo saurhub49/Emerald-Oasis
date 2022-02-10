@@ -1,44 +1,8 @@
-The primary keys in `fooditems`, `cuisines`,`order details`,`orders`,`offers`,`franchises`,`users`,`employee_details` tables are kept as `auto_increment`.
-changed the field name `desc` as description as Workbench is showing error for `desc`
-CHECK FK `customer_id` in `emp_rating` check if correct references are made.
-`price` in order_details must be kept as double.
-Spelling of `adrress_deatils` in address table. I have entered `address_details` in DB.
-
-`Order in which Tables are Created`
-roles
-franchises
-users
-employee_details
-emp_rating
-vehicles
-cuisines
-food_items
-address
-order_status
-orders
-order details
-offers
-
-`Execute the below queries in root`
-
-````SQL
-
-DROP DATABASE IF EXISTS emeraldOasis;
-
-CREATE database emeraldOasis;
-
-GRANT ALL PRIVILEGES ON emeralOasis. * TO 'd3_56789'@'localhost';
-
-SQL```
-
-Execute the below queries in the local-host or root
-
-```SQL
 
 USE emeraldOasis;
 
 CREATE TABLE roles (
-    role_id INT PRIMARY KEY,
+    role_id INT PRIMARY KEY AUTO_INCREMENT,
     role VARCHAR(20)
 );
 
@@ -83,7 +47,7 @@ CREATE TABLE employee_details (
 );
 
 CREATE TABLE emp_rating (
-    emp_rating_id INT PRIMARY KEY,
+    emp_rating_id INT PRIMARY KEY AUTO_INCREMENT,
     employee_id INT,
     customer_id INT,
     rating INT,
@@ -92,7 +56,7 @@ CREATE TABLE emp_rating (
 );
 
 CREATE TABLE vehicles (
-    vehicle_id INT PRIMARY KEY,
+    vehicle_id INT PRIMARY KEY AUTO_INCREMENT,
     vehicle_no VARCHAR(40),
     rc VARCHAR(40),
     license_number VARCHAR(20),
@@ -118,7 +82,7 @@ CREATE TABLE food_items (
 );
 
 CREATE TABLE address (
-	address INT PRIMARY KEY,
+	address INT PRIMARY KEY AUTO_INCREMENT,
 	address_details VARCHAR(255),
     area VARCHAR(20),
     city VARCHAR(20),
@@ -130,7 +94,7 @@ CREATE TABLE address (
 );
 
 CREATE TABLE order_status (
-	status_id INT PRIMARY KEY,
+	status_id INT PRIMARY KEY AUTO_INCREMENT,
     status VARCHAR(20)
 );
 
@@ -168,8 +132,3 @@ CREATE TABLE offers (
     discount_percentage INT,
     image BLOB
     );
-
-
-
-SQL```
-````
