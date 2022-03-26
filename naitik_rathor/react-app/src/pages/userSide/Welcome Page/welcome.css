@@ -1,5 +1,4 @@
 
-
 .eologo {
     height: 50px;
 }
@@ -7,6 +6,29 @@
 .navbar-items{
     margin-left: 3%;
     margin-right: 3%;
+}
+
+.elements{
+    color: green;
+}
+
+li{
+    padding-right: 40px !important;
+    font-size: smaller;
+    display: flex;
+}
+
+.nav-link:hover{
+    color: green !important;
+    border-bottom:  solid green;
+}
+
+
+.franchise{
+    border-style: solid ;
+    padding: 1%;
+    align-self: center;
+
 }
 
 .employee-icon{
@@ -109,7 +131,7 @@ text-align: center;
 
 
 .img-home{
-    background: url("../../../images/welcome.jpg");   
+    background: url("../../../images/welcome2.jpg");   
    
     top: auto;
     position: absolute;
