@@ -121,7 +121,7 @@
 
 6.  Chinese : Chinese food, rich and colorful, has diversified color, aromatic flavor, and excellent taste as its main features. It typically consists of a carbohydrate or starch like noodles, rice or buns, and accompanying stir fries or dishes of veggies, fish and meat. Chinese dishes are rich in umami which is described as a 'pleasant savory taste'
 
-    - hotPot (2000): Hot pot is a flavorful broth traditionally served inside a large metal pot. Raw ingredients, such as meat and vegetables, are placed into the simmering broth and thus "cooked" which is healthy and delicious.
+    - hotPot (2000): Hot pot is a flavorful broth traditionally served inside a large metal pot. Raw ingredients, such as meat and vegetables, are placed into the simmering broth and thus cooked which is healthy and delicious.
 
     - kungPaoChicken (1100): Kung pao chicken is a popular Chinese restaurant dish of stir-fried chicken, peanuts and vegetables. It's traditionally made with specialty ingredients, like Sichuan peppercorns, Chinese black vinegar, Chinese rice wine, and whole dried red chilies.
 

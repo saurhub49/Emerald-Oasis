@@ -7,10 +7,10 @@ CREATE TABLE User (
     userId INTEGER PRIMARY KEY auto_increment,
     firstName VARCHAR(40),
     lastName VARCHAR(40),
-    addressLine VARCHAR(512),
     email VARCHAR(50) UNIQUE,
     password VARCHAR(512),
     phoneNo VARCHAR(20) UNIQUE,
+    addressLine VARCHAR(512),
     birthdate DATE,
     gender VARCHAR(10),
     cardNo VARCHAR(20) UNIQUE,
@@ -27,7 +27,7 @@ CREATE TABLE Cuisine (
 
 CREATE TABLE FoodItem (
     foodItemId INTEGER PRIMARY KEY auto_increment,
-    name VARCHAR(50),
+    name VARCHAR(50) UNIQUE,
     description VARCHAR(512),
     image VARCHAR(512),
     price DOUBLE,
@@ -57,7 +57,7 @@ CREATE TABLE OrderDetails (
 );
 
 
-CREATE TABLE employeeDetails (
+CREATE TABLE EmployeeDetails (
     employeeDetailsId INTEGER PRIMARY KEY auto_increment,
     userId INTEGER,
     uid VARCHAR(20),
