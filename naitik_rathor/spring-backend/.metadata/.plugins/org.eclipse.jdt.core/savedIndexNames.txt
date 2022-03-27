@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+C:\Users\ratho\Desktop\CDAC Project\Emerald-Oasis\naitik_rathor\spring-backend\.metadata\.plugins\org.eclipse.jdt.core
+1602128660.index
