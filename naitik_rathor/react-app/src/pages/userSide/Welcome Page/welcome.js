@@ -2,7 +2,6 @@ import { Link } from "react-router-dom"
 import logo from '../../../assets/logo.png'
 import './welcome.css'
 import help from '../../../assets/help-circle.png'
-// import contactus from '../../../images/contactUs.png'
 
 const Welcome = () => {
 
@@ -11,29 +10,29 @@ const Welcome = () => {
 
             <nav id="navbar-example2" className="navbar fixed-top navbar-expand-lg navbar-light bg-light">
                 <div className="container-fluid navbar-items">
-                    <a className="navbar-brand  mb-0 h1" href="/"><img src={logo} className="eologo" /></a>
+                    <label className="navbar-brand  mb-0 h1" href="/"><img src={logo} className="eologo" /></label>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo2" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse " id="navbarTogglerDemo2">
                         <ul className="navbar-nav ms-auto">
-                            <li className="nav-item">
+                            <li className="nav-item ">
                                 <a className="nav-link " href="#scrollspyHeading1">HOME</a>
                             </li>
-                            <li className="nav-item">
+                            <li className="nav-item ">
                                 <a className="nav-link" href="#scrollspyHeading2">ABOUT</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="#scrollspyHeading2">CONTACT US</a>
                             </li>
                             <li className="nav-item">
-                                <a className="btn btn-outline" >Franchise</a>
+                                <a className="nav-link franchise" >FRANCHISE</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/signupUser">Signup</a>
+                                <Link className="nav-link" to="/signupUser">SIGNUP</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="btn btn-primary" to="./signin" >Login</Link>
+                                <Link className="btn btn-outline-primary" to="./signin" >Login</Link>
                             </li>
                         </ul>
                     </div>
@@ -44,7 +43,7 @@ const Welcome = () => {
                 <div id="scrollspyHeading1" className="img-home">
                     <div className="container">
                         <div className="welcome-tag-line ">
-                             India's 1st resort where you negotiate price for the food
+                            India's 1st resort where you negotiate price for the food
                         </div>
                     </div>
                 </div>
@@ -72,10 +71,11 @@ const Welcome = () => {
                 </div>
 
             </div>
+
             <div className="">
                 <div class="fixed-bottom employee-icon container employee-icon-box">
-                    Interested in being a delivery person? 
-                    <a href="/signupEmployee"><img src={help} alt="Hiring Icon"/> </a>
+                    Interested in being a delivery person?
+                    <a href="/signupEmployee"><img src={help} alt="Hiring Icon" /> </a>
                 </div>
             </div>
 
