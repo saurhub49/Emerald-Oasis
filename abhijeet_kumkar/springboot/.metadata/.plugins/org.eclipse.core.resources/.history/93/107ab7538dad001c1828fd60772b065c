@@ -1,0 +1,22 @@
+package com.app.entities;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="cuisine")
+public class cuisine {
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id
+	private int cuisineId;
+	
+	@Column(unique = true)
+	private String name;
+	
+	private String image;
+	
+}

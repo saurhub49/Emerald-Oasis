@@ -1,0 +1,29 @@
+package com.app.services;
+
+import java.util.List;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.app.daos.FoodItemDao;
+import com.app.dtos.FoodItemDTO;
+import com.app.entities.Cuisine;
+import com.app.entities.FoodItem;
+
+@Transactional
+@Service
+public class FoodItemServiceImpl {
+	@Autowired
+	private FoodItemDao foodItemDao;
+	
+
+	
+
+	public List<FoodItemDTO> findFoodItemByCuisineId(int cuisineId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
