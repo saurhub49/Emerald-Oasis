@@ -42,6 +42,7 @@ CREATE TABLE Orders (
     deliveredTimeStamp TIMESTAMP,
     totalAmount DOUBLE,
     orderStatus VARCHAR(50),
+    address VARCHAR(512),
     userId INTEGER,
     employeeId INTEGER,
     FOREIGN KEY (userId) REFERENCES User(userId),
