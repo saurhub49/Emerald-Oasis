@@ -1,0 +1,7 @@
+package com.app.dtos;
+
+public class CuisineDto {
+	private int cuisineId;
+	private String name;
+	private String image;
+}
