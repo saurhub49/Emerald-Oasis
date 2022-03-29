@@ -13,7 +13,6 @@ CREATE TABLE User (
     addressLine VARCHAR(512),
     birthdate DATE,
     gender VARCHAR(10),
-    cardNo VARCHAR(20) UNIQUE,
     roleId INTEGER,
     FOREIGN KEY (roleId) REFERENCES Role(roleId)
 );
@@ -22,7 +21,8 @@ CREATE TABLE User (
 CREATE TABLE Cuisine (
     cuisineId INTEGER PRIMARY KEY auto_increment,
     name VARCHAR(50) UNIQUE,
-    image VARCHAR(512)
+    image VARCHAR(512),
+    description VARCHAR(512)
 );
 
 CREATE TABLE FoodItem (

@@ -19,7 +19,7 @@ import com.app.dtos.CuisineDTO;
 import com.app.dtos.FoodItemDTO;
 import com.app.dtos.OrderDTO;
 import com.app.dtos.UserDTO;
-import com.app.entities.OrderDetails;
+import com.app.entities.constants.RoleName;
 import com.app.services.UserServiceImpl;
 
 @CrossOrigin(origins = "*")
@@ -29,39 +29,12 @@ public class UserController {
 	@Autowired
 	private UserServiceImpl userService;
 	
-	@GetMapping("/")
-	public String welcomeMessage() {
-		return "Welcome to Emerald Oasis";
-	}
 	
 	@PostMapping("/user/signup")
 	public ResponseEntity<?> signUp(@RequestBody UserDTO userDto) {
-		userDto.setRoleId(userService.getUserRoleId("customer"));
+		userDto.setRoleId(userService.getUserRoleId(RoleName.CUSTOMER));
 		UserDTO result = userService.saveUser(userDto);
 		
-		return Response.success(result);
-	}
-	
-	@PostMapping("/user/signin")
-	public ResponseEntity<?> signIn(@RequestBody Credentials cred) {
-		UserDTO result = userService.findUserByEmailAndPassword(cred);
-		if(result == null) {
-			return Response.error("user not found");
-		}
-		return Response.success(result);
-	}
-	
-	@GetMapping("/user/cuisines")
-	public ResponseEntity<?> findAllCuisines() {
-		List<CuisineDTO> result = userService.findAllCuisines();
-		return Response.success(result);
-	}
-	
-	@GetMapping("/user/fooditems/{id}")
-	public ResponseEntity<?> findFoodItemsByCuisineId(@PathVariable("id") int cuisineId) {
-		List<FoodItemDTO> result = userService.findFoodItemByCuisineId(cuisineId);
-		if(result == null)
-			return Response.error("No food items available !");
 		return Response.success(result);
 	}
 	
