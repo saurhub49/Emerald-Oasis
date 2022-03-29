@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.app.config.Response;
+import com.app.dtos.EmployeeDetailsDTO;
 import com.app.dtos.OrderDTO;
 import com.app.dtos.UserDTO;
 import com.app.entities.constants.RoleName;
@@ -31,8 +32,13 @@ public class EmployeeController {
 	
 	@PostMapping("/employee/signup")
 	public ResponseEntity<?> employeeSignUp(@RequestBody UserDTO userDto) {
+		EmployeeDetailsDTO employeeDetailsDTO = new EmployeeDetailsDTO();
+		employeeDetailsDTO.setUid(userDto.getUid());
+		employeeDetailsDTO.setPanCard(userDto.getPanCard());
 		userDto.setRoleId(userService.getUserRoleId(RoleName.EMPLOYEE));
 		UserDTO result = userService.saveUser(userDto);
+		employeeDetailsDTO.setEmployeeId(result.getUserId());
+		employeeService.addEmployeeDetails(employeeDetailsDTO);
 		
 		return Response.success(result);
 	}
@@ -72,6 +78,28 @@ public class EmployeeController {
 	@GetMapping("/employee/order/history/{id}")
 	public ResponseEntity<?> orderHistory(@PathVariable("id") int employeeId) {
 		List<OrderDTO> result = employeeService.employeeOrderHistory(employeeId);
+		return Response.success(result);
+	}
+	
+	@GetMapping("/employee/profile/details/{id}")
+	public ResponseEntity<?> getEmployeeDetails(@PathVariable("id") int employeeId) {
+		EmployeeDetailsDTO result = employeeService.getEmployeeDetails(employeeId);
+		return Response.success(result);
+	}
+	
+	@PutMapping("/employee/status/available/{id}")
+	public ResponseEntity<?> makeAvailable(@PathVariable("id") int employeeId) {
+		EmployeeDetailsDTO result = employeeService.statusAvailable(employeeId);
+		if(result == null)
+			return Response.error("Unexpected error !");
+		return Response.success(result);
+	}
+	
+	@PutMapping("/employee/status/unavailable/{id}")
+	public ResponseEntity<?> makeUnvailable(@PathVariable("id") int employeeId) {
+		EmployeeDetailsDTO result = employeeService.statusUnavailable(employeeId);
+		if(result == null)
+			return Response.error("Unexpected error !");
 		return Response.success(result);
 	}
 

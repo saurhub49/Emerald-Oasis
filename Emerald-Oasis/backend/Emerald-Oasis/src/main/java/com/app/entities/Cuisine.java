@@ -21,6 +21,7 @@ public class Cuisine {
 	@Column(unique = true)
 	private String name;
 	private String image;
+	private String description;
 	@OneToMany(mappedBy = "cuisine", cascade = CascadeType.ALL)
 	private List<FoodItem> foodItemList;
 	
@@ -28,11 +29,12 @@ public class Cuisine {
 		
 	}
 
-	public Cuisine(int cuisineId, String name, String image) {
+	public Cuisine(int cuisineId, String name, String image, String description) {
 		super();
 		this.cuisineId = cuisineId;
 		this.name = name;
 		this.image = image;
+		this.description = description;
 	}
 	
 	public Cuisine (int cuisineId) {
@@ -62,6 +64,14 @@ public class Cuisine {
 
 	public void setImage(String image) {
 		this.image = image;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	public List<FoodItem> getFoodItemList() {

@@ -1,20 +1,19 @@
 package com.app.entities;
 
-import java.util.Arrays;
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 @Table(name = "User")
@@ -31,10 +30,11 @@ public class User {
 	private String email;
 	private String password;
 	private String phoneNo;
-	private String cardNo;
 	@ManyToOne
 	@JoinColumn(name = "roleId")
 	private Role role;
+	@OneToOne(mappedBy = "employee", cascade = CascadeType.ALL)
+	private EmployeeDetails employeeDetails;
 	
 	public User() {
 		super();
@@ -46,7 +46,7 @@ public class User {
 	}
 
 	public User(int userId, String firstName, String lastName, String addressLine, Date birthdate, String gender,
-			String email, String password, String phoneNo, String cardNo, Role role) {
+			String email, String password, String phoneNo, Role role) {
 		super();
 		this.userId = userId;
 		this.firstName = firstName;
@@ -57,7 +57,6 @@ public class User {
 		this.email = email;
 		this.password = password;
 		this.phoneNo = phoneNo;
-		this.cardNo = cardNo;
 		this.role = role;
 	}
 
@@ -133,14 +132,6 @@ public class User {
 		this.phoneNo = phoneNo;
 	}
 
-	public String getCardNo() {
-		return cardNo;
-	}
-
-	public void setCardNo(String cardNo) {
-		this.cardNo = cardNo;
-	}
-
 	public Role getRole() {
 		return role;
 	}
@@ -153,7 +144,7 @@ public class User {
 	public String toString() {
 		return "User [userId=" + userId + ", firstName=" + firstName + ", lastName=" + lastName + ", profilePhoto="
 				+ addressLine + ", birthdate=" + birthdate + ", gender=" + gender + ", email=" + email
-				+ ", phoneNo=" + phoneNo + ", cardNo=" + cardNo + ", role=" + role + "]";
+				+ ", phoneNo=" + phoneNo + ", role=" + role + "]";
 	}
 	
 
