@@ -5,6 +5,7 @@ import Signin from './pages/userSide/Signin/signin'
 import SignupUser from './pages/userSide/Signup/userSignup'
 import SignupEmployee from './pages/employeeSide/Signup/employeeSignup'
 import Welcome from './pages/userSide/Welcome Page/welcome'
+import HomePage from './pages/userSide/HomePage/homePage'
 
 // const AuthorizeUser = () => {
 //   const loginStatus = sessionStorage['loginStatus']
@@ -19,6 +20,7 @@ import Welcome from './pages/userSide/Welcome Page/welcome'
             <Route path="/signin" element={<Signin />} />
             <Route path="/signupUser" element={<SignupUser />} />
             <Route path="/signupEmployee" element={<SignupEmployee />} />
+            <Route path="/homepage" element={<HomePage />} />
           </Routes>
         </BrowserRouter>
         <ToastContainer theme="colored" 

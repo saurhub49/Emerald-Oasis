@@ -5,7 +5,41 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2022-03-25T01:00:00Z</updated>
+  <updated>2022-03-28T14:11:57Z</updated>
+  <entry>
+    <title>An update on Java 17+ adoption</title>
+    <link rel="alternate" href="https://spring.io/blog/2022/03/28/an-update-on-java-17-adoption" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Juergen Hoeller</name>
+    </author>
+    <id>tag:spring.io,2022-03-17:4733</id>
+    <updated>2022-03-28T14:11:57Z</updated>
+    <content type="html">&lt;p&gt;As a follow-up to &lt;a href="https://spring.io/blog/2021/09/02/a-java-17-and-jakarta-ee-9-baseline-for-spring-framework-6"&gt;my blog post from last year&amp;rsquo;s SpringOne&lt;/a&gt;, it is time for an update on our Java 17+ baseline efforts!&lt;/p&gt;
+&lt;p&gt;We established the new baseline on our main branches, with a few milestones out already. The feedback has been very positive, not only in terms of framework improvements but also in terms of the motivation for a &lt;em&gt;Java upgrade at the application level&lt;/em&gt;. Of course, it does not end with JDK 17 LTS: JDK 18 is an immediate option already, JDK 19 will be the current release when we go final later this year, with JDK 20 to be in early access by then - and JDK 21 LTS on the horizon already&amp;hellip;&lt;/p&gt;
+&lt;p&gt;On a related note, the recent &lt;a href="https://www.jrebel.com/resources/java-developer-productivity-report-2022"&gt;JRebel 2022 Java Developer Productivity Report&lt;/a&gt; included some interesting numbers on JDK 17: &lt;em&gt;62% of the participants indicated a plan for a JDK 17 upgrade within the next 12 months&lt;/em&gt; - specifically, 37% within 6 months, and another 25% within 6-12 months. This is exactly the state of the industry that we are working towards: Spring Framework 6 and Spring Boot 3 will be released on a Java 17+ baseline in late 2022, &lt;em&gt;ready for adoption in a JDK 17 LTS ecosystem&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;On the other end of the spectrum, &lt;em&gt;JDK 8 reaches its end of premier support&lt;/em&gt; with Oracle and other vendors in March 2022 now, moving into its extended support phase which lasts up until 2026 (or 2030 with some vendors). This is a perfect opportunity for considering an upgrade from JDK 8, ideally right away to JDK 17 as the current Long-Term Support release! For a start, we recommend &lt;em&gt;moving Spring Framework 5.3 based applications to JDK 17&lt;/em&gt;, then migrating to Spring Framework 6 from there.&lt;/p&gt;
+&lt;p&gt;In the wider Spring ecosystem, our foundational projects are ready for Java 17 but some choose to stay on a JDK 8+ baseline for the time being, e.g. Reactor and Micrometer. This allows for &lt;em&gt;continuity on the side of integrators&lt;/em&gt;, shipping common drivers etc for broad consumption across different stacks. At the same time, Spring Framework 6 is empowered to provide &lt;em&gt;a rich Java 17+ experience for upgraded applications&lt;/em&gt;, seamlessly integrating with foundational infrastructure on lower baselines.&lt;/p&gt;
+&lt;p&gt;Rest assured, if Spring Framework 6 won&amp;rsquo;t be an option for you for a further while, &lt;em&gt;Spring Framework 5.3.x is set up for extended open source support&lt;/em&gt; until 2024, with commercial support up until 2026. Whether on JDK 8 or 11 or 17 LTS, the current generation of Spring remains available to you for an extended period. And whenever you are ready to upgrade, as long as you have moved up to JDK 17+ in the meantime, Spring Framework 6 and Spring Boot 3 will be there for you!&lt;/p&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>CVE report published for Spring Framework</title>
+    <link rel="alternate" href="https://spring.io/blog/2022/03/28/cve-report-published-for-spring-framework" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Sam Brannen</name>
+    </author>
+    <id>tag:spring.io,2022-03-10:4727</id>
+    <updated>2022-03-28T08:00:00Z</updated>
+    <content type="html">&lt;p&gt;We have released &lt;a href="https://spring.io/blog/2022/03/17/spring-framework-6-0-0-m3-and-5-3-17-available-now"&gt;Spring Framework 5.3.17&lt;/a&gt; to address the following CVE report.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://tanzu.vmware.com/security/cve-2022-22950"&gt;CVE-2022-22950: Spring Expression DoS Vulnerability&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Please review the information in the CVE report and upgrade immediately.&lt;/p&gt;
+&lt;p&gt;Spring Boot users should upgrade to &lt;a href="https://spring.io/blog/2022/03/24/spring-boot-2-5-11-available-now"&gt;2.5.11&lt;/a&gt; or &lt;a href="https://spring.io/blog/2022/03/24/spring-boot-2-6-5-available-now"&gt;2.6.5&lt;/a&gt;.&lt;/p&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>A Bootiful Podcast: Event streaming guru Jan Svoboda on Apache Kafka Design Patterns</title>
     <link rel="alternate" href="https://spring.io/blog/2022/03/24/a-bootiful-podcast-event-streaming-guru-jan-svoboda-on-apache-kafka-design-patterns" />
@@ -532,8 +566,9 @@ Mono&amp;lt;Project&amp;gt; projectMono = graphQlClient.document(document)&#xD;
     <id>tag:spring.io,2022-03-17:4732</id>
     <updated>2022-03-17T11:38:00Z</updated>
     <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I am pleased to announce that Spring Framework &lt;code&gt;6.0.0-M3&lt;/code&gt; and &lt;code&gt;5.3.17&lt;/code&gt; are available now.&lt;/p&gt;
-&lt;p&gt;Spring Framework &lt;code&gt;5.3.17&lt;/code&gt; includes &lt;a href="https://github.com/spring-projects/spring-framework/releases/tag/v5.3.17"&gt;17 fixes and improvements&lt;/a&gt; as a recommended upgrade for all Spring production scenarios. Spring Framework &lt;code&gt;6.0.0-M3&lt;/code&gt; includes &lt;a href="https://github.com/spring-projects/spring-framework/releases/tag/v6.0.0-M3"&gt;33 additional fixes and improvements&lt;/a&gt; specific to the 6.0 branch.&lt;/p&gt;
-&lt;p&gt;This milestone brings a first batch of migration of our AOT (Ahead Of Time) efforts from Spring Native, paving the way for Native support in the wider Spring ecosystem. Stay tuned for a follow-up blog post detailing these and what&amp;rsquo;s next to come.&lt;/p&gt;
+&lt;p&gt;Spring Framework &lt;code&gt;5.3.17&lt;/code&gt; includes &lt;a href="https://github.com/spring-projects/spring-framework/releases/tag/v5.3.17"&gt;17 fixes and improvements&lt;/a&gt; as well as a fix for &lt;a href="https://tanzu.vmware.com/security/cve-2022-22950"&gt;CVE-2022-22950: Spring Expression DoS Vulnerability&lt;/a&gt; and is a recommended upgrade for all Spring production scenarios.&lt;/p&gt;
+&lt;p&gt;Spring Framework &lt;code&gt;6.0.0-M3&lt;/code&gt; includes &lt;a href="https://github.com/spring-projects/spring-framework/releases/tag/v6.0.0-M3"&gt;33 additional fixes and improvements&lt;/a&gt; specific to the 6.0 branch.&lt;/p&gt;
+&lt;p&gt;This milestone brings a first batch of migration of our AOT (Ahead Of Time) efforts from Spring Native, paving the way for Native support in the wider Spring ecosystem. See the &lt;a href="https://spring.io/blog/2022/03/22/initial-aot-support-in-spring-framework-6-0-0-m3"&gt;follow-up blog post&lt;/a&gt; detailing these and what&amp;rsquo;s next to come.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://projects.spring.io/spring-framework/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-framework"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-framework/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-framework/docs/5.3.17/reference/html/"&gt;Documentation&lt;/a&gt;&lt;/p&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
@@ -581,42 +616,6 @@ Mono&amp;lt;Project&amp;gt; projectMono = graphQlClient.document(document)&#xD;
     <updated>2022-03-16T07:00:00Z</updated>
     <content type="html">&lt;p&gt;Hi, Spring fans! In this episode &lt;a href="https://twitter.com/starbuxman"&gt;Josh Long (@starbuxman)&lt;/a&gt; looks at the joy of writing fast, native CLI applications with Spring Boot, Spring Shell, GraalVM, and Spring Native&lt;/p&gt;
 &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/6Os6nL7TtAY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>This Week in Spring - March 15th, 2022</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/03/15/this-week-in-spring-march-15th-2022" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2022-03-15:4729</id>
-    <updated>2022-03-15T18:00:00Z</updated>
-    <content type="html">&lt;p&gt;Hi, Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! We&amp;rsquo;ve got a good amount of stuff to get to this week so let&amp;rsquo;s dive right in! &lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/09/introducing-spring-cloud-alibaba-2021-0-1-0"&gt;Introducing Spring Cloud Alibaba 2021.0.1.0&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;In this installment of &lt;a href="https://spring.io/blog/2022/03/09/spring-tips-hilla-an-amazing-new-web-framework-from-vaadin"&gt;Spring Tips, I look at Hilla, an amazing new web framework from Vaadin&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/10/a-bootiful-podcast-microsoft-azure-developer-advocate-mark-heckler"&gt;A Bootiful Podcast: Microsoft Azure Developer Advocate Mark Heckler&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;OG Cloud-Native &lt;a href="https://twitter.com/ciberkleid/status/1503731967694716938?s=12"&gt;Cora Iberkleid put together a really nice look on how to get resources in Kubernetes to &amp;ldquo;explain themselves&amp;rdquo;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/toedter/spring-hateoas-jsonapi/"&gt;Kai Tödter announced that he&amp;rsquo;s released version 1.3.0 of JSON:API for Spring HATEOAS&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;I&amp;rsquo;m honored to be counted among many amazing folks in this list of &lt;a href="https://www.ecairn.com/blog/top-100-influencers-devrel"&gt;The Top 100 Influencers in #DevRel&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://twitter.com/JavaAtMicrosoft/status/1502004973655126022"&gt; Binaries for #OpenJDK 11.0.14.1 are out. This release addresses an issue with the HttpClient API in Java SE that missed a patch during the release of 11.0.14. &lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;In this video, Dan Vega looks at what&amp;rsquo;s &lt;a href="https://www.youtube.com/watch?v=4L4LEnawcO8"&gt;new in Spring Boot 2.6&lt;/a&gt;. Dan just recently &lt;a href="https://www.youtube.com/watch?v=TYXdX-EakG8"&gt;joined our team!&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;write &lt;a href="https://www.youtube.com/watch?v=ndIXyLG_Y1U"&gt;your first Spring Batch Tasklet&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>A Bootiful Podcast: Microsoft Azure Developer Advocate Mark Heckler</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/03/10/a-bootiful-podcast-microsoft-azure-developer-advocate-mark-heckler" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2022-03-10:4728</id>
-    <updated>2022-03-10T12:00:00Z</updated>
-    <content type="html">&lt;p&gt;Hi, Spring fans! In this installment, Josh Long (@starbuxman) talks to former fellow Spring Developer Advocate at Tanzu, and current Java Developer Advocate at Microsoft, friend, ally, and altogether amazing human being, Mark Heckler (@mkheck). &lt;/p&gt;
-&lt;iframe title="Microsoft Azure Developer Advocate Mark Heckler" allowtransparency="true" height="150" width="100%" style="border: none; min-width: min(100%, 430px);" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=mxpsd-11cadb5-pb&amp;from=pb6admin&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Arial&amp;skin=1&amp;font-color=&amp;btn-skin=7"&gt;&lt;/iframe&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>

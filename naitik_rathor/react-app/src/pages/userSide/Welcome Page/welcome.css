@@ -6,6 +6,7 @@
 .navbar-items{
     margin-left: 3%;
     margin-right: 3%;
+    display: flex;
 }
 
 .elements{
@@ -18,28 +19,34 @@ li{
     display: flex;
 }
 
+.navbar-toggler{
+    background-color:  #C4C4C4;
+}
 .nav-link:hover{
-    color: green !important;
-    border-bottom:  solid green;
+    color: #3EF11C!important;
+    border-bottom:  solid #3EF11C;
 }
 
-
+.nav-link{
+    text-decoration: none !important;
+    color: rgba(196, 196, 196, 0.71) !important;
+    font-size: larger;
+}
 .franchise{
     border-style: solid ;
-    padding: 1%;
+    padding: 0px;
     align-self: center;
-
 }
 
 .employee-icon{
     text-align: right;
-    font-size: 18px;
+    font-size: 1.5vw;
     margin-bottom: 5%;
     font-family: roboto;
 
     color:  #FFFFFF;
 
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 500);
 }
 
 /* .employee-icon-box{
@@ -63,7 +70,6 @@ li{
     display: flex;
     align-items: center;
     text-align: center;
-
 }
 
 .how-it-works-1{
@@ -80,11 +86,9 @@ box-sizing: border-box;
 display: flex;
 align-items: center;
 text-align: center;
-
 color: black;
 
 }
-
 
 .how-it-works-2{
     font-size: 22px;
@@ -93,11 +97,12 @@ color: black;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     box-sizing: border-box;
-display: flex;
-align-items: center;
-text-align: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
 
 }
+
 .how-it-works-3{
     padding-bottom: 30px;
     margin-block-end: 0.67em;
@@ -109,7 +114,6 @@ text-align: center;
     font-weight: 550;
     line-height: initial!important;
     color: #24262f!important;
-
 }
 
 .contactUs{
@@ -125,18 +129,13 @@ text-align: center;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-
-
-
-
-
 .img-home{
     background: url("../../../images/welcome2.jpg");   
    
     top: auto;
     position: absolute;
     vertical-align: middle;
-   
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -148,6 +147,7 @@ text-align: center;
     width: 100%;
     height: 100%;
 }
+
 .img-about{
     background-size: cover;
     background-position: center;
@@ -159,7 +159,7 @@ text-align: center;
     bottom: 0;
     width: 100%;
     height: fit-content ;  
-  display: block;
+    display: block;
     background-color: cadetblue;
 }
 

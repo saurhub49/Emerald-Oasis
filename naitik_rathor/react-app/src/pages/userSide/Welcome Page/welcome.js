@@ -8,7 +8,7 @@ const Welcome = () => {
     return (
         <div >
 
-            <nav id="navbar-example2" className="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+            <nav id="navbar-example2" className="navbar fixed-top navbar-expand-lg navbar-light bg-black">
                 <div className="container-fluid navbar-items">
                     <label className="navbar-brand  mb-0 h1" href="/"><img src={logo} className="eologo" /></label>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo2" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,14 +71,12 @@ const Welcome = () => {
                 </div>
 
             </div>
-
-            <div className="">
+            <div className="emp-link">
                 <div class="fixed-bottom employee-icon container employee-icon-box">
                     Interested in being a delivery person?
                     <a href="/signupEmployee"><img src={help} alt="Hiring Icon" /> </a>
                 </div>
             </div>
-
         </div>
     )
 }
