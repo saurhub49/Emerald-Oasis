@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router'
+import { Link } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import logo from '../../assets/logo.png'
 import "./header1.css"
@@ -6,7 +7,7 @@ import "./header1.css"
 const Header1 = () => {
 
     const { firstName } = sessionStorage
-    console.log(firstName)
+    // console.log(firstName)
 
     const navigate = useNavigate()
 
@@ -14,6 +15,7 @@ const Header1 = () => {
         sessionStorage['userId'] = null
         sessionStorage['firstName'] = null
         sessionStorage['lastName'] = null
+        sessionStorage['loginStatus'] = null
 
         navigate('/')
         toast.success("Logout Success")
@@ -28,21 +30,21 @@ const Header1 = () => {
                 <div className="collapse navbar-collapse " id="navbarTogglerDemo2">
                     <ul className="navbar-nav ms-auto">
                         <li className="nav-item ">
-                            <a className="nav-link " href="/homepage">HOME</a>
+                            <Link className="nav-link " to="/homepage">HOME</Link>
                         </li>
                         <li className="nav-item ">
-                            <a className="nav-link" href="/bestsellers">BEST SELLER</a>
+                            <Link className="nav-link" to="/bestseller">BEST SELLER</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/offers">OFFERS</a>
+                            <Link className="nav-link" to="/offers">OFFERS</Link>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <li className="nav-item dropdown">
+                            <a className="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 {firstName}
                             </a>
-                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                                <li><a class="dropdown-item" href="/profile">Profile</a></li>
-                                <li><a class="dropdown-item" href="#" onClick={logoutUser}>Logout</a></li>
+                            <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                                <li><a className="dropdown-item" href="/profile">Profile</a></li>
+                                <li><a className="dropdown-item" href="#" onClick={logoutUser}>Logout</a></li>
                             </ul>
                         </li>
                     </ul>

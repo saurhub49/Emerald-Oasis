@@ -29,7 +29,7 @@ const Signin = () => {
 
       axios.post(url, body).then((response) => {
         const result = response.data
-        console.log(result)
+        // console.log(result)
         if (result['status'] == 'success') {
           toast.success('Welcome to Emerald Oasis')
 
@@ -38,7 +38,7 @@ const Signin = () => {
           sessionStorage['userId'] = userId
           sessionStorage['firstName'] = firstName
           sessionStorage['lastName'] = lastName
-          console.log(firstName)
+          sessionStorage['loginStatus'] = '1'
 
           navigate('/homepage')
         } else {

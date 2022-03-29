@@ -38,7 +38,6 @@ public class UserController {
 	public ResponseEntity<?> signUp(@RequestBody UserDTO userDto) {
 		userDto.setRoleId(userService.getUserRoleId("customer"));
 		UserDTO result = userService.saveUser(userDto);
-		
 		return Response.success(result);
 	}
 	

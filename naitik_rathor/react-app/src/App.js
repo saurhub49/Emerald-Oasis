@@ -6,11 +6,14 @@ import SignupUser from './pages/userSide/Signup/userSignup'
 import SignupEmployee from './pages/employeeSide/Signup/employeeSignup'
 import Welcome from './pages/userSide/Welcome Page/welcome'
 import HomePage from './pages/userSide/HomePage/homePage'
+import CuisineFood from './pages/userSide/CuisineFood/cuisineFood'
+import BestSeller from './pages/userSide/BestSeller/bestSeller'
+import Demo from './pages/userSide/demo/demo'
 
-// const AuthorizeUser = () => {
-//   const loginStatus = sessionStorage['loginStatus']
-//   return loginStatus == '1' ? <Home /> : <Signin />
-// }
+const AuthorizeUser = () => {
+  const loginStatus = sessionStorage['loginStatus']
+  return loginStatus == '1' ? <HomePage /> : <Welcome />
+}
   function App() {
     return (
       <div className="">
@@ -20,7 +23,11 @@ import HomePage from './pages/userSide/HomePage/homePage'
             <Route path="/signin" element={<Signin />} />
             <Route path="/signupUser" element={<SignupUser />} />
             <Route path="/signupEmployee" element={<SignupEmployee />} />
-            <Route path="/homepage" element={<HomePage />} />
+            <Route path="/homepage" element={<AuthorizeUser />} />
+            <Route path="/foodItems" element={<CuisineFood />} />
+            <Route path="/bestSeller" element={<BestSeller />} />
+            <Route path="/demo" element={<Demo />} />
+
           </Routes>
         </BrowserRouter>
         <ToastContainer theme="colored" 
