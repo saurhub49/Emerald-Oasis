@@ -14,7 +14,7 @@ const HomePage = () => {
     getCuisines()
   }, [])
 
-  const url = `${URL}/cuisine`
+  const url = `${URL}/user/cuisines`
 
   const getCuisines = () => {
 
@@ -22,6 +22,8 @@ const HomePage = () => {
       const result = response.data
       if (result.status === 'success') {
         setCuisines(result.data)
+
+
       } else {
         console.log(result.error)
         toast.error(result['error'])

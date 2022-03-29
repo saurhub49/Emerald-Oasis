@@ -1,15 +1,15 @@
 package com.app.dtos;
 
-public class CuisineDto {
+public class CuisineDTO {
 	private int cuisineId;
 	private String name;
 	private String image;
 	
-	public CuisineDto() {
+	public CuisineDTO() {
 		
 	}
 
-	public CuisineDto(int cuisineId, String name, String image) {
+	public CuisineDTO(int cuisineId, String name, String image) {
 		super();
 		this.cuisineId = cuisineId;
 		this.name = name;

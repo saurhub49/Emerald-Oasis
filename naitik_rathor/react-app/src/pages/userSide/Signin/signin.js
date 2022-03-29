@@ -31,15 +31,16 @@ const Signin = () => {
         const result = response.data
         console.log(result)
         if (result['status'] == 'success') {
-          toast.success('Welcome to the application')
+          toast.success('Welcome to Emerald Oasis')
 
           const { userId, firstName, lastName } = result['data']
 
           sessionStorage['userId'] = userId
           sessionStorage['firstName'] = firstName
           sessionStorage['lastName'] = lastName
+          console.log(firstName)
 
-          navigate('/customerhome')
+          navigate('/homepage')
         } else {
           toast.error('Invalid user name or password')
         }

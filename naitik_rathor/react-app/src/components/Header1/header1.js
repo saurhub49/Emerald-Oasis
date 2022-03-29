@@ -1,7 +1,23 @@
+import { useNavigate } from 'react-router'
+import { toast } from 'react-toastify'
 import logo from '../../assets/logo.png'
 import "./header1.css"
 
 const Header1 = () => {
+
+    const { firstName } = sessionStorage
+    console.log(firstName)
+
+    const navigate = useNavigate()
+
+    const logoutUser = () => {
+        sessionStorage['userId'] = null
+        sessionStorage['firstName'] = null
+        sessionStorage['lastName'] = null
+
+        navigate('/')
+        toast.success("Logout Success")
+    }
     return <div>
         <nav id="navbar-example2" className="navbar fixed-top navbar-expand-lg navbar-light bg-dark navbar2">
             <div className="container-fluid navbar-items">
@@ -12,22 +28,22 @@ const Header1 = () => {
                 <div className="collapse navbar-collapse " id="navbarTogglerDemo2">
                     <ul className="navbar-nav ms-auto">
                         <li className="nav-item ">
-                            <a className="nav-link " href="#scrollspyHeading1">HOME</a>
+                            <a className="nav-link " href="/homepage">HOME</a>
                         </li>
                         <li className="nav-item ">
-                            <a className="nav-link" href="#scrollspyHeading2">ABOUT</a>
+                            <a className="nav-link" href="/bestsellers">BEST SELLER</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#scrollspyHeading2">CONTACT US</a>
+                            <a className="nav-link" href="/offers">OFFERS</a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link franchise" >FRANCHISE</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" to="/signupUser">SIGNUP</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="btn btn-outline-primary" to="./signin" >Login</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                {firstName}
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                                <li><a class="dropdown-item" href="/profile">Profile</a></li>
+                                <li><a class="dropdown-item" href="#" onClick={logoutUser}>Logout</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>

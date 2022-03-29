@@ -19,9 +19,9 @@ li{
     display: flex;
 }
 
-.navbar-toggler{
+/* .navbar-toggler{
     background-color:  #C4C4C4;
-}
+} */
 .nav-link:hover{
     color: #3EF11C!important;
     border-bottom:  solid #3EF11C;
@@ -48,10 +48,6 @@ li{
 
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 500);
 }
-
-/* .employee-icon-box{
-    background-color: aqua;
-} */
 
 @media(max-width: 767px)
 {}
