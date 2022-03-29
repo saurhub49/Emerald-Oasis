@@ -1,19 +1,27 @@
-INSERT INTO Role VALUES(1, "manager");
-INSERT INTO Role VALUES(2, "employee");
-INSERT INTO Role VALUES(3, "customer");
+INSERT INTO Role VALUES(1, "MANAGER");
+INSERT INTO Role VALUES(2, "EMPLOYEE");
+INSERT INTO Role VALUES(3, "CUSTOMER");
+
+INSERT INTO User (userId, firstName, lastName, email, password, phoneNo, addressLine, gender, roleId) VALUES
+(1, "Sam", "Winchester", "sam@test.com", "$2a$10$ya.bKPIxd7Ov80gVnKk8ce9xzxdkKRfZ9gtKG4RnnWvMrEPhTHz7q", "9512346780", "Lawrence", "Male", 1),
+(2, "Dean", "Winchester", "dean@test.com", "$2a$10$ya.bKPIxd7Ov80gVnKk8ce9xzxdkKRfZ9gtKG4RnnWvMrEPhTHz7q", "8521346970", "Kansas", "Male", 2),
+(3, "Mary", "Winchester", "mary@test.com", "$2a$10$7z9Cb.UFXs55FPTzwK5P6u9GEhEoU6/pIuRydTjsPW6ts/zV0IAs6", "9032147856", "Florida", "Female", 2),
+(4, "Eileen", "Leahy", "eileen@test.com", "$2a$10$iD4Cxj6R09qpCRSpJOz4NO.lTeyt8qKvgOmcYPnvmnJ8mGN66byJe", "7532104698", "301 Lawrence", "Female", 3),
+(5, "John", "Winchester", "john@test.com", "$2a$10$1AiyRopn1oDg.U63AY9T6ORdBLt.dwxKjZM0q3YyvMA6PqDkvjNjK", "8203164597", "106 Kansas", "Male", 3)
+;
 
 
 INSERT INTO Cuisine VALUES 
-(1, "American", "https://github.com/geronimo-98/Emerald-Oasis-ImageDB/blob/main/Cuisines/american.jpg?raw=true"),
-(2, "Chinese", "https://github.com/geronimo-98/Emerald-Oasis-ImageDB/blob/main/Cuisines/chinese.jpg?raw=true"),
-(3, "French", "https://github.com/geronimo-98/Emerald-Oasis-ImageDB/blob/main/Cuisines/french.jpg?raw=true"),
-(4, "Indian", "https://github.com/geronimo-98/Emerald-Oasis-ImageDB/blob/main/Cuisines/indian.jpg?raw=true"),
-(5, "Italian", "https://github.com/geronimo-98/Emerald-Oasis-ImageDB/blob/main/Cuisines/italian.jpg?raw=true"),
-(6, "Japanese", "https://github.com/geronimo-98/Emerald-Oasis-ImageDB/blob/main/Cuisines/japanese.jpg?raw=true"),
-(7, "Russian", "https://github.com/geronimo-98/Emerald-Oasis-ImageDB/blob/main/Cuisines/russian.jpg?raw=true"),
-(8, "Spanish", "https://github.com/geronimo-98/Emerald-Oasis-ImageDB/blob/main/Cuisines/spanish.jpg?raw=true"),
-(9, "Thai", "https://github.com/geronimo-98/Emerald-Oasis-ImageDB/blob/main/Cuisines/thai.jpg?raw=true"),
-(10, "Turkish", "https://github.com/geronimo-98/Emerald-Oasis-ImageDB/blob/main/Cuisines/turkish.jpg?raw=true")
+(1, "American", "https://github.com/geronimo-98/Emerald-Oasis-ImageDB/blob/main/Cuisines/american.jpg?raw=true", "American cuisine is the cooking style and traditional food dishes prepared in the United States. Primarily European in origin, it has been significantly influenced by indigenous Native Americans, African Americans, Asians, Pacific Islanders, and many other cultures and traditions, reflecting the diverse history of the United States"),
+(2, "Chinese", "https://github.com/geronimo-98/Emerald-Oasis-ImageDB/blob/main/Cuisines/chinese.jpg?raw=true", "Chinese food, rich and colorful, has diversified color, aromatic flavor, and excellent taste as its main features. It typically consists of a carbohydrate or starch like noodles, rice or buns, and accompanying stir fries or dishes of veggies, fish and meat. Chinese dishes are rich in umami which is described as a 'pleasant savory taste"),
+(3, "French", "https://github.com/geronimo-98/Emerald-Oasis-ImageDB/blob/main/Cuisines/french.jpg?raw=true", "French Cuisine is a heavenly amalgamation of culture, tradition, sophistication and, perhaps above all, a love for food. The French look beyond the ingredients and techniques that go into creating a rich blend of flavors making the cuisine incredibly influential, particularly in the realm of western cuisine"),
+(4, "Indian", "https://github.com/geronimo-98/Emerald-Oasis-ImageDB/blob/main/Cuisines/indian.jpg?raw=true", "Traditional cuisines native to the Indian subcontinent containing a substantial varieties of food, given the diversity in culture, ethnic groups, occupations, soil and climate. The appetizing food rich in locally spices , herbs, vegetables, and fruits serves a pallete of flavours and is hot at the same time"),
+(5, "Italian", "https://github.com/geronimo-98/Emerald-Oasis-ImageDB/blob/main/Cuisines/italian.jpg?raw=true", "A highly regionalized cuisine has a great variety of different ingredients which are commonly used, ranging from fruits, vegetables, grains, cheeses, meats and fish. Fewer but of the highest quality ingredients that can be sourced locally are used to prepare dishes which are very simple, unpretentious, but always seasonal and local"),
+(6, "Japanese", "https://github.com/geronimo-98/Emerald-Oasis-ImageDB/blob/main/Cuisines/japanese.jpg?raw=true", "Japanese cuisine includes a wide variety of products, some 1,500 different items, with rice at its center. It also emphasizes seasonal produce, and uses many fermented foods"),
+(7, "Russian", "https://github.com/geronimo-98/Emerald-Oasis-ImageDB/blob/main/Cuisines/russian.jpg?raw=true", "The main feature of Russian cuisine is considered to be an abundance and variety of products used for cooking. There are numerous dishes made of dough such as pies, cakes, rolls, blini, etc. as well as unleavened dough, including dumplings and homemade noodles"),
+(8, "Spanish", "https://github.com/geronimo-98/Emerald-Oasis-ImageDB/blob/main/Cuisines/spanish.jpg?raw=true", "Spanish cuisine consists of the cooking traditions and practices from Spain. Olive oil (of which Spain is the world's largest producer) is heavily used in Spanish cuisine"),
+(9, "Thai", "https://github.com/geronimo-98/Emerald-Oasis-ImageDB/blob/main/Cuisines/thai.jpg?raw=true", "Thai cuisine is a type of Asian cuisine that is traditionally famous for its exotic taste of spices, combined with sweet and sour"),
+(10, "Turkish", "https://github.com/geronimo-98/Emerald-Oasis-ImageDB/blob/main/Cuisines/turkish.jpg?raw=true", "Turkish cuisine is largely the heritage of Ottoman cuisine, which can be described as a fusion and refinement of Mediterranean, Balkan, Middle Eastern, Central Asian, Eastern European, Armenian, and Georgian cuisines")
 ;
 
 

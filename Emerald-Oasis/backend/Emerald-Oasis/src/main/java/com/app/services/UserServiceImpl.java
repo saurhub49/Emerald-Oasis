@@ -28,7 +28,8 @@ import com.app.entities.Cuisine;
 import com.app.entities.FoodItem;
 import com.app.entities.Order;
 import com.app.entities.OrderDetails;
-import com.app.entities.OrderStatus;
+import com.app.entities.constants.OrderStatus;
+import com.app.entities.constants.RoleName;
 import com.app.entities.Role;
 import com.app.entities.User;
 
@@ -75,7 +76,7 @@ public class UserServiceImpl {
 		return null;
 	}
 	
-	public int getUserRoleId(String roleName) {
+	public int getUserRoleId(RoleName roleName) {
 		Role role = roleDao.findByRoleName(roleName);
 		return role.getRoleId();
 	}

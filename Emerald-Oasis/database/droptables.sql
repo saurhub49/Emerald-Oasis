@@ -1,6 +1,15 @@
-DROP TABLE Address;
+drop table vehicle;
 
-DROP TABLE User;
+drop table employeedetails;
 
-DROP TABLE Role;
+drop table orderdetails;
 
+drop table orders;
+
+drop table fooditem;
+
+drop table cuisine;
+
+drop table user;
+
+drop table role;

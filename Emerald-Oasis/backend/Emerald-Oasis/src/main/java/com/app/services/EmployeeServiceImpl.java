@@ -13,7 +13,7 @@ import com.app.daos.OrderDao;
 import com.app.dtos.DTOEntityConverter;
 import com.app.dtos.OrderDTO;
 import com.app.entities.Order;
-import com.app.entities.OrderStatus;
+import com.app.entities.constants.OrderStatus;
 import com.app.entities.User;
 
 @Service
@@ -33,7 +33,7 @@ public class EmployeeServiceImpl {
 		return converter.toOrderDTO(order);
 	}
 	
-	public List<OrderDTO> getAllOrders() {
+	public List<OrderDTO> getAllPlacedOrders() {
 		List<Order> orders = orderDao.findByOrderStatus(OrderStatus.PLACED);
 		return orders.stream().map(o -> converter.toOrderDTO(o)).collect(Collectors.toList());
 	}

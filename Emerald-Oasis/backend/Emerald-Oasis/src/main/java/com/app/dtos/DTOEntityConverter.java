@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import com.app.entities.Cuisine;
 import com.app.entities.FoodItem;
 import com.app.entities.Order;
-import com.app.entities.OrderStatus;
+import com.app.entities.constants.OrderStatus;
 import com.app.entities.Role;
 import com.app.entities.User;
 

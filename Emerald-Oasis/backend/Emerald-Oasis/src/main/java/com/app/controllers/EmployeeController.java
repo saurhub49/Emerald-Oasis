@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.app.config.Response;
 import com.app.dtos.OrderDTO;
 import com.app.dtos.UserDTO;
+import com.app.entities.constants.RoleName;
 import com.app.services.EmployeeServiceImpl;
 import com.app.services.UserServiceImpl;
 
@@ -30,15 +31,15 @@ public class EmployeeController {
 	
 	@PostMapping("/employee/signup")
 	public ResponseEntity<?> employeeSignUp(@RequestBody UserDTO userDto) {
-		userDto.setRoleId(userService.getUserRoleId("employee"));
+		userDto.setRoleId(userService.getUserRoleId(RoleName.EMPLOYEE));
 		UserDTO result = userService.saveUser(userDto);
 		
 		return Response.success(result);
 	}
 	
 	@GetMapping("/employee/getorders") 
-	public ResponseEntity<?> getAllOrders() {
-		List<OrderDTO> result = employeeService.getAllOrders();
+	public ResponseEntity<?> getAllPlacedOrders() {
+		List<OrderDTO> result = employeeService.getAllPlacedOrders();
 		if(result == null)
 			return Response.error("No orders available !");
 		return Response.success(result);
