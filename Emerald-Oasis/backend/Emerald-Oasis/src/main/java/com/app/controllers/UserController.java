@@ -58,7 +58,7 @@ public class UserController {
 	public ResponseEntity<?> placeOrder(@PathVariable("id") int userId) {
 		OrderDTO result = userService.placeOrder(userId);
 		if(result == null)
-			return Response.error("Unexpected error !");
+			return Response.error("Address cannot be empty !");
 		return Response.success(result);
 	} 
 	

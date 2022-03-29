@@ -10,6 +10,11 @@ INSERT INTO User (userId, firstName, lastName, email, password, phoneNo, address
 (5, "John", "Winchester", "john@test.com", "$2a$10$1AiyRopn1oDg.U63AY9T6ORdBLt.dwxKjZM0q3YyvMA6PqDkvjNjK", "8203164597", "106 Kansas", "Male", 3)
 ;
 
+INSERT INTO EmployeeDetails VALUES 
+(1, 3, "885566442130", "951234567801", "AVAILABLE", '2021-10-11', 15000),
+(2, 2, "884523442130", "951234567888", "PENDING", '2021-10-29', 13000)
+;
+
 
 INSERT INTO Cuisine VALUES 
 (1, "American", "https://github.com/geronimo-98/Emerald-Oasis-ImageDB/blob/main/Cuisines/american.jpg?raw=true", "American cuisine is the cooking style and traditional food dishes prepared in the United States. Primarily European in origin, it has been significantly influenced by indigenous Native Americans, African Americans, Asians, Pacific Islanders, and many other cultures and traditions, reflecting the diverse history of the United States"),

@@ -60,12 +60,13 @@ CREATE TABLE OrderDetails (
 
 CREATE TABLE EmployeeDetails (
     employeeDetailsId INTEGER PRIMARY KEY auto_increment,
-    userId INTEGER,
+    employeeId INTEGER,
     uid VARCHAR(20),
     panCard VARCHAR(20),
+    employeeStatus VARCHAR(20),
     joinDate DATE,
     salary DOUBLE,
-    FOREIGN KEY (userId) REFERENCES User(userId)
+    FOREIGN KEY (employeeId) REFERENCES User(userId)
 );
 
 

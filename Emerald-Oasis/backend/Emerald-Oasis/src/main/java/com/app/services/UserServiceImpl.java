@@ -1,7 +1,6 @@
 package com.app.services;
 
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -149,6 +148,9 @@ public class UserServiceImpl {
 	}
 	
 	public OrderDTO placeOrder(int userId) {
+		User user = userDao.getById(userId);
+		if(user.getAddressLine() == null)
+			return null;
 		Order cart = getCart(userId);
 		if(cart == null)
 			return null;
