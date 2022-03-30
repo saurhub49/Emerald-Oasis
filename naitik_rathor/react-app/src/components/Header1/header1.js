@@ -3,19 +3,32 @@ import { Link } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import logo from '../../assets/logo.png'
 import "./header1.css"
+import cart from '../../assets/cart.png'
 
 const Header1 = () => {
 
     const { firstName } = sessionStorage
     // console.log(firstName)
 
+    const { count } = sessionStorage
+    let countNo = 0
+    if (count > 0) {
+        countNo = count
+    } else {
+        countNo = 0
+    }
+
     const navigate = useNavigate()
 
     const logoutUser = () => {
         sessionStorage['userId'] = null
+        sessionStorage['roleId'] = null
         sessionStorage['firstName'] = null
         sessionStorage['lastName'] = null
         sessionStorage['loginStatus'] = null
+        sessionStorage['name'] = null
+        sessionStorage['count'] = null
+
 
         navigate('/')
         toast.success("Logout Success")
@@ -37,6 +50,14 @@ const Header1 = () => {
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link items" to="/offers">OFFERS</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/cart">
+                                <span className="badge bg-secondary">
+                                    {countNo}
+                                </span>
+                                <img className="nav-link items cart " src={cart}></img>
+                            </Link>
                         </li>
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle items" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">

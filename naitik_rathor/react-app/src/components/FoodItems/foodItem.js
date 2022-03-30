@@ -1,6 +1,15 @@
+import { toast } from 'react-toastify'
 import './foodItem.css'
 const FoodItem = (props) => {
     const { foodItem } = props
+
+    let count = 0
+    const addItem = () => {
+        count = count + 1
+        toast.success("Added To Cart")
+        sessionStorage['count'] = count
+        // window.location.reload(false);
+    }
 
     // console.log(foodItem.name)
 
@@ -21,7 +30,7 @@ const FoodItem = (props) => {
                     </div>
                 </div>
             </div>
-            <button className="add-cart" >Add to Cart</button>
+            <button className="add-cart" onClick={addItem}>Add to Cart</button>
         </div>
     )
 }

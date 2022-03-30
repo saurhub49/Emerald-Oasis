@@ -18,7 +18,7 @@ const CuisineFood = () => {
     const getFoodItems = () => {
         const { id } = state
         const url = `${URL}/user/fooditems/${id}`
-        console.log(id)
+        // console.log(id)
         axios.get(url).then((response) => {
             const result = response.data
             if (result.status === 'success') {
@@ -33,7 +33,7 @@ const CuisineFood = () => {
         const url = `${URL}/user/cuisines`
         axios.get(url).then((response) => {
             const result = response.data
-            console.log(result.data)
+            // console.log(result.data)
             if (result.status === 'success') {
                 setCuisines(result.data)
             } else {
