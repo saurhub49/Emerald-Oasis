@@ -4,16 +4,18 @@ import { useLocation } from "react-router"
 import { toast } from "react-toastify"
 import FoodItem from "../../../components/FoodItems/foodItem"
 import Header1 from "../../../components/Header1/header1"
+import HorizonCuisine from "../../../components/HorizontalCuisines/horizonCuisine"
 import { URL } from "../../../config"
 import "./cuisineFood.css"
 
 const CuisineFood = () => {
     const { state } = useLocation()
     const [foodItems, setFoodItems] = useState([])
+    const [cuisines, setCuisines] = useState([])
+    const { name } = sessionStorage
+    // console.log(name)
 
-
-
-    const function1 = () => {
+    const getFoodItems = () => {
         const { id } = state
         const url = `${URL}/user/fooditems/${id}`
         console.log(id)
@@ -27,15 +29,34 @@ const CuisineFood = () => {
             }
         })
     }
+    const getCuisines = () => {
+        const url = `${URL}/user/cuisines`
+        axios.get(url).then((response) => {
+            const result = response.data
+            console.log(result.data)
+            if (result.status === 'success') {
+                setCuisines(result.data)
+            } else {
+                console.log(result.error)
+                toast.error(result['error'])
+            }
+        })
+    }
 
     useEffect(() => {
-        function1()
+        getFoodItems()
+        getCuisines()
     }, [])
+
+
     return (<div className="container">
         <Header1></Header1>
         <div className="cuisine-tabs">
-
+            {cuisines.map((cuisine) => {
+                return <HorizonCuisine cuisine={cuisine}></HorizonCuisine>
+            })}
         </div>
+        <div className="name">{name} Cuisine</div>
         <div className="food-items">
             {foodItems.map((foodItem) => {
                 return <FoodItem foodItem={foodItem}></FoodItem>

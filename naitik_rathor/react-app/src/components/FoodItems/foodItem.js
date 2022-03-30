@@ -1,4 +1,3 @@
-import { useLocation } from "react-router"
 import './foodItem.css'
 const FoodItem = (props) => {
     const { foodItem } = props
@@ -8,7 +7,7 @@ const FoodItem = (props) => {
     return (
         <div className="food-tab">
             <div className="food-cont">
-                <div className="food-image-tab">
+                <div className="">
                     <img className="image" src={foodItem.image}></img>
                 </div>
                 <div className="txt-cont">
@@ -22,22 +21,9 @@ const FoodItem = (props) => {
                     </div>
                 </div>
             </div>
-            <button className="add-cart">Add to Cart</button>
+            <button className="add-cart" >Add to Cart</button>
         </div>
     )
-
-
-    // return <div className="test">
-    //     <div className="food-tab">
-    //         <center className="container food-image">
-    //             <img src={foodItem.image}></img>
-    //         </center>
-    //         <div className="row">
-    //         <div className="col">{foodItem.name}</div>
-    //         <div className="col">$. {foodItem.price}</div>
-    //         </div>
-    //     </div>
-    // </div>
 }
 
 export default FoodItem

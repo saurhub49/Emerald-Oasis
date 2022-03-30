@@ -4,10 +4,13 @@ import { useNavigate } from "react-router"
 
 const Cuisine = (props) => {
   const { cuisine, isDetails } = props
+
   const navigate = useNavigate()
 
   const getCuisineId = () => {
-    navigate('/foodItems',{ state: { id : cuisine.cuisineId }})
+    sessionStorage['name'] = cuisine.name
+    // console.log(cuisine.name)
+    navigate('/foodItems', { state: { id: cuisine.cuisineId } })
   }
 
   return (

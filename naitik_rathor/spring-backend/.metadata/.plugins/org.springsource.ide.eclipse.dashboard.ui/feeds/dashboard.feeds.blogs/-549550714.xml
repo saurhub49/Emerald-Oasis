@@ -5,7 +5,58 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2022-03-30T00:53:00Z</updated>
+  <updated>2022-03-30T07:00:00Z</updated>
+  <entry>
+    <title>Spring Cloud Azure 4.0 is Now Generally Available</title>
+    <link rel="alternate" href="https://spring.io/blog/2022/03/30/spring-cloud-azure-4-0-is-now-generally-available" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2022-03-29:4750</id>
+    <updated>2022-03-30T07:00:00Z</updated>
+    <content type="html">&lt;p&gt;&lt;strong&gt;NOTE: Hi, Spring fans! This is a guest post from Sean Li, our friend at Microsoft&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I am pleased to announce that Spring Cloud Azure 4.0 is now generally available. With this major release we aim to bring better security, leaner dependencies, support for production readiness and more. Version 4 represents a significant milestone in our product roadmap that we couldn’t have delivered without the collective wisdom of the Spring community and customer feedback. On behalf of the Spring on Azure product team, thank you for making this happen!&lt;/p&gt;&lt;h2&gt;&lt;a href="#unified-development-experience" class="anchor" name="unified-development-experience"&gt;&lt;/a&gt;Unified Development Experience&lt;/h2&gt;
+&lt;p&gt;At the Developer Division of Microsoft, we are big on developer experience. We constantly challenge ourselves on how we can make things more consistent and easier to understand, so our customers are not confronted with haphazard development choices. This is a long and self-evolving journey as consistency is relative and there will be things that are outside of our control. We now humbly take another step in this direction to improve to our developer experience by unifying project name, artifact ID and properties. &lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint xml"&gt;&lt;br/&gt;&amp;lt;dependencyManagement&amp;gt;&#xD;
+  &amp;lt;dependencies&amp;gt;&#xD;
+    &amp;lt;dependency&amp;gt;&#xD;
+      &amp;lt;groupId&amp;gt;com.azure.spring&amp;lt;/groupId&amp;gt;&#xD;
+      &amp;lt;artifactId&amp;gt;spring-cloud-azure-dependencies&amp;lt;/artifactId&amp;gt;&#xD;
+      &amp;lt;version&amp;gt;4.0.0&amp;lt;/version&amp;gt;&#xD;
+      &amp;lt;type&amp;gt;pom&amp;lt;/type&amp;gt;&#xD;
+      &amp;lt;scope&amp;gt;import&amp;lt;/scope&amp;gt;&#xD;
+    &amp;lt;/dependency&amp;gt;&#xD;
+  &amp;lt;/dependencies&amp;gt;&#xD;
+&amp;lt;/dependencyManagement&amp;gt;&#xD;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;&lt;a href="#simplified-dependency-management" class="anchor" name="simplified-dependency-management"&gt;&lt;/a&gt;Simplified dependency management&lt;/h2&gt;
+&lt;p&gt;Dependency management is one of the core value pillars that has helped Spring establish preeminence over to other Java frameworks. In that spirit, we have also been exploring ways to make dependency management easier for Spring developers on Azure. In this release we have codified best practices and expertise from Spring experts and condensed all of our dependency BOMs into one, spring-cloud-azure-dependencies, which we believe will further bring down the learning curve and avoid ill-handling of dependencies.&lt;/p&gt;&lt;h2&gt;&lt;a href="#expanded-support-scope-of-azure-support" class="anchor" name="expanded-support-scope-of-azure-support"&gt;&lt;/a&gt;Expanded support scope of Azure Support&lt;/h2&gt;
+&lt;p&gt;The Azure Support module in Spring Initializr provides auto-configuration of many Azure services. &lt;/p&gt;
+&lt;img src="https://github.com/joshlong/blog-images/blob/master/spring-cloud-azure-4/initializr.png?raw=true"/&gt;
+&lt;p&gt;In this release we have expanded the scope of Azure Support to cover the additional 3 more services:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Event Hubs&lt;/li&gt;
+  &lt;li&gt;Azure Cache for Redis&lt;/li&gt;
+  &lt;li&gt;App Configuration&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Our journey does not end here and over time we will bring even more Azure services into the fold.&lt;/p&gt;&lt;h2&gt;&lt;a href="#more-flexible-spring-programming-model" class="anchor" name="more-flexible-spring-programming-model"&gt;&lt;/a&gt;More flexible Spring programming model&lt;/h2&gt;
+&lt;p&gt;One bit of feedback that we consistently hear is our Spring modules are unnecessarily stacked on top of too many layers of dependencies, which has prevented broader adoption. As an example, all of our early Spring modules rely on Spring Boot, and many of our customers are running Spring MVC apps in Tomcat, leveraging nothing but Spring Data, as an example, to communicate with data services. We have rearchitected our Spring module dependencies from the ground up to make them a better fit with different approaches. Take the programming model for Azure Event Hubs as an example. Purple boxes in the diagrams represent Spring Cloud Azure client libraries. You can use Spring binder (spring-cloud-azure-stream-binder-eventhubs), Spring integration (spring-integration-azure-eventhubs) and Spring Kafka (spring-messaging-azure) to interact with Azure Event Hubs.&lt;/p&gt;
+&lt;img src="https://github.com/joshlong/blog-images/blob/master/spring-cloud-azure-4/graph.png?raw=true"/&gt;&lt;h2&gt;&lt;a href="#more-control-and-secure" class="anchor" name="more-control-and-secure"&gt;&lt;/a&gt;More control and secure&lt;/h2&gt;
+&lt;p&gt;At the heart of every real-world application is identity and secret management. Support for managed identity has become a fundamental principle for Azure, providing a security baseline at the individual service level. We believe aligning on those guidelines will also benefit Spring developers at large, and have added Managed Identity support for App Configuration, Event Hub, Service Bus, Cosmos, Key Vault, Storage Blob, and Storage Queue. This enables building credential-free applications, which is a pattern that has picked up tremendous momentum both at Microsoft and in the community. In addition to Managed Identity, you can use any authentication methods supported in the underlying Azure SDK from our Spring libraries. For instance, you can use a SAS token and token credential to authenticate with Service Bus and Event Hubs. &lt;a href="https://docs.microsoft.com/en-us/dotnet/api/azure.identity.chainedtokencredential?view=azure-dotnet"&gt;Credential chain&lt;/a&gt; is now enabled by default, allowing applications to obtain credentials from application properties, environment variables, managed identity, IDEs, etc., all of which promote securing your apps in a zero-trust programing model.&lt;/p&gt;
+&lt;p&gt;Lastly providing granular level access control at the resource level (i.e.: Service Bus queue), is often of paramount importance when it comes to meeting the needs of our enterprise customers. We’ve now unlocked these controls to our customers for better security governance and adherence to IT policies.&lt;/p&gt;&lt;h2&gt;&lt;a href="#more-options-exposed-in-a-spring-idiomatic-way" class="anchor" name="more-options-exposed-in-a-spring-idiomatic-way"&gt;&lt;/a&gt;More options exposed in a Spring idiomatic way&lt;/h2&gt;
+&lt;p&gt;Spring developers have long enjoyed the convenience of defining client options in application configuration files. We certainly do not want to take that privilege away and burden Spring developers with setting options via client objects. To that end, we’ve significantly improved autoconfiguration coverage of Azure SDK clients for both synchronous and asynchronous scenarios. Case in point, here is a teaser preview of configuration options you can set with Spring Integration Azure Service Bus. &lt;/p&gt;
+&lt;img src="https://github.com/joshlong/blog-images/blob/master/spring-cloud-azure-4/table.png?raw=true"/&gt;&lt;h2&gt;&lt;a href="#more-production-ready" class="anchor" name="more-production-ready"&gt;&lt;/a&gt;More Production Ready&lt;/h2&gt;
+&lt;p&gt;Lastly all of the above would be in vain if we do not have enough feature coverage to support our customers in production. Many things come to my mind to make an application production ready, but observability often arrives at the top. We’ve added health indicator for App Configuration, Event Hubs, Cosmos, Key Vault, Storage Blob, Storage Queue, Storage File, as well as Spring Cloud Sleuth support for all HTTP-based Azure SDKs. As an example, you now can probe if storage blob is up or down via Spring Boot actuator endpoint, as well as track dependencies and application latencies in a Zipkin dashboard.&lt;/p&gt;
+&lt;img src="https://github.com/joshlong/blog-images/blob/master/spring-cloud-azure-4/sleuth.png?raw=true"/&gt;&lt;h2&gt;&lt;a href="#getting-started" class="anchor" name="getting-started"&gt;&lt;/a&gt;Getting Started&lt;/h2&gt;
+&lt;p&gt;We hope you are as excited as we are about this release. To get started follow our latest&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://microsoft.github.io/spring-cloud-azure/current/reference/html/index.html"&gt;Reference docs&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/Azure-Samples/azure-spring-boot-samples"&gt;Code samples&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://microsoft.github.io/spring-cloud-azure/current/reference/html/index.html#migration-guide-for-4-0"&gt;Migration guides&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>CVE report published for Spring Cloud Function</title>
     <link rel="alternate" href="https://spring.io/blog/2022/03/29/cve-report-published-for-spring-cloud-function" />
@@ -606,22 +657,6 @@ Mono&amp;lt;Project&amp;gt; projectMono = graphQlClient.document(document)&#xD;
   &lt;li&gt;&lt;a href="https://www.elastic.co/blog/from-distributed-tracing-to-distributed-profiling-with-elastic-apm"&gt;use this to make slow methods show up in traces&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;iframe title="Elastic’s Felix Barnsteiner on APM for Spring Developers " allowtransparency="true" height="150" width="100%" style="border: none; min-width: min(100%, 430px);" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=zg6sa-11d5ed3-pb&amp;from=pb6admin&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Arial&amp;skin=1&amp;font-color=&amp;btn-skin=7"&gt;&lt;/iframe&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Framework 6.0.0-M3 and 5.3.17 available now</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/03/17/spring-framework-6-0-0-m3-and-5-3-17-available-now" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Stéphane Nicoll</name>
-    </author>
-    <id>tag:spring.io,2022-03-17:4732</id>
-    <updated>2022-03-17T11:38:00Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I am pleased to announce that Spring Framework &lt;code&gt;6.0.0-M3&lt;/code&gt; and &lt;code&gt;5.3.17&lt;/code&gt; are available now.&lt;/p&gt;
-&lt;p&gt;Spring Framework &lt;code&gt;5.3.17&lt;/code&gt; includes &lt;a href="https://github.com/spring-projects/spring-framework/releases/tag/v5.3.17"&gt;17 fixes and improvements&lt;/a&gt; as well as a fix for &lt;a href="https://tanzu.vmware.com/security/cve-2022-22950"&gt;CVE-2022-22950: Spring Expression DoS Vulnerability&lt;/a&gt; and is a recommended upgrade for all Spring production scenarios.&lt;/p&gt;
-&lt;p&gt;Spring Framework &lt;code&gt;6.0.0-M3&lt;/code&gt; includes &lt;a href="https://github.com/spring-projects/spring-framework/releases/tag/v6.0.0-M3"&gt;33 additional fixes and improvements&lt;/a&gt; specific to the 6.0 branch.&lt;/p&gt;
-&lt;p&gt;This milestone brings a first batch of migration of our AOT (Ahead Of Time) efforts from Spring Native, paving the way for Native support in the wider Spring ecosystem. See the &lt;a href="https://spring.io/blog/2022/03/22/initial-aot-support-in-spring-framework-6-0-0-m3"&gt;follow-up blog post&lt;/a&gt; detailing these and what&amp;rsquo;s next to come.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://projects.spring.io/spring-framework/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-framework"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-framework/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-framework/docs/5.3.17/reference/html/"&gt;Documentation&lt;/a&gt;&lt;/p&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>
