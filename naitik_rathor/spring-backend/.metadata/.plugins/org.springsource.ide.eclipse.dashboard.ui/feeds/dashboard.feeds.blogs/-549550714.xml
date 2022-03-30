@@ -5,7 +5,59 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2022-03-28T14:11:57Z</updated>
+  <updated>2022-03-30T00:53:00Z</updated>
+  <entry>
+    <title>CVE report published for Spring Cloud Function</title>
+    <link rel="alternate" href="https://spring.io/blog/2022/03/29/cve-report-published-for-spring-cloud-function" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Oleg Zhurakousky</name>
+    </author>
+    <id>tag:spring.io,2022-03-29:4751</id>
+    <updated>2022-03-30T00:53:00Z</updated>
+    <content type="html">&lt;p&gt;We have released Spring Cloud Function &lt;a href="https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-function-context/3.1.7/"&gt;3.1.7&lt;/a&gt; &amp;amp; &lt;a href="https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-function-context/3.2.3/"&gt;3.2.3&lt;/a&gt; to address the following CVE report.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://tanzu.vmware.com/security/cve-2022-22963"&gt;CVE-2022-22963: Spring Expression Resource Access Vulnerability&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Please review the information in the CVE report and upgrade immediately.&lt;/p&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>This Week in Spring - March 29th, 2022</title>
+    <link rel="alternate" href="https://spring.io/blog/2022/03/29/this-week-in-spring-march-29th-2022" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2022-03-29:4749</id>
+    <updated>2022-03-29T07:00:00Z</updated>
+    <content type="html">&lt;p&gt;Aloha, Spring fans, from beautiful Maui, Hawaii, where I am with my family on a bit of vacation. It&amp;rsquo;s our daughter&amp;rsquo;s Spring break and so we&amp;rsquo;re enjoying the family time while we can get it! I wanted to take a brief interlude in between the never-enough time on the beach and all the rum to get this week&amp;rsquo;s installment out for y&amp;rsquo;all, so let&amp;rsquo;s &lt;em&gt;dive&lt;/em&gt; right into it! &lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/24/a-bootiful-podcast-event-streaming-guru-jan-svoboda-on-apache-kafka-design-patterns"&gt;A Bootiful Podcast: Event streaming guru Jan Svoboda on Apache Kafka Design Patterns&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/28/an-update-on-java-17-adoption"&gt;An update on Java 17 adoption&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://gkovan.medium.com/build-to-manage-proper-exception-handling-makes-your-applications-easier-to-build-and-manage-9105dbaf2862"&gt;Build To Manage: Proper Exception Handling Makes Your Applications Easier to Build and Manage&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/28/cve-report-published-for-spring-framework"&gt;CVE report published for Spring Framework&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://reflectoring.io/getting-started-with-spring-webflux/"&gt;Getting Started with Spring WebFlux&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/22/initial-aot-support-in-spring-framework-6-0-0-m3"&gt;Initial AOT support in Spring Framework 6.0.0-M3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://openjdk.java.net/projects/jdk/18/"&gt;Java 18 is out!&lt;/a&gt; Get the bits while they&amp;rsquo;re hot! Or at least get Java 17. Wouldn&amp;rsquo;t want to be two major versions behind, would ya?&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://softwaregarden.dev/en/posts/new-java/records/vs-lombok-yet-again-with-builder-pattern/"&gt;Java Records tortured with Lombok yet again (builder edition)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Want an industrial grade Kubernetes distribution? Check out this blog on &lt;a href="https://tanzu.vmware.com/developer/guides/tanzu-application-platform-local-devloper-install/"&gt;how to run Tanzu Application Platform locally on your laptop &lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/24/spring-authorization-server-0-2-3-available-now"&gt;Spring Authorization Server 0.2.3 available now&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/23/spring-batch-5-0-m2-available-now"&gt;Spring Batch 5.0 M2 available now&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/24/spring-boot-2-5-11-available-now"&gt;Spring Boot 2.5.11 available now&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/24/spring-boot-2-6-5-available-now"&gt;Spring Boot 2.6.5 available now&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/24/spring-boot-2-7-0-m3-available-now"&gt;Spring Boot 2.7.0-M3 available now&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/24/spring-boot-3-0-0-m2-available-now"&gt;Spring Boot 3.0.0-M2 available now&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/22/spring-security-6-0-0-m3-and-5-7-0-m3-available-now"&gt;Spring Security 6.0.0-M3 and 5.7.0-M3 available now&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://developer.okta.com/blog/2022/03/24/thymeleaf-security"&gt;Spring Security and Thymeleaf - a great post over on the Okta blog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;In this installment of &lt;em&gt;Spring Tips&lt;/em&gt; , I look at: &lt;a href="https://spring.io/blog/2022/03/23/spring-tips-multitenant-jdbc"&gt;Multitenant JDBC&lt;/a&gt;: enjoy!&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/22/spring-for-graphql-1-0-milestone-6-released"&gt;Spring for GraphQL 1.0 Milestone 6 Released&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;The &lt;a href="https://twitter.com/springgraphql/status/1506976737825107969?s=12"&gt;Spring for GraphQL Team &lt;/a&gt; is now on Twitter! &lt;em&gt;AND&lt;/em&gt; they took the occasion recently to announce that there will soon be Spring GraphQL on RSocket support available! Huzzah!&lt;/li&gt;
+  &lt;li&gt;I dig this: &lt;a href="https://github.com/kagkarlsson/db-scheduler"&gt;kagkarlsson/db-scheduler is a persistent cluster-friendly scheduler for Java&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;and this: &lt;a href="https://github.com/digitalfondue/npjt-extra"&gt;digitalfondue/npjt-extra: A small layer over Spring&amp;rsquo;s NamedParameterJdbcTemplate&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>An update on Java 17+ adoption</title>
     <link rel="alternate" href="https://spring.io/blog/2022/03/28/an-update-on-java-17-adoption" />
@@ -570,52 +622,6 @@ Mono&amp;lt;Project&amp;gt; projectMono = graphQlClient.document(document)&#xD;
 &lt;p&gt;Spring Framework &lt;code&gt;6.0.0-M3&lt;/code&gt; includes &lt;a href="https://github.com/spring-projects/spring-framework/releases/tag/v6.0.0-M3"&gt;33 additional fixes and improvements&lt;/a&gt; specific to the 6.0 branch.&lt;/p&gt;
 &lt;p&gt;This milestone brings a first batch of migration of our AOT (Ahead Of Time) efforts from Spring Native, paving the way for Native support in the wider Spring ecosystem. See the &lt;a href="https://spring.io/blog/2022/03/22/initial-aot-support-in-spring-framework-6-0-0-m3"&gt;follow-up blog post&lt;/a&gt; detailing these and what&amp;rsquo;s next to come.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://projects.spring.io/spring-framework/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-framework"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-framework/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-framework/docs/5.3.17/reference/html/"&gt;Documentation&lt;/a&gt;&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Tools 4.14.0 released</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/03/16/spring-tools-4-14-0-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Martin Lippert</name>
-    </author>
-    <id>tag:spring.io,2022-03-16:4731</id>
-    <updated>2022-03-16T17:54:24Z</updated>
-    <content type="html">&lt;p&gt;Dear Spring Community,&lt;/p&gt;
-&lt;p&gt;I am happy to announce the 4.14.0 release of the Spring Tools 4 for Eclipse, Visual Studio Code, and Theia.&lt;/p&gt;&lt;h4&gt;&lt;a href="#major-changes-to-the-spring-tools-4-for-eclipse-distribution" class="anchor" name="major-changes-to-the-spring-tools-4-for-eclipse-distribution"&gt;&lt;/a&gt;major changes to the Spring Tools 4 for Eclipse distribution&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;updated to Eclipse 2022-03 release (&lt;a href="https://www.eclipse.org/eclipseide/2022-03/"&gt;new and noteworthy&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;&lt;h4&gt;&lt;a href="#fixes-and-improvements" class="anchor" name="fixes-and-improvements"&gt;&lt;/a&gt;fixes and improvements&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;(VSCode)&lt;/em&gt; fixed: VSCode Spring boot tools 1.30.0 error trying to find JVM (&lt;a href="https://github.com/spring-projects/sts4/issues/726"&gt;#726&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;(VSCode)&lt;/em&gt; fixed: vscode &amp;ldquo;Problems&amp;rdquo; diagnostic entries lack &amp;ldquo;source&amp;rdquo; field (&lt;a href="https://github.com/spring-projects/sts4/issues/725"&gt;#725&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;(VSCode)&lt;/em&gt; fixed: orphan vscode extension processes left running (&lt;a href="https://github.com/spring-projects/sts4/issues/704"&gt;#704&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;(VSCode)&lt;/em&gt; fixed: deadlock in language server process avoids process to be shutdown (&lt;a href="https://github.com/spring-projects/sts4/issues/741"&gt;#741&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;(VSCode)&lt;/em&gt; fixed: Outline View is broken again on Windows (&lt;a href="https://github.com/spring-projects/sts4/issues/742"&gt;#742&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;(VSCode)&lt;/em&gt; fixed: boot-java.live-information.automatic-tracking.on is not working on vscode (&lt;a href="https://github.com/spring-projects/sts4/issues/733"&gt;#733&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;(VSCode)&lt;/em&gt; fixed: Java 17 is mis-identified as Java 8 (&lt;a href="https://github.com/spring-projects/sts4/issues/713"&gt;#713&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;(Eclipse)&lt;/em&gt; fixed: Deadlock with Spring LSP in Eclipse 4.23 with STS 4.23 nightlies (&lt;a href="https://github.com/spring-projects/sts4/issues/729"&gt;#729&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;To download the distribution for Eclipse and find links to the marketplace entries for Visual Studio Code and Theia, please go visit:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Spring Tools 4: &lt;a href="https://spring.io/tools/"&gt;https://spring.io/tools/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Detailed changes can be found here: &lt;a href="https://github.com/spring-projects/sts4/wiki/Changelog#2022-03-16-4140-release-incl-language-servers-version-1320"&gt;https://github.com/spring-projects/sts4/wiki/Changelog#2022-03-16-4140-release-incl-language-servers-version-1320&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Spring Tools 4.14.1 is scheduled to be released in late April 2022.&lt;/p&gt;
-&lt;p&gt;Enjoy!&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Tips: Spring Shell and Spring Native</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/03/16/spring-tips-spring-shell-and-spring-native" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2022-03-15:4730</id>
-    <updated>2022-03-16T07:00:00Z</updated>
-    <content type="html">&lt;p&gt;Hi, Spring fans! In this episode &lt;a href="https://twitter.com/starbuxman"&gt;Josh Long (@starbuxman)&lt;/a&gt; looks at the joy of writing fast, native CLI applications with Spring Boot, Spring Shell, GraalVM, and Spring Native&lt;/p&gt;
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/6Os6nL7TtAY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>

@@ -1,19 +1,21 @@
 package com.app.dtos;
 
-public class CuisineDto {
+public class CuisineDTO {
 	private int cuisineId;
 	private String name;
 	private String image;
+	private String description;
 	
-	public CuisineDto() {
+	public CuisineDTO() {
 		
 	}
 
-	public CuisineDto(int cuisineId, String name, String image) {
+	public CuisineDTO(int cuisineId, String name, String image, String description) {
 		super();
 		this.cuisineId = cuisineId;
 		this.name = name;
 		this.image = image;
+		this.description = description;
 	}
 
 	public int getCuisineId() {
@@ -38,6 +40,14 @@ public class CuisineDto {
 
 	public void setImage(String image) {
 		this.image = image;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	@Override

@@ -51,7 +51,7 @@ const SignupUser = () => {
             axios.post(url, body).then((response) => {
                 const result = response.data
 
-                console.log(result)
+                // console.log(result)
 
                 if (result['status'] === 'success') {
                     toast.success('signup success')

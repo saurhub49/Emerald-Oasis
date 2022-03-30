@@ -3,8 +3,13 @@
     height: 228px;
     margin-top: 20px;
     background: rgba(125, 137, 149, 0.17);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.76);
+   
     border-radius: 0px 0px 30px 0px;
+}
+
+.cuisine:hover{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.76);
+    background: rgba(1, 201, 187, 0.17);
 }
 .tag{
     padding-right: 10px;
@@ -15,16 +20,18 @@
 .cuisine-image{
 width: 378.06px;
 height: 228px;
+}
 
+.cuisine-image:hover{
+    size: 10%;
 }
-.cuisine-image{
-    left: 0px;
-}
+
 .cuisine-name{
 width: 197.49px;
 height: 52px;
 left: 979.99px;
 top: 517px;
+align-items: flex-end;
 
 font-family: 'Poppins';
 font-style: normal;

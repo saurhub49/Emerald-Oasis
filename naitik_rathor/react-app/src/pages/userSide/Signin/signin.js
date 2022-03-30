@@ -29,17 +29,18 @@ const Signin = () => {
 
       axios.post(url, body).then((response) => {
         const result = response.data
-        console.log(result)
+        // console.log(result)
         if (result['status'] == 'success') {
-          toast.success('Welcome to the application')
+          toast.success('Welcome to Emerald Oasis')
 
           const { userId, firstName, lastName } = result['data']
 
           sessionStorage['userId'] = userId
           sessionStorage['firstName'] = firstName
           sessionStorage['lastName'] = lastName
+          sessionStorage['loginStatus'] = '1'
 
-          navigate('/customerhome')
+          navigate('/homepage')
         } else {
           toast.error('Invalid user name or password')
         }

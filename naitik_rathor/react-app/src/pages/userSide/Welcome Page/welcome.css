@@ -1,3 +1,12 @@
+.oasis1{
+    font-family: 'DM Mono';
+font-style: normal;
+font-weight: 500;
+font-size: 30px;
+text-align: center;
+padding: 10px;
+color: white;
+}
 
 .eologo {
     height: 50px;
@@ -24,8 +33,9 @@ li{
 }
 .nav-link:hover{
     color: #3EF11C!important;
-    border-bottom:  solid #3EF11C;
+    /* border-bottom:  solid #3EF11C; */
 }
+
 
 .nav-link{
     text-decoration: none !important;
@@ -48,10 +58,6 @@ li{
 
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 500);
 }
-
-/* .employee-icon-box{
-    background-color: aqua;
-} */
 
 @media(max-width: 767px)
 {}
