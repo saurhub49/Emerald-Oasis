@@ -22,6 +22,7 @@ const Cuisine = (props) => {
           <div >
             <img className="tag" scr={tag1}></img>
             <span className="cuisine-name">{cuisine.name}</span>
+            <div className="#">{cuisine.description}</div>
             <div></div>
           </div>
         </div>

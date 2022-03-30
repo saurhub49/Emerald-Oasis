@@ -18,6 +18,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import com.app.entities.constants.OrderStatus;
+
 
 @Entity
 @Table(name = "Orders")

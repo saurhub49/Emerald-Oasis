@@ -6,17 +6,14 @@ import Header1 from "../../../components/Header1/header1"
 import { URL } from "../../../config"
 import eclipse from "../../../assets/eclipse2.png"
 import '../HomePage/homePage.css'
+import Carousel from "../../../components/CuisineCarousel/carousel"
 
 const HomePage = () => {
   const [cuisines, setCuisines] = useState([])
 
-  useEffect(() => {
-    getCuisines()
-  }, [])
-
-  const url = `${URL}/user/cuisines`
-
   const getCuisines = () => {
+
+    const url = `${URL}/user/cuisines`
 
     axios.get(url).then((response) => {
       const result = response.data
@@ -28,6 +25,11 @@ const HomePage = () => {
       }
     })
   }
+
+  useEffect(() => {
+    getCuisines()
+  }, [])
+
   return (<>
     <div className="container">
       <Header1></Header1>
@@ -42,11 +44,11 @@ const HomePage = () => {
         </div>
         <div className="col-8">
           <img className="eclipse1" src={eclipse}></img>
-          {/* <div className="">
+          <div className="">
             {cuisines.map((cuisine) => {
               return <Carousel cuisine={cuisine}></Carousel>
             })}
-          </div> */}
+          </div>
         </div>
       </div>
       <div className="demo">

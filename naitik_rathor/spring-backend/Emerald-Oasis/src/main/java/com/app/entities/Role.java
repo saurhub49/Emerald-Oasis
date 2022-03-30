@@ -4,12 +4,15 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.app.entities.constants.RoleName;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
@@ -20,10 +23,11 @@ public class Role {
 	@Id
 	@Column
 	private int roleId;
-	private String roleName;
+	@Enumerated(EnumType.STRING)
+	private RoleName roleName;
 	@OneToMany(mappedBy = "role")
 	private List<User> userList;
-	public Role(int roleId, String roleName, List<User> userList) {
+	public Role(int roleId, RoleName roleName, List<User> userList) {
 		super();
 		this.roleId = roleId;
 		this.roleName = roleName;
@@ -42,10 +46,10 @@ public class Role {
 	public void setRoleId(int roleId) {
 		this.roleId = roleId;
 	}
-	public String getRoleName() {
+	public RoleName getRoleName() {
 		return roleName;
 	}
-	public void setRoleName(String roleName) {
+	public void setRoleName(RoleName roleName) {
 		this.roleName = roleName;
 	}
 	@JsonIgnore

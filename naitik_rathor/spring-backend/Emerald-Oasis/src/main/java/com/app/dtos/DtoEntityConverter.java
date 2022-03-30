@@ -3,9 +3,10 @@ package com.app.dtos;
 import org.springframework.stereotype.Component;
 
 import com.app.entities.Cuisine;
+import com.app.entities.EmployeeDetails;
 import com.app.entities.FoodItem;
 import com.app.entities.Order;
-import com.app.entities.OrderStatus;
+import com.app.entities.constants.EmployeeStatus;
 import com.app.entities.Role;
 import com.app.entities.User;
 
@@ -73,6 +74,7 @@ public class DTOEntityConverter {
 		dto.setCuisineId(entity.getCuisineId());
 		dto.setName(entity.getName());
 		dto.setImage(entity.getImage());
+		dto.setDescription(entity.getDescription());
 		return dto;
 	}
 	
@@ -81,6 +83,7 @@ public class DTOEntityConverter {
 		entity.setCuisineId(dto.getCuisineId());
 		entity.setName(dto.getName());
 		entity.setImage(dto.getImage());
+		entity.setDescription(dto.getDescription());
 		return entity;		
 	}
 	
@@ -97,17 +100,29 @@ public class DTOEntityConverter {
 			dto.setEmployeeId(order.getEmployee().getUserId());
 		return dto;
 	}
-	public Order toOrderEntity(OrderDTO dto) {
-		Order order = new Order();
-		order.setOrderId(dto.getOrderId());
-		order.setOrderedTimeStamp(dto.getOrderedTimeStamp());
-		order.setDeliveredTimeStamp(dto.getDeliveredTimeStamp());
-		order.setTotalAmount(dto.getTotalAmount());
-		order.setOrderStatus(OrderStatus.valueOf((dto.getOrderStatus()).toUpperCase()));
-		order.setAddress(dto.getAddress());
-		order.setUser(new User(dto.getUserId()));
-		order.setEmployee(new User(dto.getEmployeeId()));
-		return order;
+	
+	public EmployeeDetailsDTO toEmployeeDetailsDTO(EmployeeDetails entity) {
+		EmployeeDetailsDTO dto = new EmployeeDetailsDTO();
+		dto.setEmployeeDetailsId(entity.getEmployeeDetailsId());
+		dto.setEmployeeStatus(entity.getEmployeeStatus().toString());
+		dto.setJoinDate(entity.getJoinDate());
+		dto.setPanCard(entity.getPanCard());
+		dto.setSalary(entity.getSalary());
+		dto.setUid(entity.getUid());
+		dto.setEmployeeId(entity.getEmployee().getUserId());
+		return dto;
+	}
+	
+	public EmployeeDetails toEmployeeDetailsEntity(EmployeeDetailsDTO dto) {
+		EmployeeDetails entity = new EmployeeDetails();
+		entity.setEmployeeDetailsId(dto.getEmployeeDetailsId());
+		entity.setEmployeeStatus(EmployeeStatus.PENDING);
+		entity.setJoinDate(dto.getJoinDate());
+		entity.setPanCard(dto.getPanCard());
+		entity.setSalary(dto.getSalary());
+		entity.setUid(dto.getUid());
+		entity.setEmployee(new User(dto.getEmployeeId()));
+		return entity;
 	}
 
 }

@@ -9,6 +9,7 @@ import HomePage from './pages/userSide/HomePage/homePage'
 import CuisineFood from './pages/userSide/CuisineFood/cuisineFood'
 import BestSeller from './pages/userSide/BestSeller/bestSeller'
 import Demo from './pages/userSide/demo/demo'
+import Carousel from './components/CuisineCarousel/carousel'
 
 const AuthorizeUser = () => {
   const loginStatus = sessionStorage['loginStatus']
@@ -25,6 +26,7 @@ const AuthorizeUser = () => {
             <Route path="/signupEmployee" element={<SignupEmployee />} />
             <Route path="/homepage" element={<AuthorizeUser />} />
             <Route path="/foodItems" element={<CuisineFood />} />
+            <Route path="/carousel" element={<Carousel />} />
             <Route path="/bestSeller" element={<BestSeller />} />
             <Route path="/demo" element={<Demo />} />
 

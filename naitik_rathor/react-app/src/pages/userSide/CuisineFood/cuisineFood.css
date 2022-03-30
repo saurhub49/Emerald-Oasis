@@ -1,0 +1,11 @@
+.cuisine-tabs{
+    position: absolute;
+    margin-top: 100px;
+width: 100%;
+height: 270px;
+left: 0px;
+/* top: 0px; */
+
+background-color: #000000;
+box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
