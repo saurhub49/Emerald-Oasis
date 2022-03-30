@@ -29,6 +29,15 @@ color: #000000;
     color:  white !important;
 }
 
+.cart{
+    height: 50px;
+    width: 50px;
+}
+
+.badge{
+    position: absolute;
+    margin-left: 30px;
+}
 /* .items {
     color: #ffffff !important;
     margin: 0 -.25rem;

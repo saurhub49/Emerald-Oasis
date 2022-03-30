@@ -33,9 +33,10 @@ const Signin = () => {
         if (result['status'] == 'success') {
           toast.success('Welcome to Emerald Oasis')
 
-          const { userId, firstName, lastName } = result['data']
+          const { userId, firstName, lastName, roleId } = result['data']
 
           sessionStorage['userId'] = userId
+          sessionStorage['roleId'] = roleId
           sessionStorage['firstName'] = firstName
           sessionStorage['lastName'] = lastName
           sessionStorage['loginStatus'] = '1'
