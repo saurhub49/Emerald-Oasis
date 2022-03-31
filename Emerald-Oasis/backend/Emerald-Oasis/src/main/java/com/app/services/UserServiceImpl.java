@@ -1,6 +1,7 @@
 package com.app.services;
 
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -20,8 +21,10 @@ import com.app.daos.UserDao;
 import com.app.dtos.Credentials;
 import com.app.dtos.CuisineDTO;
 import com.app.dtos.DTOEntityConverter;
+import com.app.dtos.EmployeeContactDetailsDTO;
 import com.app.dtos.FoodItemDTO;
 import com.app.dtos.OrderDTO;
+import com.app.dtos.RoleDTO;
 import com.app.dtos.UserDTO;
 import com.app.entities.Cuisine;
 import com.app.entities.FoodItem;
@@ -64,6 +67,12 @@ public class UserServiceImpl {
 		return userDto;
 	}
 	
+	public UserDTO saveEditedProfile(UserDTO userDTO) {
+		User user = converter.toUserEntity(userDTO);
+		user = userDao.save(user);
+		return converter.toUserDTO(user);
+	}
+	
 	public UserDTO findUserByEmailAndPassword(Credentials cred) {
 		User dbUser = userDao.findByEmail(cred.getEmail());
 		String rawPassword = cred.getPassword();
@@ -73,6 +82,11 @@ public class UserServiceImpl {
 			return result;
 		}
 		return null;
+	}
+	
+	public RoleDTO getRole(int roleId) {
+		Role role = roleDao.getById(roleId);
+		return converter.toRoleDTO(role);
 	}
 	
 	public int getUserRoleId(RoleName roleName) {
@@ -103,6 +117,17 @@ public class UserServiceImpl {
 		return cart.get(0);
 	}
 	
+	public OrderDTO getOngoingOrder(int userId) {
+		User user = userDao.getById(userId);
+		List<Order> list = orderDao.findByOrderStatusAndUser(OrderStatus.PLACED, user);
+		if(!list.isEmpty())
+			return converter.toOrderDTO(list.get(0));
+		list = orderDao.findByOrderStatusAndUser(OrderStatus.ONTHEWAY, user);
+		if(!list.isEmpty())
+			return converter.toOrderDTO(list.get(0));
+		return null;
+	}
+	
 	public List<FoodItemDTO> addItemToCart(int userId, int itemId) {
 		User user = userDao.getById(userId);
 		FoodItem item = foodItemDao.getById(itemId);
@@ -128,6 +153,8 @@ public class UserServiceImpl {
 	public List<FoodItemDTO> deleteItemFromCart(int userId, int itemId) {
 		FoodItem item = foodItemDao.getById(itemId);
 		Order order = getCart(userId);
+		if(order == null)
+			return null;
 		
 		List<OrderDetails> itemList = orderDetailsDao.findByFoodItemAndOrder(item, order);
 		if(itemList.isEmpty()) 
@@ -145,6 +172,29 @@ public class UserServiceImpl {
 		
 		List<OrderDetails> orderDetailsList = orderDetailsDao.findByOrder(order);
 		return orderDetailsList.stream().map(odl -> converter.toFoodItemDTO(odl.getFoodItem())).collect(Collectors.toList());
+	}
+	
+	public List<FoodItemDTO> getCartItems(int userId) {
+		Order order = getCart(userId);
+		List<OrderDetails> orderDetailsList = new ArrayList<>();
+		if(order != null) {
+			orderDetailsList = orderDetailsDao.findByOrder(order);
+			return orderDetailsList.stream().map(odl -> converter.toFoodItemDTO(odl.getFoodItem())).collect(Collectors.toList());
+		}
+		OrderDTO dto = getOngoingOrder(userId);
+		if(dto != null) {
+			order = orderDao.getById(dto.getOrderId());
+			orderDetailsList = orderDetailsDao.findByOrder(order);
+			return orderDetailsList.stream().map(odl -> converter.toFoodItemDTO(odl.getFoodItem())).collect(Collectors.toList());
+		}
+		return null;
+	}
+	
+	public OrderDTO getCartOrder(int userId) {
+		Order order = getCart(userId);
+		if(order == null)
+			return null;
+		return converter.toOrderDTO(order);
 	}
 	
 	public OrderDTO placeOrder(int userId) {
@@ -165,5 +215,12 @@ public class UserServiceImpl {
 		User user = new User(userId);
 		List<Order> orders = orderDao.findByUser(user);
 		return orders.stream().map(o -> converter.toOrderDTO(o)).collect(Collectors.toList());
+	}
+	
+	public EmployeeContactDetailsDTO getEmployeeContactDetails(int userId) {
+		OrderDTO order = getOngoingOrder(userId);
+		int employeeId = order.getEmployeeId();
+		User user = userDao.getById(employeeId);
+		return converter.toEmployeeContactDetailsDTO(user);
 	}
 }

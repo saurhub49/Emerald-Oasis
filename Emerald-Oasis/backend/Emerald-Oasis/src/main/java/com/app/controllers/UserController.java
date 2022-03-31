@@ -14,8 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.app.config.Response;
-import com.app.dtos.Credentials;
-import com.app.dtos.CuisineDTO;
+import com.app.dtos.EmployeeContactDetailsDTO;
 import com.app.dtos.FoodItemDTO;
 import com.app.dtos.OrderDTO;
 import com.app.dtos.UserDTO;
@@ -38,8 +37,19 @@ public class UserController {
 		return Response.success(result);
 	}
 	
+	@PutMapping("/user/profile")
+	public ResponseEntity<?> editProfile(@RequestBody UserDTO userDTO) {
+		UserDTO result = userService.saveEditedProfile(userDTO);
+		if(result == null)
+			return Response.error("Unexpected error !");
+		return Response.success(result);
+	}
+	
 	@PutMapping("/user/{userid}/order/additem/{itemid}")
 	public ResponseEntity<?> addItemToCart(@PathVariable("userid") int userId, @PathVariable("itemid") int itemId) {
+		OrderDTO order = userService.getOngoingOrder(userId); 
+		if(order != null)
+			return Response.error("Previous order still in progress");
 		List<FoodItemDTO> result = userService.addItemToCart(userId, itemId);
 		if(result == null)
 			return Response.error("Item unavailable !");
@@ -50,8 +60,29 @@ public class UserController {
 	public ResponseEntity<?> deleteItemFromCart(@PathVariable("userid") int userId, @PathVariable("itemid") int itemId) {
 		List<FoodItemDTO> result = userService.deleteItemFromCart(userId, itemId);
 		if(result == null)
+			return Response.error("Order already placed");
+		return Response.success(result);
+	}
+	
+	@GetMapping("/user/cart/{id}")
+	public ResponseEntity<?> getCartItems(@PathVariable("id") int userId) {
+		List<FoodItemDTO> result = userService.getCartItems(userId);
+		if(result == null)
 			return Response.error("Unexpected error !");
 		return Response.success(result);
+	}
+	
+	@GetMapping("/user/order/cart/{id}")
+	public ResponseEntity<?> getUnDeliveredOrder(@PathVariable("id") int userId) {
+		OrderDTO result = userService.getCartOrder(userId);
+		if(result != null)
+			return Response.success(result);
+		result = userService.getOngoingOrder(userId);
+		if(result != null)
+			return Response.success(result);
+		
+		return Response.error("Cart is empty !");
+		
 	}
 	
 	@PutMapping("/user/order/placeorder/{id}")
@@ -66,6 +97,14 @@ public class UserController {
 	public ResponseEntity<?> orderHistory(@PathVariable("id") int userId) {
 		List<OrderDTO> result = userService.userOrderHistory(userId);
 		return Response.success(result);
+	}
+	
+	@GetMapping("/user/order/getemployee/{id}")
+		public ResponseEntity<?> getEmployeeContactDetails(@PathVariable("id") int userId) {
+			EmployeeContactDetailsDTO result = userService.getEmployeeContactDetails(userId);
+			if(result == null)
+				return Response.error("Unexpected error !");
+			return Response.success(result);
 	}
 	
 }

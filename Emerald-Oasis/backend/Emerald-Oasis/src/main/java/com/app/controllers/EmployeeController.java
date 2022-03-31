@@ -59,6 +59,14 @@ public class EmployeeController {
 		return Response.success(result); 
 	}
 	
+	@GetMapping("/employee/acceptedorder/{id}")
+	public ResponseEntity<?> getAcceptedOrder(@PathVariable("id") int employeeId) {
+		OrderDTO result = employeeService.getAcceptedOrder(employeeId);
+		if(result == null)
+			return Response.error("Unexpected error !");
+		return Response.success(result); 
+	}
+	
 	@PutMapping("/employee/confirmdelivery/{orderid}") 
 	public ResponseEntity<?> confirmDelivery(@PathVariable("orderid") int orderId) {
 		OrderDTO result =  employeeService.confirmOrder(orderId);

@@ -50,6 +50,14 @@ public class EmployeeServiceImpl {
 		return orders.stream().map(o -> converter.toOrderDTO(o)).collect(Collectors.toList());
 	}
 	
+	public OrderDTO getAcceptedOrder(int employeeId) {
+		User employee = new User(employeeId);
+		List<Order> acceptedOrders = orderDao.findByOrderStatusAndEmployee(OrderStatus.ONTHEWAY, employee);
+		if(acceptedOrders.isEmpty())
+			return null;
+		return converter.toOrderDTO(acceptedOrders.get(0));
+	}
+	
 	public OrderDTO confirmOrder(int orderId) {
 		Order order = orderDao.getById(orderId);
 		order.setDeliveredTimeStamp(new Date());
