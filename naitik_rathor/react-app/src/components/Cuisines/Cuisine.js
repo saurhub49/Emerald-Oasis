@@ -8,13 +8,11 @@ const Cuisine = (props) => {
   const navigate = useNavigate()
 
   const getCuisineId = () => {
-    sessionStorage['name'] = cuisine.name
-    // console.log(cuisine.name)
-    navigate('/foodItems', { state: { id: cuisine.cuisineId } })
+    navigate('/foodItems',{ state: { id : cuisine.cuisineId, cuisineName : cuisine.name }})
   }
 
   return (
-    <div >
+    <div className="" >
       <div className="row cuisine" onClick={getCuisineId}>
         <div className="col-4">
           <div >

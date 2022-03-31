@@ -94,6 +94,11 @@ public class AdminServiceImpl {
 		return list.get(0);
 	}
 	
+	public EmployeeDetailsDTO getEmployeeDetails(int employeeId) {
+		EmployeeDetails emp = getEmployee(employeeId);
+		return converter.toEmployeeDetailsDTO(emp);
+	}
+	
 	public EmployeeDetailsDTO editSalary(double salary, int employeeId) {
 		EmployeeDetails empDetails = getEmployee(employeeId);
 		if(empDetails == null)

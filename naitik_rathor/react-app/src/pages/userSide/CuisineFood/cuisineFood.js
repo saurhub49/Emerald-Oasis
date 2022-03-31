@@ -12,7 +12,7 @@ const CuisineFood = () => {
     const { state } = useLocation()
     const [foodItems, setFoodItems] = useState([])
     const [cuisines, setCuisines] = useState([])
-    const { name } = sessionStorage
+    const { cuisineName } = state
     // console.log(name)
 
     const getFoodItems = () => {
@@ -56,8 +56,8 @@ const CuisineFood = () => {
                 return <HorizonCuisine cuisine={cuisine}></HorizonCuisine>
             })}
         </div>
-        <div className="name">{name} Cuisine</div>
-        <div className="food-items">
+        <div className="name">{cuisineName} Cuisine</div>
+        <div className="food-items ">
             {foodItems.map((foodItem) => {
                 return <FoodItem foodItem={foodItem}></FoodItem>
             })}
