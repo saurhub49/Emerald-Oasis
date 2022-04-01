@@ -1,6 +1,6 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-import Header1 from "../../../components/Header1/header1"
+import Header1 from "../../../components/UserHeader/header1"
 import { toast } from "react-toastify"
 import { URL } from "../../../config"
 import CartItem from "../../../components/Cart/cartComp"

@@ -1,6 +1,6 @@
-import { Link, Navigate, useLocation, useNavigate } from "react-router-dom"
+import { useLocation, useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react"
-import { collapseToast, toast } from "react-toastify"
+import { toast } from "react-toastify"
 import axios from "axios"
 import { URL } from "../../../../config"
 import AdminHeader from "../../../../components/AdminHeader/adminHeader"

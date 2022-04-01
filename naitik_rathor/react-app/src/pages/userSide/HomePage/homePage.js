@@ -2,7 +2,7 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 import { toast } from "react-toastify"
 import Cuisine from "../../../components/Cuisines/Cuisine"
-import Header1 from "../../../components/Header1/header1"
+import Header1 from "../../../components/UserHeader/header1"
 import { URL } from "../../../config"
 import eclipse from "../../../assets/eclipse2.png"
 import '../HomePage/homePage.css'
@@ -50,7 +50,7 @@ const HomePage = () => {
           </div> */}
         </div>
       </div>
-      <div className="demo main-div">
+      <div className="main-div">
         {cuisines.map((cuisine) => {
           return <Cuisine cuisine={cuisine}></Cuisine>
         })}

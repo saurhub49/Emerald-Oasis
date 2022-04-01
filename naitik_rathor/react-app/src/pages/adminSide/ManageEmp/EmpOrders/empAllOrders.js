@@ -32,9 +32,9 @@ const EmpAllOrders = () => {
     return <div className="container">
         <AdminHeader></AdminHeader>
         <div className="main-div">
-        <label className="emp-details">Orders of {empName}</label>
+        <label className="emp-details">Order History of {empName}</label>
             {allOrders.length < 1 &&
-                <div className="text-center fs-3 fw-light">There is no Order for {empName}</div>
+                <div className="text-center fs-3 fw-light">Order History is Empty for {empName}</div>
             }
             {allOrders.length > 0 &&
                 <table class="table">

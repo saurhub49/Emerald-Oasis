@@ -34,21 +34,24 @@ const AdminHeader = () => {
                             <Link className="nav-link items" to="/homepage">HOME</Link>
                         </li>
                         <li className="nav-item ">
-                            <Link className="nav-link items" to="/employees">Employees</Link>
+                            <Link className="nav-link items" to="/employees">EMPLOYEES</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link items" to="/customers">Customers</Link>
+                            <Link className="nav-link items" to="/customers">CUSTOMERS</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link items" to="/allOrders">All Orders</Link>
+                            <Link className="nav-link items" to="/cuisinesAll">CUISINES</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link items" to="/allOrders">ORDERS</Link>
                         </li>
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle items" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <label className="items">{firstName}</label>
                             </a>
                             <ul className="dropdown-menu dropdown-menu-dark items" aria-labelledby="navbarDarkDropdownMenuLink">
-                                <li><a className="dropdown-item" href="/profile">Profile</a></li>
-                                <li><a className="dropdown-item" href="#" onClick={logoutUser}>Logout</a></li>
+                                <li><a className="dropdown-item" href="/profile">PROFILE</a></li>
+                                <li><a className="dropdown-item" href="#" onClick={logoutUser}>LOGOUT</a></li>
                             </ul>
                         </li>
                     </ul>

@@ -1,5 +1,6 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
+import { Navigate, useNavigate } from "react-router"
 import { Link } from "react-router-dom"
 import { toast } from "react-toastify"
 import AdminHeader from "../../../../components/AdminHeader/adminHeader"
@@ -8,6 +9,8 @@ import './cuisinesAll.css'
 
 const CuisinesAll = () => {
     const [cuisines, setCuisines] = useState([])
+
+    const navigate = useNavigate()
 
     const getCuisines = () => {
 
@@ -40,8 +43,9 @@ const CuisinesAll = () => {
             {
                 cuisines.map((cuisine) => {
                     return (
-                        <div className="container1 float-start">
-                            <img src={cuisine.image} alt="Avatar" className="float-start image-size image"></img>
+                        <div className="cui-box float-start" onClick={() => {
+                            navigate('/allFoods', { state: { id: cuisine.cuisineId, cuisName: cuisine.name } })
+                        }}>
                             <div className="overlay">
                                 <div className="text">{cuisine.name}</div>
                             </div>
