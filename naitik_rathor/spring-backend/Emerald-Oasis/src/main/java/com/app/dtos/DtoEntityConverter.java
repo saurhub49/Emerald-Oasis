@@ -22,6 +22,9 @@ public class DTOEntityConverter {
 		dto.setEmail(user.getEmail());
 		dto.setPhoneNo(user.getPhoneNo());
 		dto.setPassword(user.getPassword());
+		dto.setBirthdate(user.getBirthdate());
+		dto.setAddressLine(user.getAddressLine());
+		dto.setGender(user.getGender());
 		dto.setRoleId((user.getRole()).getRoleId());
 		
 		return dto;
@@ -36,9 +39,19 @@ public class DTOEntityConverter {
 		user.setEmail(dto.getEmail());
 		user.setPhoneNo(dto.getPhoneNo());
 		user.setPassword(dto.getPassword());
+		user.setAddressLine(dto.getAddressLine());
+		user.setBirthdate(dto.getBirthdate());
+		user.setGender(dto.getGender());
 		user.setRole(new Role(dto.getRoleId()));
 		
 		return user;
+	}
+	
+	public RoleDTO toRoleDTO(Role entity) {
+		RoleDTO dto = new RoleDTO();
+		dto.setRoleId(entity.getRoleId());
+		dto.setRoleName(entity.getRoleName().toString());
+		return dto;
 	}
 	
 	public FoodItemDTO toFoodItemDTO(FoodItem entity) {
@@ -123,6 +136,16 @@ public class DTOEntityConverter {
 		entity.setUid(dto.getUid());
 		entity.setEmployee(new User(dto.getEmployeeId()));
 		return entity;
+	}
+	
+	public EmployeeContactDetailsDTO toEmployeeContactDetailsDTO(User entity) {
+		EmployeeContactDetailsDTO dto = new EmployeeContactDetailsDTO();
+		dto.setEmployeeId(entity.getUserId());
+		dto.setEmail(entity.getEmail());
+		dto.setFirstName(entity.getFirstName());
+		dto.setLastName(entity.getLastName());
+		dto.setPhoneNo(entity.getPhoneNo());
+		return dto;
 	}
 
 }

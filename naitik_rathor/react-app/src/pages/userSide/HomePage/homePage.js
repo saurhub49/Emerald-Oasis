@@ -6,7 +6,6 @@ import Header1 from "../../../components/Header1/header1"
 import { URL } from "../../../config"
 import eclipse from "../../../assets/eclipse2.png"
 import '../HomePage/homePage.css'
-import Carousel from "../../../components/CuisineCarousel/carousel"
 
 const HomePage = () => {
   const [cuisines, setCuisines] = useState([])
@@ -44,14 +43,14 @@ const HomePage = () => {
         </div>
         <div className="col-8">
           <img className="eclipse1" src={eclipse}></img>
-          <div className="">
+          {/* <div className="">
             {cuisines.map((cuisine) => {
               return <Carousel cuisine={cuisine}></Carousel>
             })}
-          </div>
+          </div> */}
         </div>
       </div>
-      <div className="demo">
+      <div className="demo main-div">
         {cuisines.map((cuisine) => {
           return <Cuisine cuisine={cuisine}></Cuisine>
         })}

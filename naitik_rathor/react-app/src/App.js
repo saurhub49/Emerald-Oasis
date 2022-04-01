@@ -8,31 +8,26 @@ import Welcome from './pages/userSide/Welcome Page/welcome'
 import HomePage from './pages/userSide/HomePage/homePage'
 import CuisineFood from './pages/userSide/CuisineFood/cuisineFood'
 import BestSeller from './pages/userSide/BestSeller/bestSeller'
-import Carousel from './components/CuisineCarousel/carousel'
 import Demo from './pages/demo/demo'
 import AdminHome from './pages/adminSide/HomePage/adminHome'
 import EmployeeHome from './pages/employeeSide/HomePage/employeeHome'
+import Customers from './pages/adminSide/ManageCust/Customers/customers'
+import EmpDetails from './pages/adminSide/ManageEmp/EmpDetaills/empDetails'
+import Employees from './pages/adminSide/ManageEmp/Employees/employees'
+import Cart from './pages/userSide/Cart/cart'
+import CustDetails from './pages/adminSide/ManageCust/CustDetails/custDetails'
+import CuisinesAll from './pages/adminSide/ManageCuis/Cuisines/cuisinesAll'
+import AddCuisine from './pages/adminSide/ManageCuis/AddCuisine/addCuisine'
+import AllOrders from './pages/adminSide/ManageOrders/AllOrders/allOrders'
 
 const AuthorizeUser = () => {
   const loginStatus = sessionStorage['loginStatus']
   const roleId = sessionStorage['roleId']
   return loginStatus == '1' ? roleId == '1' ? <AdminHome /> : roleId == '2' ? <EmployeeHome /> : <HomePage /> : <Welcome />
 
-  // if(loginStatus=='1'){
-  //   if(roleId=='1'){
-  //     return <AdminHome />
-  //   }
-  //   else if(roleId=='2'){
-  //     return <EmployeeHome />
-  //   }
-  //   else if(roleId=='3'){
-  //     return <HomePage />
-  //   }
-  // }
-  // else{
-  //   return <Welcome />
-  // }
 }
+
+console.log(sessionStorage)
 function App() {
   return (
     <div className="">
@@ -44,9 +39,16 @@ function App() {
           <Route path="/signupEmployee" element={<SignupEmployee />} />
           <Route path="/homepage" element={<AuthorizeUser />} />
           <Route path="/foodItems" element={<CuisineFood />} />
-          <Route path="/carousel" element={<Carousel />} />
           <Route path="/bestSeller" element={<BestSeller />} />
           <Route path="/demo" element={<Demo />} />
+          <Route path="/employees" element={<Employees />} />
+          <Route path="/customers" element={<Customers />} />
+          <Route path="/empDetails" element={<EmpDetails />} />
+          <Route path="/custDetails" element={<CustDetails />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/cuisinesAll" element={<CuisinesAll />} />
+          <Route path="/addCuisine" element={<AddCuisine />} />
+          <Route path="/allOrders" element={<AllOrders />} />
         </Routes>
       </BrowserRouter>
       <ToastContainer theme="colored"

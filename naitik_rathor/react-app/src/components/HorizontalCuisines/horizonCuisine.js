@@ -8,7 +8,8 @@ const HorizonCuisine = (props) => {
     const navigate = useNavigate()
 
     const getCuisineId = () => {
-        navigate('/foodItems', { state: { id: cuisine.cuisineId } })
+        navigate('/foodItems',{ state: { id : cuisine.cuisineId, cuisineName : cuisine.name }})
+        window.location.reload(false)
     }
 
     return (

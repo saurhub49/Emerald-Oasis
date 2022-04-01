@@ -139,6 +139,14 @@ public class AdminController {
 		return Response.success(result);
 	}
 	
+	@GetMapping("/admin/employeedetails/{id}")
+	public ResponseEntity<?> getEmployeeDetails(@PathVariable("id") int employeeId) {
+		EmployeeDetailsDTO result = adminService.getEmployeeDetails(employeeId);
+		if(result == null)
+			return Response.error("Unexpected error !");
+		return Response.success(result);
+	}
+	
 	@GetMapping("/admin/getuser/{id}")
 	public ResponseEntity<?> getUser(@PathVariable("id") int userId) {
 		UserDTO result = adminService.getUserById(userId);

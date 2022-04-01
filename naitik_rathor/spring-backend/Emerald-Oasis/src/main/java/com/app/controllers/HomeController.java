@@ -15,6 +15,7 @@ import com.app.config.Response;
 import com.app.dtos.Credentials;
 import com.app.dtos.CuisineDTO;
 import com.app.dtos.FoodItemDTO;
+import com.app.dtos.RoleDTO;
 import com.app.dtos.UserDTO;
 import com.app.services.UserServiceImpl;
 
@@ -39,6 +40,11 @@ public class HomeController {
 		return Response.success(result);
 	}
 	
+	@GetMapping("/user/role/{id}")
+	public ResponseEntity<?> getRole(@PathVariable("id") int roleId) {
+		RoleDTO result = userService.getRole(roleId);
+		return Response.success(result);
+	}
 	
 	@GetMapping("/user/cuisines")
 	public ResponseEntity<?> findAllCuisines() {

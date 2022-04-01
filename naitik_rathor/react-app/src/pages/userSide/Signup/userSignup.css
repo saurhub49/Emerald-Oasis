@@ -60,3 +60,13 @@ input::placeholder {
   margin-left: 3%;
   margin-right: 3%;
 }
+
+.oasis1{
+  font-family: 'DM Mono';
+font-style: normal;
+font-weight: 500;
+font-size: 30px;
+text-align: center;
+padding: 10px;
+color: white;
+}

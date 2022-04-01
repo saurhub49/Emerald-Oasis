@@ -14,4 +14,5 @@ public interface OrderDao extends JpaRepository<Order, Integer> {
 	List<Order> findByOrderStatus(OrderStatus status);
 	List<Order> findByUser(User user);
 	List<Order> findByEmployee(User employee);
+	List<Order> findByOrderStatusAndEmployee(OrderStatus status, User employee);
 }

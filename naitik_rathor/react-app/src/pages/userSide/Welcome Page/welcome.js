@@ -35,7 +35,7 @@ const Welcome = () => {
                                 <Link className="nav-link" to="/signupUser">SIGNUP</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="btn btn-outline-primary" href="./signin" >Login</a>
+                                <a href="./signin"><button className="btn btn-outline-primary"  >Login</button></a>
                             </li>
                         </ul>
                     </div>
