@@ -1,27 +1,27 @@
 package com.app.dtos;
 
-public class EmployeeContactDetailsDTO {
-	private int employeeId;
+public class UserContactDetailsDTO {
+	private int userId;
 	private String firstName;
 	private String lastName;
 	private String email;
 	private String phoneNo;
-	public EmployeeContactDetailsDTO() {
+	public UserContactDetailsDTO() {
 		super();
 	}
-	public EmployeeContactDetailsDTO(int employeeId, String firstName, String lastName, String email, String phoneNo) {
+	public UserContactDetailsDTO(int userId, String firstName, String lastName, String email, String phoneNo) {
 		super();
-		this.employeeId = employeeId;
+		this.userId = userId;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
 		this.phoneNo = phoneNo;
 	}
-	public int getEmployeeId() {
-		return employeeId;
+	public int getUserId() {
+		return userId;
 	}
-	public void setEmployeeId(int employeeId) {
-		this.employeeId = employeeId;
+	public void setUserId(int employeeId) {
+		this.userId = employeeId;
 	}
 	public String getFirstName() {
 		return firstName;
@@ -49,7 +49,7 @@ public class EmployeeContactDetailsDTO {
 	}
 	@Override
 	public String toString() {
-		return "EmployeeContactDetailsDTO [employeeId=" + employeeId + ", firstName=" + firstName + ", lastName="
+		return "EmployeeContactDetailsDTO [userId=" + userId + ", firstName=" + firstName + ", lastName="
 				+ lastName + ", email=" + email + ", phoneNo=" + phoneNo + "]";
 	}
 	

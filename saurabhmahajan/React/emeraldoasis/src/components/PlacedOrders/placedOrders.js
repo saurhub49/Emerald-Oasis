@@ -1,4 +1,6 @@
 
+import axios from 'axios'
+import { toast } from 'react-toastify'
 import '../../components/PlacedOrders/placedOrders.css'
 import { URL } from '../../config'
 import {formatDate} from '../../utils'
@@ -8,9 +10,14 @@ const PlacedOrder = (props) => {
     const { order } = props
 
     const acceptOrder = (id) => {
-        console.log(id)
-        console.log(userId)
         const url = `${URL}/employee/${userId}/acceptorder/${id}`
+        axios.put(url).then((response) => {
+            const result = response.data
+            if(result.status === 'success') {
+                toast.success("Order accepted")
+                window.location.reload(false)
+            }
+        })
     } 
 
 

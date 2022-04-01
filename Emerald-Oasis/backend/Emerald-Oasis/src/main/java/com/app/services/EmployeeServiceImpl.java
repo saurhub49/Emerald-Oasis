@@ -11,9 +11,12 @@ import org.springframework.stereotype.Service;
 
 import com.app.daos.EmployeeDetailsDao;
 import com.app.daos.OrderDao;
+import com.app.daos.UserDao;
 import com.app.dtos.DTOEntityConverter;
 import com.app.dtos.EmployeeDetailsDTO;
 import com.app.dtos.OrderDTO;
+import com.app.dtos.UserContactDetailsDTO;
+import com.app.dtos.UserDTO;
 import com.app.entities.EmployeeDetails;
 import com.app.entities.Order;
 import com.app.entities.constants.EmployeeStatus;
@@ -24,6 +27,8 @@ import com.app.entities.User;
 @Transactional
 public class EmployeeServiceImpl {
 	
+	@Autowired
+	private UserDao userDao;
 	@Autowired
 	private OrderDao orderDao;
 	@Autowired
@@ -105,6 +110,13 @@ public class EmployeeServiceImpl {
 		details.setEmployeeStatus(EmployeeStatus.UNAVAILABLE);
 		employeeDetailsDao.save(details);	
 		return converter.toEmployeeDetailsDTO(details);
+	}
+	
+	public UserContactDetailsDTO getCustomerContactDetails(int employeeId) {
+		OrderDTO order = getAcceptedOrder(employeeId);
+		User user = userDao.getById(order.getUserId());
+		
+		return converter.toUserContactDetailsDTO(user);
 	}
 
 }

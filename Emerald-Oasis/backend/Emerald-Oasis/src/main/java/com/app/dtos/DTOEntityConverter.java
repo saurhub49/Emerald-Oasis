@@ -138,9 +138,9 @@ public class DTOEntityConverter {
 		return entity;
 	}
 	
-	public EmployeeContactDetailsDTO toEmployeeContactDetailsDTO(User entity) {
-		EmployeeContactDetailsDTO dto = new EmployeeContactDetailsDTO();
-		dto.setEmployeeId(entity.getUserId());
+	public UserContactDetailsDTO toUserContactDetailsDTO(User entity) {
+		UserContactDetailsDTO dto = new UserContactDetailsDTO();
+		dto.setUserId(entity.getUserId());
 		dto.setEmail(entity.getEmail());
 		dto.setFirstName(entity.getFirstName());
 		dto.setLastName(entity.getLastName());

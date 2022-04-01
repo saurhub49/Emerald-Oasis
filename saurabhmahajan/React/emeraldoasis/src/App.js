@@ -12,6 +12,7 @@ import Demo from './pages/userSide/demo/demo'
 import Carousel from './components/CuisineCarousel/carousel'
 import Cart from './pages/userSide/Cart/cart'
 import EmployeeHome from './pages/employeeSide/HomePage/EmployeeHome'
+import EmployeeOrderHistory from './pages/employeeSide/EmpOrderHistory/orderHistory'
 
 const AuthorizeUser = () => {
   const loginStatus = sessionStorage['loginStatus']
@@ -33,6 +34,7 @@ const AuthorizeUser = () => {
             <Route path="/cart" element={<Cart />} />
             <Route path="/demo" element={<Demo />} />
             <Route path="/employeehome" element={<EmployeeHome />} />
+            <Route path="/employeeorderhistory" element={<EmployeeOrderHistory />} />
 
           </Routes>
         </BrowserRouter>

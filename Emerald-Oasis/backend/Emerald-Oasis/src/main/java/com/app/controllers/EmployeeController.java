@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.app.config.Response;
 import com.app.dtos.EmployeeDetailsDTO;
 import com.app.dtos.OrderDTO;
+import com.app.dtos.UserContactDetailsDTO;
 import com.app.dtos.UserDTO;
 import com.app.entities.constants.RoleName;
 import com.app.services.EmployeeServiceImpl;
@@ -106,6 +107,14 @@ public class EmployeeController {
 	@PutMapping("/employee/status/unavailable/{id}")
 	public ResponseEntity<?> makeUnvailable(@PathVariable("id") int employeeId) {
 		EmployeeDetailsDTO result = employeeService.statusUnavailable(employeeId);
+		if(result == null)
+			return Response.error("Unexpected error !");
+		return Response.success(result);
+	}
+	
+	@GetMapping("/employee/customer/{id}")
+	public ResponseEntity<?> getCustomerDetails(@PathVariable("id") int employeeId) {
+		UserContactDetailsDTO result = employeeService.getCustomerContactDetails(employeeId);
 		if(result == null)
 			return Response.error("Unexpected error !");
 		return Response.success(result);
