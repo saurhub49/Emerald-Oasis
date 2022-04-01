@@ -54,7 +54,7 @@ const AllOrders = () => {
                                     <td>{order.orderId}</td>
                                     <td>Aman</td>
                                     <td>{order.orderedTimeStamp}</td>
-                                    <td>{order.deliveredTimeStamp}</td>
+                                    <td>naitik</td>
                                     <td>{order.orderStatus}</td>
                                 </tr>
                             )

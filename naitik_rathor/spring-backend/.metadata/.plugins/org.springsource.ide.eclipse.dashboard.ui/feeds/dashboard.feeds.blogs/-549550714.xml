@@ -62,13 +62,13 @@
     <updated>2022-03-31T10:27:00Z</updated>
     <content type="html">&lt;p&gt;&lt;strong&gt;Updates&lt;/strong&gt; &lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;[15:40 BST]&lt;/strong&gt; &lt;a href="https://spring.io/blog/2022/03/31/spring-boot-2-6-6-available-now"&gt;Spring Boot 2.6.6&lt;/a&gt; is available.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;[14:38 BST]&lt;/strong&gt; &lt;a href="https://spring.io/blog/2022/03/31/spring-boot-2-5-12-available-now"&gt;Spring Boot 2.5.12&lt;/a&gt; is available.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;[14:00 BST]&lt;/strong&gt; &lt;a href="https://tanzu.vmware.com/security/cve-2022-22965"&gt;CVE-2022-22965&lt;/a&gt; is published.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;[13:03 BST]&lt;/strong&gt; Added section &amp;ldquo;Misconceptions&amp;rdquo;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;[12:34 BST]&lt;/strong&gt; Added section &amp;ldquo;Am I Impacted&amp;rdquo;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;[12:11 BST]&lt;/strong&gt; Fix minor issue in the workaround for adding &lt;code&gt;disallowedFields&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;[11:59 BST]&lt;/strong&gt; Spring Framework versions &lt;strong&gt;5.3.18&lt;/strong&gt; and &lt;strong&gt;5.2.20&lt;/strong&gt;, which address the vulnerability, are now available. The release process for Spring Boot is in progress.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[15:40 BST]&lt;/strong&gt; &lt;a href="https://spring.io/blog/2022/03/31/spring-boot-2-6-6-available-now"&gt;Spring Boot 2.6.6&lt;/a&gt; is available&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[14:38 BST]&lt;/strong&gt; &lt;a href="https://spring.io/blog/2022/03/31/spring-boot-2-5-12-available-now"&gt;Spring Boot 2.5.12&lt;/a&gt; is available&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[14:00 BST]&lt;/strong&gt; &lt;a href="https://tanzu.vmware.com/security/cve-2022-22965"&gt;CVE-2022-22965&lt;/a&gt; is published&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[13:03 BST]&lt;/strong&gt; Added section &amp;ldquo;Misconceptions&amp;rdquo;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[12:34 BST]&lt;/strong&gt; Added section &amp;ldquo;Am I Impacted&amp;rdquo;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[12:11 BST]&lt;/strong&gt; Fix minor issue in the workaround for adding &lt;code&gt;disallowedFields&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[11:59 BST]&lt;/strong&gt; Spring Framework versions &lt;strong&gt;5.3.18&lt;/strong&gt; and &lt;strong&gt;5.2.20&lt;/strong&gt;, which address the vulnerability, are now available. The release process for Spring Boot is in progress&lt;/li&gt;
 &lt;/ul&gt;&lt;h2&gt;&lt;a href="#toc" class="anchor" name="toc"&gt;&lt;/a&gt;ToC&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href="#overview"&gt;Overview&lt;/a&gt;&lt;/li&gt;
@@ -84,16 +84,16 @@
 &lt;p&gt;These are the requirements for the specific scenario from the report:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;JDK 9 or higher&lt;/li&gt;
-  &lt;li&gt;Apache Tomcat as the Servlet container&lt;/li&gt;
-  &lt;li&gt;Packaged as a traditional WAR (in contrast to a Spring Boot executable jar)&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;spring-webmvc&lt;/code&gt; or &lt;code&gt;spring-webflux&lt;/code&gt; dependency&lt;/li&gt;
-  &lt;li&gt;Spring Framework versions 5.3.0 to 5.3.17, 5.2.0 to 5.2.19, and older versions&lt;/li&gt;
+  &lt;li&gt;Apache Tomcat as the Servlet container.&lt;/li&gt;
+  &lt;li&gt;Packaged as a traditional WAR (in contrast to a Spring Boot executable jar).&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;spring-webmvc&lt;/code&gt; or &lt;code&gt;spring-webflux&lt;/code&gt; dependency.&lt;/li&gt;
+  &lt;li&gt;Spring Framework versions 5.3.0 to 5.3.17, 5.2.0 to 5.2.19, and older versions.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;However, the nature of the vulnerability is more general, and there may be other ways to exploit it that have not been reported yet.&lt;/p&gt;&lt;h3&gt;&lt;a href="#status" class="anchor" name="status"&gt;&lt;/a&gt;Status&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;Spring Framework 5.3.18 and 5.2.20, which contain the fixes, have been released&lt;/li&gt;
+  &lt;li&gt;Spring Framework 5.3.18 and 5.2.20, which contain the fixes, have been released.&lt;/li&gt;
   &lt;li&gt;Spring Boot 2.6.6 and 2.5.12 that depend on Spring Framework 5.3.18 have been released.&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://tanzu.vmware.com/security/cve-2022-22965"&gt;CVE-2022-22965&lt;/a&gt; has been published&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://tanzu.vmware.com/security/cve-2022-22965"&gt;CVE-2022-22965&lt;/a&gt; has been published.&lt;/li&gt;
 &lt;/ul&gt;&lt;h3&gt;&lt;a href="#suggested-workarounds" class="anchor" name="suggested-workarounds"&gt;&lt;/a&gt;Suggested Workarounds&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; If you&amp;rsquo;re able to upgrade to Spring Framework &lt;strong&gt;5.3.18&lt;/strong&gt; and &lt;strong&gt;5.2.20&lt;/strong&gt;, you do not need this section. &lt;/p&gt;
 &lt;p&gt;The leaked reports recommend setting &lt;code&gt;disallowedFields&lt;/code&gt;on &lt;code&gt;WebDataBinder&lt;/code&gt; through an &lt;code&gt;@ControllerAdvice&lt;/code&gt;:&lt;/p&gt;
@@ -176,8 +176,7 @@ public class MyApp {&#xD;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;For Spring MVC without Spring Boot, an application can switch from &lt;code&gt;@EnableWebMvc&lt;/code&gt; to extending &lt;code&gt;DelegatingWebMvcConfiguration&lt;/code&gt; directly as described in &lt;a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-config-advanced-java"&gt;Advanced Config&lt;/a&gt; section of the documentation, then overriding the &lt;code&gt;createRequestMappingHandlerAdapter&lt;/code&gt; method.&lt;/p&gt;&lt;h3&gt;&lt;a href="#misconceptions" class="anchor" name="misconceptions"&gt;&lt;/a&gt;Misconceptions&lt;/h3&gt;
 &lt;p&gt;There was speculation surrounding the commit to deprecate &lt;code&gt;SerializationUtils&lt;/code&gt;. This class has only one usage within the framework and is not exposed to external input. The deprecation is unrelated to this vulnerability.&lt;/p&gt;
-&lt;p&gt;There was confusion with a &lt;a href="https://spring.io/blog/2022/03/29/cve-report-published-for-spring-cloud-function"&gt;CVE for Spring Cloud Function&lt;/a&gt; which was released just before the report for this vulnerability. It is also unrelated.&lt;/p&gt;&lt;h3&gt;&lt;a href="#further-updates" class="anchor" name="further-updates"&gt;&lt;/a&gt;Further Updates&lt;/h3&gt;
-&lt;p&gt;When the releases are ready, we will post another blog on this site, to announce their availability. So please continue to watch &lt;a href="https://spring.io/blog"&gt;https://spring.io/blog&lt;/a&gt;. We may also update this blog post, if there are any corrections to be made, and in that case we&amp;rsquo;ll clearly call those out at the top.&lt;/p&gt;
+&lt;p&gt;There was confusion with a &lt;a href="https://spring.io/blog/2022/03/29/cve-report-published-for-spring-cloud-function"&gt;CVE for Spring Cloud Function&lt;/a&gt; which was released just before the report for this vulnerability. It is also unrelated.&lt;/p&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
   <entry>

@@ -62,6 +62,11 @@ const EmpDetails = () => {
         }
     }
 
+    const getEmpId=()=>{
+        navigate('/empAllOrder', { state: { empId: userDetails.userId, empName: userDetails.firstName }})
+        // console.log(userDetails.userId)
+    }
+
 
     useEffect(() => {
         getUserDetails()
@@ -113,7 +118,7 @@ const EmpDetails = () => {
                             />
                         </div>
                         <div className="col-md-5 text-center ">
-                            <button class="btn btn-success" type="button" id="button-addon2" >All Orders</button>
+                            <button className="btn btn-success" type="button" onClick={getEmpId} >All Orders</button>
                         </div>
                     </div>
                     <br />
@@ -241,7 +246,6 @@ const EmpDetails = () => {
                     <div className="row">
                         <div className="col-md-5">
                             <button class="btn btn-success" type="button" id="button-addon2" onClick={editSalary} >Update</button>
-                            {/* <Link to="/employees"> <button class="btn btn-light" type="button" id="button-addon2"  >Cancel</button></Link> */}
                         </div>
                         <div className="col-md-5">
                             <button class="btn btn-danger" type="button" id="button-addon2" onClick={deleteEmp} >Delete Employee</button>
