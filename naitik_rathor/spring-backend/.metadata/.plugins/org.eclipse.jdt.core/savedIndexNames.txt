@@ -52,7 +52,6 @@ INDEX VERSION 1.131+C:\Users\ratho\Desktop\CDAC Project\Emerald-Oasis\naitik_rat
 1734877768.index
 3939870542.index
 1435727677.index
-1661936740.index
 832039537.index
 3541499122.index
 1362532881.index

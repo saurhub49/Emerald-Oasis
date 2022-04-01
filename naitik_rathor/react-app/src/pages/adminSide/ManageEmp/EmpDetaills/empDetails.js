@@ -1,6 +1,6 @@
 import { Link, Navigate, useLocation, useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react"
-import { toast } from "react-toastify"
+import { collapseToast, toast } from "react-toastify"
 import axios from "axios"
 import { URL } from "../../../../config"
 import AdminHeader from "../../../../components/AdminHeader/adminHeader"
@@ -42,6 +42,24 @@ const EmpDetails = () => {
                 toast.error(result['error'])
             }
         })
+    }
+
+    const deleteEmp=()=>{
+        if(window.confirm("This Employee will be Deleted\nAre You Sure?")){
+          
+            const url =`${URL}/admin/deleteuser/${userDetails.userId}`
+
+            axios.delete(url).then((response) => {
+                const result = response.data
+                if (result.status === 'success') {
+                    toast.success("Employee Deleted")
+                    navigate('/employees')
+                } else {
+                    console.log(result.error)
+                    toast.error(result['error'])
+                }
+            })
+        }
     }
 
 
@@ -226,7 +244,7 @@ const EmpDetails = () => {
                             {/* <Link to="/employees"> <button class="btn btn-light" type="button" id="button-addon2"  >Cancel</button></Link> */}
                         </div>
                         <div className="col-md-5">
-                            <button class="btn btn-danger" type="button" id="button-addon2"  >Delete Employee</button>
+                            <button class="btn btn-danger" type="button" id="button-addon2" onClick={deleteEmp} >Delete Employee</button>
                         </div>
                     </div>
                 </form>
