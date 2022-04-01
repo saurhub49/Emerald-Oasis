@@ -112,7 +112,7 @@ const EmpDetails = () => {
                                 aria-label="Disabled input example" disabled readonly
                             />
                         </div>
-                        <div className="col-md-5">
+                        <div className="col-md-5 text-center ">
                             <button class="btn btn-success" type="button" id="button-addon2" >All Orders</button>
                         </div>
                     </div>
