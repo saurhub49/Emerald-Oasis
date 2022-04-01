@@ -1252,3 +1252,21 @@
 2022-03-31 16:19:27,884 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2022-03-31 16:19:27,884 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
 2022-03-31 16:19:27,885 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\ratho\Desktop\CDAC Project\Emerald-Oasis\naitik_rathor\spring-backend\Emerald-Oasis\src\test\resources
+2022-04-01 09:12:06,882 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2022-04-01 09:12:34,243 [Worker-7: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.app:Emerald-Oasis:0.0.1-SNAPSHOT @ C:\Users\ratho\Desktop\CDAC Project\Emerald-Oasis\naitik_rathor\spring-backend\Emerald-Oasis\pom.xml.
+2022-04-01 09:12:35,072 [Worker-8: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.app:Emerald-Oasis:0.0.1-SNAPSHOT @ C:\Users\ratho\Desktop\CDAC Project\Emerald-Oasis\naitik_rathor\spring-backend\Emerald-Oasis\pom.xml.
+2022-04-01 09:12:36,413 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-04-01 09:12:36,413 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-04-01 09:12:36,419 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-04-01 09:12:36,480 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-01 09:12:36,484 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-04-01 09:12:36,486 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-04-01 09:12:36,486 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\ratho\Desktop\CDAC Project\Emerald-Oasis\naitik_rathor\spring-backend\Emerald-Oasis\src\test\resources
+2022-04-01 09:12:37,830 [Worker-1: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.app:Emerald-Oasis:0.0.1-SNAPSHOT @ C:\Users\ratho\Desktop\CDAC Project\Emerald-Oasis\naitik_rathor\spring-backend\Emerald-Oasis\pom.xml.
+2022-04-01 09:12:39,320 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-04-01 09:12:39,320 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-04-01 09:12:39,323 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-01 09:12:39,324 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-01 09:12:39,327 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-04-01 09:12:39,327 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-04-01 09:12:39,328 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\ratho\Desktop\CDAC Project\Emerald-Oasis\naitik_rathor\spring-backend\Emerald-Oasis\src\test\resources

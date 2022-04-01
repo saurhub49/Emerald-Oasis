@@ -5,7 +5,20 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2022-03-31T14:40:28Z</updated>
+  <updated>2022-03-31T16:00:00Z</updated>
+  <entry>
+    <title>A Bootiful Podcast: Kubernetes cofounder and vice president of R&amp;D at VMware, Craig McLuckie</title>
+    <link rel="alternate" href="https://spring.io/blog/2022/03/31/a-bootiful-podcast-kubernetes-cofounder-and-vice-president-of-r-d-at-vmware-craig-mcluckie" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2022-03-31:4758</id>
+    <updated>2022-03-31T16:00:00Z</updated>
+    <content type="html">&lt;p&gt;Hi, Spring fans! Welcome to another installment of a Bootiful Podcast! In this episode, Josh Long (@starbuxman) talks to Kubernetes cofounder, all-around nice person, and vice president of R&amp;amp;D at VMware, Craig McLuckie (@cmcluck).&lt;/p&gt;
+&lt;iframe title="Craig McLuckie, Kubernetes cofounder and vice president of R&amp;D at VMware " allowtransparency="true" height="150" width="100%" style="border: none; min-width: min(100%, 430px);" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=2jfyx-11e87b6-pb&amp;from=pb6admin&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Arial&amp;skin=1&amp;font-color=&amp;logo_link=episode_page&amp;btn-skin=7"&gt;&lt;/iframe&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>Spring Boot 2.6.6 available now</title>
     <link rel="alternate" href="https://spring.io/blog/2022/03/31/spring-boot-2-6-6-available-now" />
@@ -617,29 +630,6 @@ Customer[id=3, name=Amey]
   &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/16/spring-tools-4-14-0-released"&gt;Spring Tools 4.14.0 released&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/22/spring-for-graphql-1-0-milestone-6-released"&gt;Spring for GraphQL 1.0 Milestone 6 Released&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Security 6.0.0-M3 and 5.7.0-M3 available now</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/03/22/spring-security-6-0-0-m3-and-5-7-0-m3-available-now" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Steve Riesenberg</name>
-    </author>
-    <id>tag:spring.io,2022-03-22:4738</id>
-    <updated>2022-03-22T18:30:00Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;On behalf of the team and everyone who has contributed, I am pleased to announce that Spring Security &lt;code&gt;6.0.0-M3&lt;/code&gt; and &lt;code&gt;5.7.0-M3&lt;/code&gt; are available now.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;This third 6.0 milestone covers build and release enhancements as well as the &lt;a href="https://spring.io/blog/2022/02/21/spring-security-without-the-websecurityconfigureradapter"&gt;deprecation of &lt;code&gt;WebSecurityConfigurerAdapter&lt;/code&gt;&lt;/a&gt; that was already released with &lt;code&gt;5.7.0-M2&lt;/code&gt;. The third 5.7 milestone covers several enhancements to SAML 2.0 and OAuth 2.0 support as well as a change to &lt;a href="https://github.com/spring-projects/spring-security/issues/10903"&gt;use UTF-8 by default for HTTP Basic credentials&lt;/a&gt; in Spring WebFlux.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;For the release changes, please refer to the &lt;a href="https://github.com/spring-projects/spring-security/releases"&gt;releases page&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;a href="http://projects.spring.io/spring-security/"&gt;Project Site&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-security/reference/"&gt;Reference&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-security"&gt;Help&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>

@@ -18,6 +18,7 @@ import Cart from './pages/userSide/Cart/cart'
 import CustDetails from './pages/adminSide/ManageCust/CustDetails/custDetails'
 import CuisinesAll from './pages/adminSide/ManageCuis/Cuisines/cuisinesAll'
 import AddCuisine from './pages/adminSide/ManageCuis/AddCuisine/addCuisine'
+import AllOrders from './pages/adminSide/ManageOrders/AllOrders/allOrders'
 
 const AuthorizeUser = () => {
   const loginStatus = sessionStorage['loginStatus']
@@ -47,6 +48,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/cuisinesAll" element={<CuisinesAll />} />
           <Route path="/addCuisine" element={<AddCuisine />} />
+          <Route path="/allOrders" element={<AllOrders />} />
         </Routes>
       </BrowserRouter>
       <ToastContainer theme="colored"
