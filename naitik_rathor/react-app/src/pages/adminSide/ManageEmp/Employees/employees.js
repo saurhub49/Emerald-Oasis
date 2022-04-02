@@ -34,34 +34,39 @@ const Employees = () => {
         <AdminHeader></AdminHeader>
         <div className="main-div">
             <label className="emp-details">Employees Detail</label>
-            <table class="table">
-                <thead class="table-dark">
-                    <tr>
-                        <td>Employee Id</td>
-                        <td>Employee Name</td>
-                        <td>Gender</td>
-                        <td>Email</td>
-                        <td>Phone No</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        employees.map((employee) => {
-                            return (
-                                <tr onClick={() => {
-                                    navigate('/empDetails', { state: { id: employee.userId } })
-                                }}>
-                                    <td>{employee.userId}</td>
-                                    <td>{employee.firstName}</td>
-                                    <td>{employee.gender}</td>
-                                    <td>{employee.email}</td>
-                                    <td>{employee.phoneNo}</td>
-                                </tr>
-                            )
-                        })
-                    }
-                </tbody>
-            </table>
+            {employees.length < 1 &&
+                <div className="text-center fs-3 fw-light">There is no Employee to show</div>
+            }
+            {employees.length > 0 &&
+                <table class="table">
+                    <thead class="table-dark">
+                        <tr>
+                            <td>Employee Id</td>
+                            <td>Employee Name</td>
+                            <td>Gender</td>
+                            <td>Email</td>
+                            <td>Phone No</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            employees.map((employee) => {
+                                return (
+                                    <tr onClick={() => {
+                                        navigate('/empDetails', { state: { id: employee.userId } })
+                                    }}>
+                                        <td>{employee.userId}</td>
+                                        <td>{employee.firstName}</td>
+                                        <td>{employee.gender}</td>
+                                        <td>{employee.email}</td>
+                                        <td>{employee.phoneNo}</td>
+                                    </tr>
+                                )
+                            })
+                        }
+                    </tbody>
+                </table>
+            }
         </div>
     </div>
 }

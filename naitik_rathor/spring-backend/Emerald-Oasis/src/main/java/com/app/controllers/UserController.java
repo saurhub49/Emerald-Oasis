@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.app.config.Response;
-import com.app.dtos.EmployeeContactDetailsDTO;
+import com.app.dtos.UserContactDetailsDTO;
 import com.app.dtos.FoodItemDTO;
 import com.app.dtos.OrderDTO;
 import com.app.dtos.UserDTO;
@@ -101,7 +101,7 @@ public class UserController {
 	
 	@GetMapping("/user/order/getemployee/{id}")
 		public ResponseEntity<?> getEmployeeContactDetails(@PathVariable("id") int userId) {
-			EmployeeContactDetailsDTO result = userService.getEmployeeContactDetails(userId);
+			UserContactDetailsDTO result = userService.getEmployeeContactDetails(userId);
 			if(result == null)
 				return Response.error("Unexpected error !");
 			return Response.success(result);

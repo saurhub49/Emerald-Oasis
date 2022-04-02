@@ -5,7 +5,22 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2022-03-31T16:00:00Z</updated>
+  <updated>2022-04-01T11:49:00Z</updated>
+  <entry>
+    <title>Spring Framework RCE, Mitigation Alternative</title>
+    <link rel="alternate" href="https://spring.io/blog/2022/04/01/spring-framework-rce-mitigation-alternative" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Rossen Stoyanchev</name>
+    </author>
+    <id>tag:spring.io,2022-04-01:4760</id>
+    <updated>2022-04-01T11:49:00Z</updated>
+    <content type="html">&lt;p&gt;Yesterday we &lt;a href="https://spring.io/blog/2022/03/31/spring-framework-rce-early-announcement"&gt;announced&lt;/a&gt; a Spring Framework RCE vulnerability &lt;a href="https://tanzu.vmware.com/security/cve-2022-22965"&gt;CVE-2022-22965&lt;/a&gt;, listing Apache Tomcat as one of several preconditions. The Apache Tomcat team has since released versions &lt;strong&gt;10.0.20&lt;/strong&gt;, &lt;strong&gt;9.0.62&lt;/strong&gt;, and &lt;strong&gt;8.5.78&lt;/strong&gt; all of which close the attack vector on Tomcat&amp;rsquo;s side. While the vulnerability is not in Tomcat itself, in real world situations, it is important to be able to choose among multiple upgrade paths that in turn provides flexibility and layered protection. &lt;/p&gt;
+&lt;p&gt;Upgrading to Spring Framework &lt;strong&gt;5.3.18+&lt;/strong&gt; or &lt;strong&gt;5.2.20+&lt;/strong&gt; continues to be our main recommendation not only because it addresses the root cause and prevents other possible attack vectors, but also because it adds protection for other CVEs addressed since the current version in use. &lt;/p&gt;
+&lt;p&gt;For older, unsupported versions of the Spring Framework, the Tomcat releases provide an adequate solution for the reported attack vector. Nevertheless, we must stress that this should only be seen as a tactical solution, while the main goal should still be to upgrade to a currently &lt;a href="https://github.com/spring-projects/spring-framework/wiki/Spring-Framework-Versions"&gt;supported Spring Framework version&lt;/a&gt; as soon as possible.&lt;/p&gt;
+&lt;p&gt;Last but not least, it&amp;rsquo;s worth mentioning that downgrading to Java 8 provides another viable workaround, which may be another tactical solution option.&lt;/p&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>A Bootiful Podcast: Kubernetes cofounder and vice president of R&amp;D at VMware, Craig McLuckie</title>
     <link rel="alternate" href="https://spring.io/blog/2022/03/31/a-bootiful-podcast-kubernetes-cofounder-and-vice-president-of-r-d-at-vmware-craig-mcluckie" />
@@ -62,13 +77,16 @@
     <updated>2022-03-31T10:27:00Z</updated>
     <content type="html">&lt;p&gt;&lt;strong&gt;Updates&lt;/strong&gt; &lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;[15:40 BST]&lt;/strong&gt; &lt;a href="https://spring.io/blog/2022/03/31/spring-boot-2-6-6-available-now"&gt;Spring Boot 2.6.6&lt;/a&gt; is available.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;[14:38 BST]&lt;/strong&gt; &lt;a href="https://spring.io/blog/2022/03/31/spring-boot-2-5-12-available-now"&gt;Spring Boot 2.5.12&lt;/a&gt; is available.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;[14:00 BST]&lt;/strong&gt; &lt;a href="https://tanzu.vmware.com/security/cve-2022-22965"&gt;CVE-2022-22965&lt;/a&gt; is published.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;[13:03 BST]&lt;/strong&gt; Added section &amp;ldquo;Misconceptions&amp;rdquo;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;[12:34 BST]&lt;/strong&gt; Added section &amp;ldquo;Am I Impacted&amp;rdquo;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;[12:11 BST]&lt;/strong&gt; Fix minor issue in the workaround for adding &lt;code&gt;disallowedFields&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;[11:59 BST]&lt;/strong&gt; Spring Framework versions &lt;strong&gt;5.3.18&lt;/strong&gt; and &lt;strong&gt;5.2.20&lt;/strong&gt;, which address the vulnerability, are now available. The release process for Spring Boot is in progress.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[04-01 16:35 BST]&lt;/strong&gt; Updated &lt;a href="#am-i-impacted"&gt;Am I Impacted&lt;/a&gt; with additional notes&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[04-01 13:05 BST]&lt;/strong&gt; Updated &lt;a href="#suggested-workarounds"&gt;Suggested Workarounds&lt;/a&gt; section for Apache Tomcat upgrades and Java 8 downgrades&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[04-01 12:51 BST]&lt;/strong&gt; Apache Tomcat releases versions &lt;strong&gt;10.0.20&lt;/strong&gt;, &lt;strong&gt;9.0.62&lt;/strong&gt;, and &lt;strong&gt;8.5.78&lt;/strong&gt; which close the attack vector on Tomcat’s side, see &lt;a href="https://spring.io/blog/2022/04/01/spring-framework-rce-mitigation-alternative"&gt;mitigation alternative&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[03-31 15:40 BST]&lt;/strong&gt; &lt;a href="https://spring.io/blog/2022/03/31/spring-boot-2-6-6-available-now"&gt;Spring Boot 2.6.6&lt;/a&gt; is available&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[03-31 14:38 BST]&lt;/strong&gt; &lt;a href="https://spring.io/blog/2022/03/31/spring-boot-2-5-12-available-now"&gt;Spring Boot 2.5.12&lt;/a&gt; is available&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[03-31 14:00 BST]&lt;/strong&gt; &lt;a href="https://tanzu.vmware.com/security/cve-2022-22965"&gt;CVE-2022-22965&lt;/a&gt; is published&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[03-31 13:03 BST]&lt;/strong&gt; Added section &amp;ldquo;Misconceptions&amp;rdquo;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[03-31 12:34 BST]&lt;/strong&gt; Added section &amp;ldquo;Am I Impacted&amp;rdquo;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[03-31 12:11 BST]&lt;/strong&gt; Fix minor issue in the workaround for adding &lt;code&gt;disallowedFields&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[03-31 11:59 BST]&lt;/strong&gt; Spring Framework versions &lt;strong&gt;5.3.18&lt;/strong&gt; and &lt;strong&gt;5.2.20&lt;/strong&gt;, which address the vulnerability, are now available. The release process for Spring Boot is in progress&lt;/li&gt;
 &lt;/ul&gt;&lt;h2&gt;&lt;a href="#toc" class="anchor" name="toc"&gt;&lt;/a&gt;ToC&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href="#overview"&gt;Overview&lt;/a&gt;&lt;/li&gt;
@@ -77,26 +95,39 @@
   &lt;li&gt;&lt;a href="#status"&gt;Status&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="#suggested-workarounds"&gt;Suggested Workarounds&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="#misconceptions"&gt;Misconceptions&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#further-updates"&gt;Further Updates&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;h3&gt;&lt;a href="#overview" class="anchor" name="overview"&gt;&lt;/a&gt;Overview&lt;/h3&gt;
 &lt;p&gt;I would like to announce an RCE vulnerability in the Spring Framework that was leaked out ahead of CVE publication. The issue was first reported to VMware late on Tuesday evening, close to Midnight, GMT time by codeplutos, meizjm3i of AntGroup FG. On Wednesday we worked through investigation, analysis, identifying a fix, testing, while aiming for emergency releases on Thursday. In the mean time, also on Wednesday, details were leaked in full detail online, which is why we are providing this update ahead of the releases and the CVE report.&lt;/p&gt;&lt;h3&gt;&lt;a href="#vulnerability" class="anchor" name="vulnerability"&gt;&lt;/a&gt;Vulnerability&lt;/h3&gt;
 &lt;p&gt;The vulnerability impacts Spring MVC and Spring WebFlux applications running on JDK 9+. The specific exploit requires the application to run on Tomcat as a WAR deployment. If the application is deployed as a Spring Boot executable jar, i.e. the default, it is not vulnerable to the exploit. However, the nature of the vulnerability is more general, and there may be other ways to exploit it.&lt;/p&gt;&lt;h3&gt;&lt;a href="#am-i-impacted" class="anchor" name="am-i-impacted"&gt;&lt;/a&gt;Am I Impacted?&lt;/h3&gt;
 &lt;p&gt;These are the requirements for the specific scenario from the report:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;JDK 9 or higher&lt;/li&gt;
-  &lt;li&gt;Apache Tomcat as the Servlet container&lt;/li&gt;
-  &lt;li&gt;Packaged as a traditional WAR (in contrast to a Spring Boot executable jar)&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;spring-webmvc&lt;/code&gt; or &lt;code&gt;spring-webflux&lt;/code&gt; dependency&lt;/li&gt;
-  &lt;li&gt;Spring Framework versions 5.3.0 to 5.3.17, 5.2.0 to 5.2.19, and older versions&lt;/li&gt;
+  &lt;li&gt;Running on JDK 9 or higher&lt;/li&gt;
+  &lt;li&gt;Apache Tomcat as the Servlet container.&lt;/li&gt;
+  &lt;li&gt;Packaged as a traditional WAR (in contrast to a Spring Boot executable jar).&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;spring-webmvc&lt;/code&gt; or &lt;code&gt;spring-webflux&lt;/code&gt; dependency.&lt;/li&gt;
+  &lt;li&gt;Spring Framework versions 5.3.0 to 5.3.17, 5.2.0 to 5.2.19, and older versions.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;However, the nature of the vulnerability is more general, and there may be other ways to exploit it that have not been reported yet.&lt;/p&gt;&lt;h3&gt;&lt;a href="#status" class="anchor" name="status"&gt;&lt;/a&gt;Status&lt;/h3&gt;
+&lt;p&gt;Additional notes:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Spring Framework 5.3.18 and 5.2.20, which contain the fixes, have been released&lt;/li&gt;
+  &lt;li&gt;The vulnerability involves &lt;code&gt;ClassLoader&lt;/code&gt; access, and therefore in addition to the specific attack reported with a Tomcat specific &lt;code&gt;ClassLoader&lt;/code&gt;, other attacks may be possible against a different custom &lt;code&gt;ClassLoader&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;The issue relates to data binding used to populate an object from request parameters (either query parameters or form data). Data binding is used for controller method parameters that are annotated with &lt;code&gt;@ModelAttribute&lt;/code&gt; or optionally without it, and without any other Spring Web annotation.&lt;/li&gt;
+  &lt;li&gt;The issues does not relate to &lt;code&gt;@RequestBody&lt;/code&gt; controller method parameters (e.g. JSON deserialization). However, such methods may still be vulnerable if they have another method parameter populated via data binding from query parameters.&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;&lt;a href="#status" class="anchor" name="status"&gt;&lt;/a&gt;Status&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring Framework 5.3.18 and 5.2.20, which contain the fixes, have been released.&lt;/li&gt;
   &lt;li&gt;Spring Boot 2.6.6 and 2.5.12 that depend on Spring Framework 5.3.18 have been released.&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://tanzu.vmware.com/security/cve-2022-22965"&gt;CVE-2022-22965&lt;/a&gt; has been published&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://tanzu.vmware.com/security/cve-2022-22965"&gt;CVE-2022-22965&lt;/a&gt; has been published.&lt;/li&gt;
+  &lt;li&gt;Apache Tomcat has released versions 10.0.20, 9.0.62, and 8.5.78 which close the attack vector on Tomcat’s side, see &lt;a href="https://spring.io/blog/2022/04/01/spring-framework-rce-mitigation-alternative"&gt;Spring Framework RCE, Mitigation Alternative&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;&lt;h3&gt;&lt;a href="#suggested-workarounds" class="anchor" name="suggested-workarounds"&gt;&lt;/a&gt;Suggested Workarounds&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; If you&amp;rsquo;re able to upgrade to Spring Framework &lt;strong&gt;5.3.18&lt;/strong&gt; and &lt;strong&gt;5.2.20&lt;/strong&gt;, you do not need this section. &lt;/p&gt;
-&lt;p&gt;The leaked reports recommend setting &lt;code&gt;disallowedFields&lt;/code&gt;on &lt;code&gt;WebDataBinder&lt;/code&gt; through an &lt;code&gt;@ControllerAdvice&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;The preferred response is to update to Spring Framework &lt;strong&gt;5.3.18&lt;/strong&gt; and &lt;strong&gt;5.2.20&lt;/strong&gt; or greater. If you have done this, then no workarounds are necessary. However, some may be in a position where upgrading is not possible to do quickly. For that reason, we have provided some workarounds below.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="#upgrading-tomcat"&gt;Upgrading Tomcat&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#downgrading-to-java-8"&gt;Downgrading to Java 8&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#disallowed-fields"&gt;Disallowed Fields&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Please note that, workarounds are not necessarily mutually exclusive since security is best done &amp;ldquo;in depth&amp;rdquo;.&lt;/p&gt;&lt;h4&gt;&lt;a href="#upgrading-tomcat" class="anchor" name="upgrading-tomcat"&gt;&lt;/a&gt;Upgrading Tomcat&lt;/h4&gt;
+&lt;p&gt;For older, unsupported Spring Framework versions, upgrading to Apache Tomcat &lt;strong&gt;10.0.20&lt;/strong&gt;, &lt;strong&gt;9.0.62&lt;/strong&gt;, or &lt;strong&gt;8.5.78&lt;/strong&gt;, provides adequate protection. However, this should be seen as a tactical solution, and the main goal should be to upgrade to a currently supported Spring Framework version as soon as possible. If you take this approach, you should consider setting &lt;a href="#disallowed-fields"&gt;Disallowed Fields&lt;/a&gt; as well for defense in depth approach.&lt;/p&gt;&lt;h4&gt;&lt;a href="#downgrading-to-java-8" class="anchor" name="downgrading-to-java-8"&gt;&lt;/a&gt;Downgrading to Java 8&lt;/h4&gt;
+&lt;p&gt;Downgrading to Java 8 is a viable workaround, if you can neither upgrade the Spring Framework nor upgrade Apache Tomcat. &lt;/p&gt;&lt;h4&gt;&lt;a href="#disallowed-fields" class="anchor" name="disallowed-fields"&gt;&lt;/a&gt;Disallowed Fields&lt;/h4&gt;
+&lt;p&gt;Another viable workaround is to disable binding to particular fields by setting &lt;code&gt;disallowedFields&lt;/code&gt;on &lt;code&gt;WebDataBinder&lt;/code&gt; globally:&lt;/p&gt;
 &lt;pre&gt;&lt;code class="prettyprint java"&gt;&lt;br/&gt;@ControllerAdvice&#xD;
 @Order(Ordered.LOWEST_PRECEDENCE)&#xD;
 public class BinderControllerAdvice {&#xD;
@@ -176,8 +207,7 @@ public class MyApp {&#xD;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;For Spring MVC without Spring Boot, an application can switch from &lt;code&gt;@EnableWebMvc&lt;/code&gt; to extending &lt;code&gt;DelegatingWebMvcConfiguration&lt;/code&gt; directly as described in &lt;a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-config-advanced-java"&gt;Advanced Config&lt;/a&gt; section of the documentation, then overriding the &lt;code&gt;createRequestMappingHandlerAdapter&lt;/code&gt; method.&lt;/p&gt;&lt;h3&gt;&lt;a href="#misconceptions" class="anchor" name="misconceptions"&gt;&lt;/a&gt;Misconceptions&lt;/h3&gt;
 &lt;p&gt;There was speculation surrounding the commit to deprecate &lt;code&gt;SerializationUtils&lt;/code&gt;. This class has only one usage within the framework and is not exposed to external input. The deprecation is unrelated to this vulnerability.&lt;/p&gt;
-&lt;p&gt;There was confusion with a &lt;a href="https://spring.io/blog/2022/03/29/cve-report-published-for-spring-cloud-function"&gt;CVE for Spring Cloud Function&lt;/a&gt; which was released just before the report for this vulnerability. It is also unrelated.&lt;/p&gt;&lt;h3&gt;&lt;a href="#further-updates" class="anchor" name="further-updates"&gt;&lt;/a&gt;Further Updates&lt;/h3&gt;
-&lt;p&gt;When the releases are ready, we will post another blog on this site, to announce their availability. So please continue to watch &lt;a href="https://spring.io/blog"&gt;https://spring.io/blog&lt;/a&gt;. We may also update this blog post, if there are any corrections to be made, and in that case we&amp;rsquo;ll clearly call those out at the top.&lt;/p&gt;
+&lt;p&gt;There was confusion with a &lt;a href="https://spring.io/blog/2022/03/29/cve-report-published-for-spring-cloud-function"&gt;CVE for Spring Cloud Function&lt;/a&gt; which was released just before the report for this vulnerability. It is also unrelated.&lt;/p&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
   <entry>
@@ -599,37 +629,6 @@ Customer[id=3, name=Amey]
     <content type="html">&lt;p&gt;Hi, Spring fans! In this installment we look at how to use Spring&amp;rsquo;s &lt;code&gt;AbstractRoutingDataSource&lt;/code&gt; to build multi-tenant JDBC database code. &lt;/p&gt;
 &lt;p&gt;code: &lt;a href="https://github.com/spring-tips/multitenant-jdbc"&gt;https://github.com/spring-tips/multitenant-jdbc&lt;/a&gt;&lt;br/&gt;speaker: &lt;a href="https://twitter.com/starbuxman"&gt;Josh Long (@starbuxman)&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/hjJ6ODxgYqE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&amp;lt;/iframe&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>This Week in Spring - March 22nd, 2022 (Java 18 Edition!)</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/03/22/this-week-in-spring-march-22nd-2022-java-18-edition" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2022-03-22:4739</id>
-    <updated>2022-03-22T20:00:00Z</updated>
-    <content type="html">&lt;p&gt;Hi, Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! Spring time is here! Astrologically and meteorlogically, speaking, of course. I love this season. Longer days, greener grass, bluer skies, and more. Next week, my family and I are headed to Hawaii for some much-needed R&amp;amp;R while my daughter has a week off from school. (It&amp;rsquo;s hard to believe she might be going to college in another state in 18 short months! We need all the family vacations we can get together! T_T) &lt;/p&gt;
-&lt;p&gt;As always, we&amp;rsquo;ve got a lot to look at today, so let&amp;rsquo;s dive right into it! &lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;First thing: &lt;a href="https://www.oracle.com/news/announcement/oracle-releases-java-18-2022-03-22/"&gt;Java 18 was released today&lt;/a&gt;! There are a ton new features, including UTF-8 by default, a simple HTTP server, a reimplementation of core reflection to use method handles, an SPI for internet resolution, an easier JavaDoc attribute to simplify the inclusion of code snippets in JavaDoc comments, and previews of a bunch of amazing new features including pattern matching for switch, Project Panama, the new Vector API (as in matrix multiplication, not a collection, exactly). There&amp;rsquo;s also a switch you can use to disable finialization and finalizers, which you might want to try now to see if your application continues to do the right thing.&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://twitter.com/springgraphql/status/1506359922157670414?s=21"&gt;The Spring for GraphQL project has a Twitter account (@SpringGraphQL)!&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/17/a-bootiful-podcast-elastic-s-felix-barnsteiner-on-apm-for-spring-developers"&gt;A Bootiful Podcast: Elastic&amp;rsquo;s Felix Barnsteiner on APM for Spring Developers&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://bell-sw.com/announcements/2021/09/02/BellSoft-VMware/"&gt;BellSoft is excited to announce its new agreement with VMware.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://kubernetes.io/blog/2022/03/16/meet-our-contributors-au-nz-ep-02/"&gt;Blog: Meet Our Contributors - APAC (Aus-NZ region)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=SFcAdJNGDOw"&gt;I was happy to be on the Kong podcast to talk about how Spring changed Java application development&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/22/initial-aot-support-in-spring-framework-6-0-0-m3"&gt;Initial AOT support in Spring Framework 6.0.0-M3&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://openjdk.java.net/projects/jdk/18/"&gt;JDK 18&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://netty.io/news/2022/03/17/5-0-0-Alpha1.html"&gt;Netty 5.0.0.Alpha1 released&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/SimonHarmonicMinor/sneaky-java"&gt;SimonHarmonicMinor/sneaky-java: Java utilities to throw checked exceptions in a &amp;ldquo;sneaky&amp;rdquo; way.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/21/spring-data-2022-0-0-m2-2021-2-0-m4-2021-1-3-and-2021-0-10-released"&gt;Spring Data 2022.0.0-M2, 2021.2.0-M4, 2021.1.3, and 2021.0.10 released&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/17/spring-framework-6-0-0-m3-and-5-3-17-available-now"&gt;Spring Framework 6.0.0-M3 and 5.3.17 available now&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/22/spring-security-6-0-0-m3-and-5-7-0-m3-available-now"&gt;Spring Security 6.0.0-M3 and 5.7.0-M3 available now&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/16/spring-tips-spring-shell-and-spring-native"&gt;Spring Tips: Spring Shell and Spring Native&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/16/spring-tools-4-14-0-released"&gt;Spring Tools 4.14.0 released&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/22/spring-for-graphql-1-0-milestone-6-released"&gt;Spring for GraphQL 1.0 Milestone 6 Released&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>

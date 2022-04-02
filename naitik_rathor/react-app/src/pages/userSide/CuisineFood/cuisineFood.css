@@ -13,7 +13,7 @@
 }
 
 .food-items {
-    top: 500px;
+    top: 450px;
     position: relative;
     display: inline-block;
     column-count: 3;
@@ -22,7 +22,7 @@
 
 .name{
     position: relative;
-    top: 500px;
+    top: 450px;
     font-family: 'Domine';
     font-style: normal;
     font-weight: 600;

@@ -21,7 +21,7 @@ import com.app.daos.UserDao;
 import com.app.dtos.Credentials;
 import com.app.dtos.CuisineDTO;
 import com.app.dtos.DTOEntityConverter;
-import com.app.dtos.EmployeeContactDetailsDTO;
+import com.app.dtos.UserContactDetailsDTO;
 import com.app.dtos.FoodItemDTO;
 import com.app.dtos.OrderDTO;
 import com.app.dtos.RoleDTO;
@@ -217,10 +217,10 @@ public class UserServiceImpl {
 		return orders.stream().map(o -> converter.toOrderDTO(o)).collect(Collectors.toList());
 	}
 	
-	public EmployeeContactDetailsDTO getEmployeeContactDetails(int userId) {
+	public UserContactDetailsDTO getEmployeeContactDetails(int userId) {
 		OrderDTO order = getOngoingOrder(userId);
 		int employeeId = order.getEmployeeId();
 		User user = userDao.getById(employeeId);
-		return converter.toEmployeeContactDetailsDTO(user);
+		return converter.toUserContactDetailsDTO(user);
 	}
 }

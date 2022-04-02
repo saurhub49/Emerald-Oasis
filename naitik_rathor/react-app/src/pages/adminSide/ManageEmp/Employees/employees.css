@@ -11,7 +11,9 @@ text-align: center;
 
 color: #000000;
 box-sizing: border-box;
-padding-bottom: 20px;
+/* padding-bottom: 20px; */
+border-bottom: solid #000000;
+margin-bottom: 30px;
 }
 
 .main-div{
