@@ -25,10 +25,10 @@ const Food = (props) => {
         }
     }
     return (
-        <div class="containerr">
-            <div class="textt">{food.name}</div>
+        <div className="containerr">
+            <div className="textt">{food.name}</div>
             <div className="row">
-                <img src={food.image} alt="Avatar" class="col imagee" ></img>
+                <img src={food.image} alt="Avatar" className="col imagee" ></img>
                 <div className="col " >{food.description}</div>
             </div>
             <div className="row mb-4">
@@ -37,8 +37,8 @@ const Food = (props) => {
             </div>
             <div className="row">
                 <div className="col btn-group ">
-                    <button type="button" class="btn btn-outline-secondary ">EDIT</button>
-                    <button type="button" class="btn btn-outline-secondary " onClick={deleteFood}>DELETE</button>
+                    <button type="button" className="btn btn-outline-secondary ">EDIT</button>
+                    <button type="button" className="btn btn-outline-secondary " onClick={deleteFood}>DELETE</button>
                 </div>
             </div>
             <hr />

@@ -2,10 +2,7 @@
     position: relative;
     width: 100%;
     padding: 20px;
-  }
-
-  .containerr:hover{
-
+    display: inline-block;
   }
   
   .imagee {

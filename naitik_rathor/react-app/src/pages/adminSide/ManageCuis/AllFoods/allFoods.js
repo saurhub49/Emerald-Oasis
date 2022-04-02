@@ -1,6 +1,7 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import { useLocation, useNavigate } from "react-router"
+import { Link } from "react-router-dom"
 import { toast } from "react-toastify"
 import AdminHeader from "../../../../components/AdminHeader/adminHeader"
 import Food from "../../../../components/Food/food"
@@ -25,16 +26,16 @@ const AllFoods = () => {
             if (result.status === 'success') {
                 setFoods(result.data)
             } else {
-                console.log(result.error)
+                // console.log(result.error)
                 toast.error(result['error'])
             }
         })
     }
 
-    const deleteCuisine=()=>{
-        if(window.confirm("All Cuisine and Foods will be Deleted Permanently\nAre You Sure?")){
-          
-            const url =`${URL}/admin/deletecuisine/${id}`
+    const deleteCuisine = () => {
+        if (window.confirm("All Cuisine and Foods will be Deleted Permanently\nAre You Sure?")) {
+
+            const url = `${URL}/admin/deletecuisine/${id}`
 
             axios.delete(url).then((response) => {
                 const result = response.data
@@ -49,6 +50,11 @@ const AllFoods = () => {
         }
     }
 
+    const addFoodItem = () => {
+        navigate('/addFood', { state: { cuisineId: id } })
+        // console.log(id)
+    }
+
     useEffect(() => {
         getFoods()
     }, [])
@@ -59,8 +65,8 @@ const AllFoods = () => {
             <div className="row mb-4">
                 <div className="col"></div>
                 <div className="col btn-group">
-                    <button type="button" class="btn btn-outline-secondary">ADD FOOD</button>
-                    <button type="button" class="btn btn-outline-danger" onClick={deleteCuisine}>DELETE CUISINE</button>
+                    <button type="button" className="btn btn-outline-secondary" onClick={addFoodItem}>ADD FOOD</button>
+                    <button type="button" className="btn btn-outline-danger" onClick={deleteCuisine}>DELETE CUISINE</button>
                 </div>
             </div>
             <label className="row emp-details">{cuisName} Cuisine</label>

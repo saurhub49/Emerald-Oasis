@@ -36,7 +36,7 @@ const CuisinesAll = () => {
         <AdminHeader></AdminHeader>
         <br />
         <div className="main-div">
-            <Link to="/addCuisine"><button type="button" class="btn btn-outline-secondary">Add New Cuisine</button></Link>
+            <Link to="/addCuisine"><button type="button" className="btn btn-outline-secondary">Add New Cuisine</button></Link>
             <br />
             <br />
             <label className="emp-details">Manage Cuisines</label>
