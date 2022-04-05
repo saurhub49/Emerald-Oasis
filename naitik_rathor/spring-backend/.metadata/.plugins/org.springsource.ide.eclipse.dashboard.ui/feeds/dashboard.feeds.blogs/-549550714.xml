@@ -77,8 +77,9 @@
     <updated>2022-03-31T10:27:00Z</updated>
     <content type="html">&lt;p&gt;&lt;strong&gt;Updates&lt;/strong&gt; &lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;[04-01 16:35 BST]&lt;/strong&gt; Updated &lt;a href="#am-i-impacted"&gt;Am I Impacted&lt;/a&gt; with additional notes&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;[04-01 13:05 BST]&lt;/strong&gt; Updated &lt;a href="#suggested-workarounds"&gt;Suggested Workarounds&lt;/a&gt; section for Apache Tomcat upgrades and Java 8 downgrades&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[04-04 10:45 BST]&lt;/strong&gt; Updated &lt;a href="https://spring.io/blog/2022/03/31/spring-framework-rce-early-announcement#am-i-impacted"&gt;Am I Impacted&lt;/a&gt; with improved description for deployment requirements&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[04-01 16:35 BST]&lt;/strong&gt; Updated &lt;a href="https://spring.io/blog/2022/03/31/spring-framework-rce-early-announcement#am-i-impacted"&gt;Am I Impacted&lt;/a&gt; with additional notes&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[04-01 13:05 BST]&lt;/strong&gt; Updated &lt;a href="https://spring.io/blog/2022/03/31/spring-framework-rce-early-announcement#suggested-workarounds"&gt;Suggested Workarounds&lt;/a&gt; section for Apache Tomcat upgrades and Java 8 downgrades&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;[04-01 12:51 BST]&lt;/strong&gt; Apache Tomcat releases versions &lt;strong&gt;10.0.20&lt;/strong&gt;, &lt;strong&gt;9.0.62&lt;/strong&gt;, and &lt;strong&gt;8.5.78&lt;/strong&gt; which close the attack vector on Tomcat’s side, see &lt;a href="https://spring.io/blog/2022/04/01/spring-framework-rce-mitigation-alternative"&gt;mitigation alternative&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;[03-31 15:40 BST]&lt;/strong&gt; &lt;a href="https://spring.io/blog/2022/03/31/spring-boot-2-6-6-available-now"&gt;Spring Boot 2.6.6&lt;/a&gt; is available&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;[03-31 14:38 BST]&lt;/strong&gt; &lt;a href="https://spring.io/blog/2022/03/31/spring-boot-2-5-12-available-now"&gt;Spring Boot 2.5.12&lt;/a&gt; is available&lt;/li&gt;
@@ -102,7 +103,7 @@
 &lt;ul&gt;
   &lt;li&gt;Running on JDK 9 or higher&lt;/li&gt;
   &lt;li&gt;Apache Tomcat as the Servlet container.&lt;/li&gt;
-  &lt;li&gt;Packaged as a traditional WAR (in contrast to a Spring Boot executable jar).&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://docs.spring.io/spring-boot/docs/2.5.x/reference/htmlsingle/#howto.traditional-deployment"&gt;Packaged as a traditional WAR&lt;/a&gt; and deployed in a standalone Tomcat instance. Typical Spring Boot deployments using &lt;a href="https://docs.spring.io/spring-boot/docs/2.5.x/reference/htmlsingle/#features.developing-web-applications.embedded-container"&gt;an embedded Servlet container&lt;/a&gt; or &lt;a href="https://docs.spring.io/spring-boot/docs/2.5.x/reference/htmlsingle/#features.developing-web-applications.reactive-server"&gt;reactive web server&lt;/a&gt; are not impacted.&lt;/li&gt;
   &lt;li&gt;&lt;code&gt;spring-webmvc&lt;/code&gt; or &lt;code&gt;spring-webflux&lt;/code&gt; dependency.&lt;/li&gt;
   &lt;li&gt;Spring Framework versions 5.3.0 to 5.3.17, 5.2.0 to 5.2.19, and older versions.&lt;/li&gt;
 &lt;/ul&gt;

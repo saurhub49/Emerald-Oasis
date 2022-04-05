@@ -1,7 +1,0 @@
-package com.app.daos;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-public interface FoodItemDao extends JpaRepository<com.app.entities.FoodItem, ID>{
-
-}
