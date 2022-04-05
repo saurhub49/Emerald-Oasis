@@ -10,7 +10,7 @@ import AdminHeader from "../../../../components/AdminHeader/adminHeader"
 const CustDetails = () => {
     const { state } = useLocation()
     const [custDetails, setCustDetails] = useState([])
-    // const navigate = useNavigate()
+    const navigate = useNavigate()
 
     const { custId } = state
 
@@ -34,7 +34,7 @@ const CustDetails = () => {
         <div className="container">
             <AdminHeader></AdminHeader>
             <div className="main-div">
-            <label className="cust-details">Customer Details</label>
+                <label className="cust-details">Customer Details</label>
 
                 <form>
                     <div className="row">
@@ -134,7 +134,9 @@ const CustDetails = () => {
                         </div>
                     </div>
                     <br />
-                    <button class="btn btn-success" type="button" id="button-addon2" >Show All Orders</button>
+                    <button class="btn btn-success" type="button" id="button-addon2" onClick={() => {
+                        navigate('/userAllOrders', { state: { userId: custDetails.userId } })
+                    }}>Show All Orders</button>
                 </form>
             </div>
         </div>

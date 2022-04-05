@@ -22,6 +22,8 @@ import AllOrders from './pages/adminSide/ManageOrders/AllOrders/allOrders'
 import EmpAllOrders from './pages/adminSide/ManageEmp/EmpOrders/empAllOrders'
 import AllFoods from './pages/adminSide/ManageCuis/AllFoods/allFoods'
 import AddFood from './pages/adminSide/ManageCuis/AddFood/addFood'
+import UserAllOrders from './pages/adminSide/ManageCust/UserAllOrders/userAllOrders'
+import UserOrderDetails from './pages/adminSide/ManageCust/UserOrderDetails/userOrderDetails'
 
 const AuthorizeUser = () => {
   const loginStatus = sessionStorage['loginStatus']
@@ -55,6 +57,8 @@ function App() {
           <Route path="/empAllOrder" element={<EmpAllOrders />} />
           <Route path="/allFoods" element={<AllFoods />} />
           <Route path="/addFood" element={<AddFood />} />
+          <Route path="/userAllOrders" element={<UserAllOrders />} />
+          <Route path="/userOrderDetails" element={<UserOrderDetails />} />
         </Routes>
       </BrowserRouter>
       <ToastContainer theme="colored"

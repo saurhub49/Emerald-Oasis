@@ -1,5 +1,0 @@
-package com.app.daos;
-
-public interface FoodItem {
-
-}

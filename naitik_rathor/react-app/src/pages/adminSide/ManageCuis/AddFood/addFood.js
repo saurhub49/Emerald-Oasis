@@ -22,19 +22,19 @@ const AddFood = () => {
 
     const addFoodItem = () => {
         if (name.length == 0) {
-            toast.warning('Enter Cuisine Name')
+            toast.error('Enter Cuisine Name')
         }
         else if (image.length == 0) {
-            toast.warning('Enter Image Link')
-        }
-        else if (description.length == 0) {
-            toast.warning('Enter About Cuisine')
+            toast.error('Enter Image Link')
         }
         else if (price.length == 0) {
-            toast.warning('Enter Price')
+            toast.error('Enter Price')
         }
         else if (quantity.length == 0) {
-            toast.warning('Enter Quantity')
+            toast.error('Enter Quantity')
+        }
+        else if (description.length == 0) {
+            toast.error('Enter About Cuisine')
         }
         else {
             const body = {

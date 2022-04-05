@@ -35,6 +35,7 @@ const ResolverCachePlugin = require("./cache/ResolverCachePlugin");
 
 const CommonJsPlugin = require("./dependencies/CommonJsPlugin");
 const HarmonyModulesPlugin = require("./dependencies/HarmonyModulesPlugin");
+const ImportMetaContextPlugin = require("./dependencies/ImportMetaContextPlugin");
 const ImportMetaPlugin = require("./dependencies/ImportMetaPlugin");
 const ImportPlugin = require("./dependencies/ImportPlugin");
 const LoaderPlugin = require("./dependencies/LoaderPlugin");
@@ -291,7 +292,7 @@ class WebpackOptionsApply extends OptionsApply {
 
 		if (options.experiments.css) {
 			const CssModulesPlugin = require("./css/CssModulesPlugin");
-			new CssModulesPlugin().apply(compiler);
+			new CssModulesPlugin(options.experiments.css).apply(compiler);
 		}
 
 		if (options.experiments.lazyCompilation) {
@@ -361,6 +362,7 @@ class WebpackOptionsApply extends OptionsApply {
 		new RequireEnsurePlugin().apply(compiler);
 		new RequireContextPlugin().apply(compiler);
 		new ImportPlugin().apply(compiler);
+		new ImportMetaContextPlugin().apply(compiler);
 		new SystemPlugin().apply(compiler);
 		new ImportMetaPlugin().apply(compiler);
 		new URLPlugin().apply(compiler);

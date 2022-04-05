@@ -49,6 +49,7 @@ const makeSerializable = require("./util/makeSerializable");
  * @property {string=} type the type of source that should be generated
  */
 
+// TODO webpack 6: compilation will be required in CodeGenerationContext
 /**
  * @typedef {Object} CodeGenerationContext
  * @property {DependencyTemplates} dependencyTemplates the dependency templates
@@ -58,6 +59,7 @@ const makeSerializable = require("./util/makeSerializable");
  * @property {RuntimeSpec} runtime the runtimes code should be generated for
  * @property {ConcatenationScope=} concatenationScope when in concatenated module, information about other concatenated modules
  * @property {CodeGenerationResults} codeGenerationResults code generation results of other modules (need to have a codeGenerationDependency to use that)
+ * @property {Compilation=} compilation the compilation
  */
 
 /**
@@ -400,7 +402,6 @@ class Module extends DependenciesBlock {
 	// BACKWARD-COMPAT END
 
 	/**
-	 * @deprecated moved to .buildInfo.exportsArgument
 	 * @returns {string} name of the exports argument
 	 */
 	get exportsArgument() {
@@ -408,7 +409,6 @@ class Module extends DependenciesBlock {
 	}
 
 	/**
-	 * @deprecated moved to .buildInfo.moduleArgument
 	 * @returns {string} name of the module argument
 	 */
 	get moduleArgument() {
@@ -691,7 +691,7 @@ class Module extends DependenciesBlock {
 
 	/**
 	 * @param {NeedBuildContext} context context info
-	 * @param {function(WebpackError=, boolean=): void} callback callback function, returns true, if the module needs a rebuild
+	 * @param {function((WebpackError | null)=, boolean=): void} callback callback function, returns true, if the module needs a rebuild
 	 * @returns {void}
 	 */
 	needBuild(context, callback) {

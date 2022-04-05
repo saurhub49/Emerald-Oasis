@@ -28,6 +28,24 @@ const CuisinesAll = () => {
         })
     }
 
+    // const deleteCuisine = (cuisineId) => {
+    //     if (window.confirm("All Cuisine and Foods will be Deleted Permanently\nAre You Sure?")) {
+
+    //         const url = `${URL}/admin/deletecuisine/${cuisineId}`
+
+    //         axios.delete(url).then((response) => {
+    //             const result = response.data
+    //             if (result.status === 'success') {
+    //                 toast.success("Cuisine Deleted")
+    //                 window.location.reload(false);
+    //             } else {
+    //                 console.log(result.error)
+    //                 toast.error(result['error'])
+    //             }
+    //         })
+    //     }
+    // }
+
     useEffect(() => {
         getCuisines()
     }, [])
@@ -49,6 +67,12 @@ const CuisinesAll = () => {
                             <div className="overlay">
                                 <div className="text">{cuisine.name}</div>
                             </div>
+                            {/* <div className="row">
+                                <div className="col btn-group">
+                                    <button type="button" className="btn btn-outline-success">EDIT</button>
+                                    <button type="button" className="btn btn-outline-danger" onClick={deleteCuisine(cuisine.cuisineId)}>DELETE</button>
+                                </div>
+                            </div> */}
                         </div>
                     )
                 })
