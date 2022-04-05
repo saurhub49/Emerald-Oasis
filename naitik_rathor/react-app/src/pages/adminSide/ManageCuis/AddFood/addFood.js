@@ -14,7 +14,7 @@ const AddFood = () => {
     const [description, setDescription] = useState('')
     const [price, setPrice] = useState('')
     const [quantity, setQuantity] = useState('')
-    const { cuisineId } = state
+    const { cuisineId, cuisName } = state
 
     // console.log(cuisineId)
 
@@ -53,7 +53,7 @@ const AddFood = () => {
                 // console.log(result)
                 if (result['status'] === 'success') {
                     toast.success('Food Item Added')
-                    navigate('/allFoods', { state: { id: cuisineId }})
+                    navigate('/allFoods', { state: { id: cuisineId } })
                 }
                 else {
                     toast.error(result['error'])
@@ -70,13 +70,13 @@ const AddFood = () => {
                 <div class="row">
                     <div className="col input-group mb-4 ">
                         <span class="input-group-text " >Food Name</span>
-                        <input onChange={(e)=>{
+                        <input onChange={(e) => {
                             setName(e.target.value)
                         }} type="text" class="form-control" aria-describedby="inputGroup-sizing-default" />
                     </div>
                     <div class="col input-group mb-4">
                         <span class="input-group-text " >Image Link</span>
-                        <input onChange={(e)=>{
+                        <input onChange={(e) => {
                             setImage(e.target.value)
                         }} type="text" class="form-control" aria-describedby="inputGroup-sizing-default" />
                     </div>
@@ -85,7 +85,7 @@ const AddFood = () => {
                     <div className="col input-group mb-4 ">
                         <span class="input-group-text " >Price</span>
                         <span class="input-group-text " >Rs</span>
-                        <input onChange={(e)=>{
+                        <input onChange={(e) => {
                             setPrice(e.target.value)
                         }} type="number" class="form-control input-number" aria-describedby="inputGroup-sizing-default" />
                     </div>
@@ -93,7 +93,7 @@ const AddFood = () => {
                         <div className="row">
                             <div class="col input-group mb-4">
                                 <span class="input-group-text " >Quantity</span>
-                                <input onChange={(e)=>{
+                                <input onChange={(e) => {
                                     setQuantity(e.target.value)
                                 }} type="number" class="form-control" aria-describedby="inputGroup-sizing-default" />
                             </div>
@@ -104,14 +104,20 @@ const AddFood = () => {
                 <div className="row">
                     <label class="form-label">Description</label>
                     <div class="col form-floating mb-4">
-                        <textarea onChange={(e)=>{
+                        <textarea onChange={(e) => {
                             setDescription(e.target.value)
                         }} type="text" class="form-control" id="floatingInput" placeholder="description" />
                         <label for="floatingInput"> description</label>
                     </div>
                     <div className="col"></div>
                 </div>
-                <button type="button" class="btn btn-outline-secondary" onClick={addFoodItem}>Submit</button>
+                <div className="col-md-6 btn-group">
+                    <button type="button" class="btn btn-outline-success" onClick={addFoodItem}>ADD FOOD</button>
+                    <button type="button" class="btn btn-outline-secondary" onClick={() => {
+                        toast.warn("No Changes")
+                        navigate('/allFoods', { state: { id: cuisineId, cuisName: cuisName } })
+                    }}>CANCEL</button>
+                </div>
             </div>
         </div>
     )

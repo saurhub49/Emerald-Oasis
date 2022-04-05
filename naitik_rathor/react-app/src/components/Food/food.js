@@ -1,16 +1,18 @@
 import axios from 'axios'
 import { toast } from 'react-toastify'
 import './food.css'
-import {URL} from '../../config'
+import { URL } from '../../config'
+import { useNavigate } from 'react-router'
 
 const Food = (props) => {
     const { food, setFood } = props
-    // console.log(food.name)
+    const { cuisineId, cuisName } = props
+    const navigate = useNavigate()
 
-    const deleteFood=()=>{
-        if(window.confirm("This Food Item will be Deleted Permanently\nAre You Sure?")){
-          
-            const url =`${URL}/admin/deletefooditem/${food.foodItemId}`
+    const deleteFood = () => {
+        if (window.confirm("This Food Item will be Deleted Permanently\nAre You Sure?")) {
+
+            const url = `${URL}/admin/deletefooditem/${food.foodItemId}`
 
             axios.delete(url).then((response) => {
                 const result = response.data
@@ -37,7 +39,9 @@ const Food = (props) => {
             </div>
             <div className="row">
                 <div className="col btn-group ">
-                    <button type="button" className="btn btn-outline-secondary ">EDIT</button>
+                    <button type="button" className="btn btn-outline-secondary " onClick={() => {
+                        navigate('/editFood', { state: { food: food, cuisineId: cuisineId, cuisName: cuisName } })
+                    }}>EDIT</button>
                     <button type="button" className="btn btn-outline-secondary " onClick={deleteFood}>DELETE</button>
                 </div>
             </div>
