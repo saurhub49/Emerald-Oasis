@@ -1,7 +1,6 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import { useLocation, useNavigate } from "react-router"
-import { Link } from "react-router-dom"
 import { toast } from "react-toastify"
 import AdminHeader from "../../../../components/AdminHeader/adminHeader"
 import Food from "../../../../components/Food/food"
@@ -51,7 +50,7 @@ const AllFoods = () => {
     }
 
     const addFoodItem = () => {
-        navigate('/addFood', { state: { cuisineId: id } })
+        navigate('/addFood', { state: { cuisineId: id, cuisName: cuisName } })
         // console.log(id)
     }
 
@@ -75,7 +74,7 @@ const AllFoods = () => {
             }
             <div className="grid"> {
                 foods.map((food) => {
-                    return <div className="row mb-3  "><Food food={food}></Food></div>
+                    return <div className="row mb-3  "><Food food={food} cuisineId={id} cuisName={cuisName}></Food></div>
                 })
             }</div>
         </div>

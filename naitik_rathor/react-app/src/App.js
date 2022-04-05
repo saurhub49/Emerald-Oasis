@@ -24,6 +24,8 @@ import AllFoods from './pages/adminSide/ManageCuis/AllFoods/allFoods'
 import AddFood from './pages/adminSide/ManageCuis/AddFood/addFood'
 import UserAllOrders from './pages/adminSide/ManageCust/UserAllOrders/userAllOrders'
 import UserOrderDetails from './pages/adminSide/ManageCust/UserOrderDetails/userOrderDetails'
+import EditCuisine from './pages/adminSide/ManageCuis/EditCuisine/editCuisine'
+import EditFood from './pages/adminSide/ManageCuis/EditFood/editFood'
 
 const AuthorizeUser = () => {
   const loginStatus = sessionStorage['loginStatus']
@@ -59,6 +61,8 @@ function App() {
           <Route path="/addFood" element={<AddFood />} />
           <Route path="/userAllOrders" element={<UserAllOrders />} />
           <Route path="/userOrderDetails" element={<UserOrderDetails />} />
+          <Route path="/editCuisine" element={<EditCuisine />} />
+          <Route path="/editFood" element={<EditFood />} />
         </Routes>
       </BrowserRouter>
       <ToastContainer theme="colored"

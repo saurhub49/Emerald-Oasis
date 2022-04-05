@@ -1,6 +1,6 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-import { Navigate, useNavigate } from "react-router"
+import { useNavigate } from "react-router"
 import { Link } from "react-router-dom"
 import { toast } from "react-toastify"
 import AdminHeader from "../../../../components/AdminHeader/adminHeader"
@@ -28,24 +28,6 @@ const CuisinesAll = () => {
         })
     }
 
-    // const deleteCuisine = (cuisineId) => {
-    //     if (window.confirm("All Cuisine and Foods will be Deleted Permanently\nAre You Sure?")) {
-
-    //         const url = `${URL}/admin/deletecuisine/${cuisineId}`
-
-    //         axios.delete(url).then((response) => {
-    //             const result = response.data
-    //             if (result.status === 'success') {
-    //                 toast.success("Cuisine Deleted")
-    //                 window.location.reload(false);
-    //             } else {
-    //                 console.log(result.error)
-    //                 toast.error(result['error'])
-    //             }
-    //         })
-    //     }
-    // }
-
     useEffect(() => {
         getCuisines()
     }, [])
@@ -61,18 +43,36 @@ const CuisinesAll = () => {
             {
                 cuisines.map((cuisine) => {
                     return (
-                        <div className="cui-box float-start" onClick={() => {
-                            navigate('/allFoods', { state: { id: cuisine.cuisineId, cuisName: cuisine.name } })
-                        }}>
-                            <div className="overlay">
+                        <div className="cui-box float-start" >
+                            <div className="overlay " onClick={() => {
+                                navigate('/allFoods', { state: { id: cuisine.cuisineId, cuisName: cuisine.name } })
+                            }}>
                                 <div className="text">{cuisine.name}</div>
                             </div>
-                            {/* <div className="row">
+                            <div className="row">
                                 <div className="col btn-group">
-                                    <button type="button" className="btn btn-outline-success">EDIT</button>
-                                    <button type="button" className="btn btn-outline-danger" onClick={deleteCuisine(cuisine.cuisineId)}>DELETE</button>
+                                    <button type="button" className="btn btn-outline-success" onClick={() => {
+                                        navigate('/editCuisine', { state: { cuisine: cuisine } })
+                                    }}>EDIT</button>
+                                    <button type="button" className="btn btn-outline-danger" onClick={() => {
+                                        if (window.confirm("All Cuisine and Foods will be Deleted Permanently\nAre You Sure?")) {
+
+                                            const url = `${URL}/admin/deletecuisine/${cuisine.cuisineId}`
+
+                                            axios.delete(url).then((response) => {
+                                                const result = response.data
+                                                if (result.status === 'success') {
+                                                    toast.success("Cuisine Deleted")
+                                                    window.location.reload(false);
+                                                } else {
+                                                    console.log(result.error)
+                                                    toast.error(result['error'])
+                                                }
+                                            })
+                                        }
+                                    }}>DELETE</button>
                                 </div>
-                            </div> */}
+                            </div>
                         </div>
                     )
                 })

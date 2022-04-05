@@ -77,8 +77,11 @@ const AddCuisine = () => {
                         }
                     } className="form-control" placeholder="description" rows="3" required></textarea>
                 </div>
-                <div className="mb-3">
-                    <button type="button" class="btn btn-outline-secondary" onClick={addCuisine}>Add Cuisine</button>
+                <div className="col-md-6 btn-group mb-3">
+                    <button type="button" class="btn btn-outline-success" onClick={addCuisine}>ADD CUISINE</button>
+                    <button type="button" class="btn btn-outline-secondary" onClick={() => {
+                        navigate('/cuisinesAll')
+                    }}>CANCEL</button>
                 </div>
             </div>
         </div>
