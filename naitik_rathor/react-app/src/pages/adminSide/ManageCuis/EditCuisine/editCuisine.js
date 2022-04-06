@@ -17,13 +17,13 @@ const EditCuisine = () => {
     const navigate = useNavigate()
 
     const updateCuisine = () => {
-        if (name.length==0) {
+        if (name.length == 0) {
             toast.error("Enter Cuisine Name")
-        }else if(image.length==0){
+        } else if (image.length == 0) {
             toast.error("Enter Image Link")
-        }else if(description.length==0){
+        } else if (description.length == 0) {
             toast.error("Enter Description")
-        }else {
+        } else {
             const body = {
                 cuisineId: cuisine.cuisineId,
                 name,

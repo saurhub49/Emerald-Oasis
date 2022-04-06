@@ -47,6 +47,7 @@ const CuisinesAll = () => {
                             <div className="overlay " onClick={() => {
                                 navigate('/allFoods', { state: { id: cuisine.cuisineId, cuisName: cuisine.name } })
                             }}>
+                                <img className="image-cuis" src={cuisine.image}></img>
                                 <div className="text">{cuisine.name}</div>
                             </div>
                             <div className="row">
