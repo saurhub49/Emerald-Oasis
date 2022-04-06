@@ -80,7 +80,7 @@ const Welcome = () => {
             <div className="emp-link">
                 <div class="fixed-bottom employee-icon container employee-icon-box">
                     Interested in being a delivery person?
-                    <a href="/signupEmployee"><img src={help} alt="Hiring Icon" /> </a>
+                    <a href="/signupEmployee"><img className="deliv" src={help} alt="Hiring Icon" /> </a>
                 </div>
             </div>
         </div>
