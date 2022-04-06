@@ -1,17 +1,14 @@
 .eclipse1{
-    position: absolute;
-    
-    top: -80%;
-    left: 30%;
-
-   width: max-content;
+    position: relative;
+    top: -550px;
+    left: 300px;
+    /* opacity: 75%; */
 }
 
 .rect1{
     position: relative;
     width: 228.92px;
     top: 200px;
-    margin-bottom: 200px;
 }
 
 .delicious{
@@ -39,11 +36,10 @@
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 2px;
-    width: 170px;
+    width: 200px;
     border-radius: 20px;
-    position: absolute;
+    position: relative;
     background-color: white;
-    /* color: #24960F; */
     text-align: center;
     font-size: larger;
     font-weight: 700;
@@ -52,4 +48,9 @@
 .quench-now:hover{
     background-color: #9BD490;
     color: white;
+}
+
+.cuis-div{
+    position: relative;
+    top: -450px;
 }

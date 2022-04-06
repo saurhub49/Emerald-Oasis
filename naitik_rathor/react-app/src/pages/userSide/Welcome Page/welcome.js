@@ -10,10 +10,10 @@ const Welcome = () => {
 
             <nav id="navbar-example2" className="navbar fixed-top navbar-expand-lg navbar-light bg-black">
                 <div className="container-fluid navbar-items">
-                    <label className="navbar-brand  mb-0 h1" href="/">
+                   <a href="/"> <label className="navbar-brand  mb-0 h1">
                         <img src={logo} className="eologo" />
                         <span className="oasis1">Emerald Oasis</span>
-                    </label>
+                    </label></a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo2" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
