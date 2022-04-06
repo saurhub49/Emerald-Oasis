@@ -2,15 +2,16 @@ import { Link } from "react-router-dom"
 import logo from '../../../assets/logo.png'
 import './welcome.css'
 import help from '../../../assets/help-circle.png'
+import WelcomeCarousel from "../../../components/WelcomeCarousel/welcomeCarousel"
 
 const Welcome = () => {
 
     return (
         <div >
-
+            <WelcomeCarousel></WelcomeCarousel>
             <nav id="navbar-example2" className="navbar fixed-top navbar-expand-lg navbar-light bg-black">
                 <div className="container-fluid navbar-items">
-                   <a href="/"> <label className="navbar-brand  mb-0 h1">
+                    <a href="/"> <label className="navbar-brand  mb-0 h1">
                         <img src={logo} className="eologo" />
                         <span className="oasis1">Emerald Oasis</span>
                     </label></a>
@@ -41,6 +42,8 @@ const Welcome = () => {
                     </div>
                 </div>
             </nav>
+
+
 
             <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" className="scrollspy-example" tabIndex="0">
                 <div id="scrollspyHeading1" className="img-home">

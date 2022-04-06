@@ -72,10 +72,13 @@ li{
     text-align: center!important;
     box-sizing: border-box;
     position: relative;
-    height: 100%;
+    /* height: 100%; */
     display: flex;
     align-items: center;
     text-align: center;
+
+    left: 50px;
+    top: -200px;
 }
 
 .how-it-works-1{
@@ -136,8 +139,6 @@ color: black;
 }
 
 .img-home{
-    background: url("../../../images/welcome2.jpg");   
-   
     top: auto;
     position: absolute;
     vertical-align: middle;
@@ -145,20 +146,20 @@ color: black;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     width: 100%;
     height: 100%;
+    z-index: 2;
 }
 
 .img-about{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    position: absolute;
+    position: relative;
     top: 100%;
     left: 0;
     right: 0;
@@ -167,6 +168,7 @@ color: black;
     height: fit-content ;  
     display: block;
     background-color: cadetblue;
+    /* z-index: 2; */
 }
 
 .img-contactUs{
@@ -182,4 +184,11 @@ color: black;
     height: 100%;
     padding: 35px;
     background-color:bisque
+}
+
+
+.div1{
+    position: absolute;
+    top: 100px;
+height: 500px;
 }
