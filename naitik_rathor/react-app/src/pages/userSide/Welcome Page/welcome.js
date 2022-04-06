@@ -58,7 +58,7 @@ const Welcome = () => {
                 <div id="scrollspyHeading2" className="img-about">
                     <div className="container">
                         <div className="how-it-works-1">
-                            HOW IT WORKS
+                            HOW IT&nbsp;<div className="works">WORKS</div>
                         </div>
                         <div className="how-it-works-2 ">
                             A theme bar where customers can interact with a virtual bartender
@@ -70,7 +70,7 @@ const Welcome = () => {
                     <div id="scrollspyHeading3" className="img-contactUs">
                         <div className="container">
                             <div className="contactUs">
-                                Contact US
+                                Contact&nbsp;<span className="works">US</span>
                             </div>
                         </div>
                     </div>

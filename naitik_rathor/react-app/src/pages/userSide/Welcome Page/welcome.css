@@ -89,7 +89,7 @@ li{
     
 font-style: normal;
 font-weight: 600;
-font-size: 70px;
+font-size: 60px;
 line-height: initial !important;
 box-sizing: border-box;
 display: flex;
@@ -116,18 +116,18 @@ color: black;
     padding-bottom: 30px;
     margin-block-end: 0.67em;
     box-sizing: border-box;
-    font-style: oblique;
+    font-style: normal;
     font-size: 23px;
     font-family: 'AvantGardeBk';
     box-sizing: border-box;
-    font-weight: 550;
+    font-weight: bolder;
     line-height: initial!important;
     color: #24262f!important;
 }
 
 .contactUs{
     margin-bottom: 1vw;
-    font-size: 40px;
+    font-size: 60px;
     position: relative;
     text-transform: uppercase;
     font-weight: 600;
@@ -186,9 +186,6 @@ color: black;
     background-color:bisque
 }
 
-
-.div1{
-    position: absolute;
-    top: 100px;
-height: 500px;
+.works{
+    color: white;
 }

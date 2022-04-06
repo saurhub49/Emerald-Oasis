@@ -26,7 +26,6 @@ import UserAllOrders from './pages/adminSide/ManageCust/UserAllOrders/userAllOrd
 import UserOrderDetails from './pages/adminSide/ManageCust/UserOrderDetails/userOrderDetails'
 import EditCuisine from './pages/adminSide/ManageCuis/EditCuisine/editCuisine'
 import EditFood from './pages/adminSide/ManageCuis/EditFood/editFood'
-import WelcomeCarousel from './components/WelcomeCarousel/welcomeCarousel'
 
 const AuthorizeUser = () => {
   const loginStatus = sessionStorage['loginStatus']
@@ -64,7 +63,6 @@ function App() {
           <Route path="/userOrderDetails" element={<UserOrderDetails />} />
           <Route path="/editCuisine" element={<EditCuisine />} />
           <Route path="/editFood" element={<EditFood />} />
-          <Route path="/comdemo" element={<WelcomeCarousel />} />
         </Routes>
       </BrowserRouter>
       <ToastContainer theme="colored"
