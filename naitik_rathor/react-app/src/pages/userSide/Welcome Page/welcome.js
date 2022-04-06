@@ -2,6 +2,9 @@ import { Link } from "react-router-dom"
 import logo from '../../../assets/logo.png'
 import './welcome.css'
 import help from '../../../assets/help-circle.png'
+import mail from '../../../assets/mail.png'
+import faq from '../../../assets/faq.png'
+import call from '../../../assets/call.png'
 import WelcomeCarousel from "../../../components/WelcomeCarousel/welcomeCarousel"
 
 const Welcome = () => {
@@ -71,6 +74,30 @@ const Welcome = () => {
                         <div className="container">
                             <div className="contactUs">
                                 Contact&nbsp;<span className="works">US</span>
+                            </div>
+                            <img className="contact-icon" src={mail} data-bs-toggle="collapse" href="#mail-body" aria-expanded="false"></img>
+                            <img className="contact-icon" src={call} data-bs-toggle="collapse" href="#call-body" aria-expanded="false"></img>
+                            <img className="contact-icon" src={faq} data-bs-toggle="collapse" href="#faq-body" aria-expanded="false"></img>
+                            <div class="collapse" id="mail-body">
+                                <div class="card card-body" >
+                                    Thanks For Visiting Us...
+                                    <br />
+                                    Email: emeral_oasis@gmail.com
+                                </div>
+                            </div>
+                            <div class="collapse" id="call-body">
+                                <div class="card card-body" >
+                                    Thanks For Visiting Us...
+                                    <br />
+                                    Contact us: 999999xxx
+                                </div>
+                            </div>
+                            <div class="collapse" id="faq-body">
+                                <div class="card card-body" >
+                                    Thanks For Visiting Us...
+                                    <br />
+                                    Help: write your query here...
+                                </div>
                             </div>
                         </div>
                     </div>
