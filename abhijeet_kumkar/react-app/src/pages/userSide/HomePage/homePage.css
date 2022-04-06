@@ -1,0 +1,55 @@
+.eclipse1{
+    position: absolute;
+    
+    top: -80%;
+    left: 30%;
+
+   width: max-content;
+}
+
+.rect1{
+    position: relative;
+    width: 228.92px;
+    top: 100px;
+    margin-bottom: 200px;
+}
+
+.delicious{
+    
+    font-size: 60px;
+    font-weight: 400;
+    color: #24960F;
+}
+
+.quench-the-hunger{
+    font-size: 25px;
+    font-weight: 400;
+    font-family: 'Cousine';
+    color: #C00C0C;
+    border-bottom: solid ;
+}
+
+.quote-1{
+    font-size: 17px;
+    color: black;
+    font-weight: 500;
+}
+
+.quench-now{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 2px;
+    width: 170px;
+    border-radius: 20px;
+    position: absolute;
+    background-color: white;
+    color: #24960F;
+    text-align: center;
+    font-size: larger;
+    font-weight: 700;
+}
+
+.quench-now:hover{
+    background-color: #1c790a;
+    color: white;
+}
