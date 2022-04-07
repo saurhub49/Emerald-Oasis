@@ -4,6 +4,7 @@ import { useLocation, useNavigate } from "react-router"
 import { toast } from "react-toastify"
 import { URL } from "../../../../config"
 import AdminHeader from "../../../../components/AdminHeader/adminHeader"
+import { formatDate } from "../../../../utils"
 
 
 
@@ -103,7 +104,7 @@ const CustDetails = () => {
                                 class="form-control"
                                 type="text"
                                 id="inputBirthDate"
-                                value={custDetails.birthdate} format="yyyy-mm-dd"
+                                value={formatDate(custDetails.birthdate)} 
                                 placeholder="na"
                                 aria-label="Disabled input example" disabled readOnly
                             />

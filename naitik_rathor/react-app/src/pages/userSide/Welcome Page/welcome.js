@@ -30,7 +30,7 @@ const Welcome = () => {
                                 <a className="nav-link" href="#scrollspyHeading2">ABOUT</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#scrollspyHeading2">CONTACT US</a>
+                                <a className="nav-link" href="#scrollspyHeading3">CONTACT US</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link franchise" >FRANCHISE</a>
@@ -56,7 +56,6 @@ const Welcome = () => {
                         </div>
                     </div>
                 </div>
-
 
                 <div id="scrollspyHeading2" className="img-about">
                     <div className="container">
@@ -102,7 +101,6 @@ const Welcome = () => {
                         </div>
                     </div>
                 </div>
-
             </div>
             <div className="emp-link">
                 <div class="fixed-bottom employee-icon container employee-icon-box">

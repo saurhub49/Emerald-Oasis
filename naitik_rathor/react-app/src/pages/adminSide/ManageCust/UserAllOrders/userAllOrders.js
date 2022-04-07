@@ -5,6 +5,7 @@ import { toast } from "react-toastify"
 import AdminHeader from "../../../../components/AdminHeader/adminHeader"
 import { URL } from "../../../../config"
 import '../Customers/customers.css'
+import { formatDate } from "../../../../utils"
 
 const UserAllOrders = () => {
     const { state } = useLocation()
@@ -59,11 +60,10 @@ const UserAllOrders = () => {
                                 }}>
             
                                     <td>{userOrder.orderId}</td>
-                                    <td>{userOrder.orderedTimeStamp}</td>
-                                    <td>{userOrder.deliveredTimeStamp}</td>
+                                    <td>{formatDate(userOrder.orderedTimeStamp)}</td>
+                                    <td>{formatDate(userOrder.deliveredTimeStamp)}</td>
                                     <td>{userOrder.totalAmount}</td>
                                     <td>{userOrder.orderStatus}</td>
-                                    
                                 </tr>
                             )
                         })

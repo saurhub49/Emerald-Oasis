@@ -1,12 +1,15 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-import { Navigate } from "react-router"
+import {useNavigate } from "react-router"
 import { toast } from "react-toastify"
 import AdminHeader from "../../../../components/AdminHeader/adminHeader"
+import UserName from "../../../../components/UserName/userName"
 import { URL } from "../../../../config"
+import { formatDate } from "../../../../utils"
 
 const AllOrders = () => {
     const [orders, setOrders] = useState([])
+    const navigate = useNavigate()
 
     const getAllOrders = () => {
         const url = `${URL}/admin/getallorders`
@@ -39,22 +42,24 @@ const AllOrders = () => {
                     <tr>
                         <td>Order Id</td>
                         <td>Customer Name</td>
+                        <td>Employee Name</td>
                         <td>Ordered On</td>
-                        <td>Delivery Person</td>
-                        <td>Status</td>
+                        <td>Delivered On</td>
+                        <td>Total Amount</td>
+                        <td>Order Status</td>
                     </tr>
                 </thead>
                 <tbody>
                     {
                         orders.map((order) => {
                             return (
-                                <tr onClick={() => {
-                                    Navigate('/orderDetails', { state: { id: order.orderId } })
-                                }}>
+                                <tr>
                                     <td>{order.orderId}</td>
-                                    <td>Aman</td>
-                                    <td>{order.orderedTimeStamp}</td>
-                                    <td>naitik</td>
+                                    <td><UserName order={order} role={1}></UserName></td>
+                                    <td><UserName order={order} role={0}></UserName></td>
+                                    <td>{formatDate(order.orderedTimeStamp)}</td>
+                                    <td>{formatDate(order.deliveredTimeStamp)}</td>
+                                    <td>{order.totalAmount}</td>
                                     <td>{order.orderStatus}</td>
                                 </tr>
                             )

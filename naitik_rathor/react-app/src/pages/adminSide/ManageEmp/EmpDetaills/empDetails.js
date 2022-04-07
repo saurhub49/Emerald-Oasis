@@ -4,6 +4,7 @@ import { toast } from "react-toastify"
 import axios from "axios"
 import { URL } from "../../../../config"
 import AdminHeader from "../../../../components/AdminHeader/adminHeader"
+import { formatDate } from "../../../../utils"
 
 
 
@@ -173,9 +174,9 @@ const EmpDetails = () => {
                             <label for="inputBirthDate">Birth Date</label>
                             <input
                                 class="form-control"
-                                type="date" format="yyyy-mm-dd"
+                                type="date"
                                 id="inputBirthDate"
-                                value={userDetails.birthdate}
+                                value={formatDate(userDetails.birthdate)}
                                 aria-label="Disabled input example" disabled readonly
                             />
                         </div>
