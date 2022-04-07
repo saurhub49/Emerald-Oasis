@@ -7,12 +7,13 @@ import AdminHeader from "../../../../components/AdminHeader/adminHeader"
 
 const EditFood = () => {
     const { state } = useLocation()
-    const [name, setName] = useState('')
-    const [image, setImage] = useState('')
-    const [description, setDescription] = useState('')
-    const [price, setPrice] = useState('')
-    const [quantity, setQuantity] = useState('')
     const { cuisineId, food, cuisName } = state
+    const [name, setName] = useState(food.name)
+    const [image, setImage] = useState(food.image)
+    const [description, setDescription] = useState(food.description)
+    const [price, setPrice] = useState(food.price)
+    const [quantity, setQuantity] = useState(food.quantity)
+    
     // console.log(food.name)
 
     // console.log(cuisineId)
@@ -20,17 +21,7 @@ const EditFood = () => {
     const navigate = useNavigate()
 
     const updateFoodItem = () => {
-        if (name.length == 0) {
-            toast.error("Enter Food Name")
-        } else if (image.length == 0) {
-            toast.error("Enter Image Link")
-        } else if (description.length == 0) {
-            toast.error("Enter Description")
-        } else if (price.length == 0) {
-            toast.error("Enter Price")
-        } else if (quantity.length == 0) {
-            toast.error("Enter Quantity")
-        } else {
+
             const body = {
                 foodItemId: food.foodItemId,
                 name,
@@ -54,7 +45,6 @@ const EditFood = () => {
                     toast.error(result['error'])
                 }
             })
-        }
     }
 
 

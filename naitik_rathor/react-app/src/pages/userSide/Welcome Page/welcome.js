@@ -33,9 +33,6 @@ const Welcome = () => {
                                 <a className="nav-link" href="#scrollspyHeading3">CONTACT US</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link franchise" >FRANCHISE</a>
-                            </li>
-                            <li className="nav-item">
                                 <Link className="nav-link" to="/signupUser">SIGNUP</Link>
                             </li>
                             <li className="nav-item">

@@ -36,7 +36,7 @@ public class Cuisine {
 		this.image = image;
 		this.description = description;
 	}
-
+	
 	public Cuisine (int cuisineId) {
 		this.cuisineId = cuisineId;
 		
