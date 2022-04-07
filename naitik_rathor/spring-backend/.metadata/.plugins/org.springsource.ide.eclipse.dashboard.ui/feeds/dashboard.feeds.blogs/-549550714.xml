@@ -5,7 +5,256 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2022-04-01T11:49:00Z</updated>
+  <updated>2022-04-06T04:00:00Z</updated>
+  <entry>
+    <title>Spring Cloud Data Flow 2.9.4 Released</title>
+    <link rel="alternate" href="https://spring.io/blog/2022/04/05/spring-cloud-data-flow-2-9-4-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Chris Bono</name>
+    </author>
+    <id>tag:spring.io,2022-04-06:4762</id>
+    <updated>2022-04-06T04:00:00Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I’m happy to announce that Spring Cloud Dataflow &lt;code&gt;2.9.4&lt;/code&gt; has been released and is now available from Maven Central.&lt;/p&gt;
+&lt;p&gt;This release contains an update of the Spring Boot version and addresses a couple of CVEs. See the &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow/releases/tag/v2.9.4"&gt;release notes&lt;/a&gt; for more information.&lt;/p&gt;&lt;h2&gt;&lt;a href="#notable-changes-in-2-9-4" class="anchor" name="notable-changes-in-2-9-4"&gt;&lt;/a&gt;Notable Changes in 2.9.4&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Update to Spring Boot &lt;code&gt;2.5.12&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Resolves &lt;a href="https://tanzu.vmware.com/security/cve-2022-22965"&gt;CVE-2022-22965&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Resolves &lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29425"&gt;CVE-2021-29425&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h2&gt;&lt;a href="#stay-in-touch-hellip" class="anchor" name="stay-in-touch-hellip"&gt;&lt;/a&gt;Stay in touch&amp;hellip;&lt;/h2&gt;
+&lt;p&gt;As always, we welcome feedback and contributions, so please reach out to us on &lt;a href="https://stackoverflow.com/questions/tagged/spring-cloud-dataflow"&gt;Stackoverflow&lt;/a&gt; or &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow/issues"&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Cloud 2022.0.0-M2 (codename Kilburn) Has Been Released</title>
+    <link rel="alternate" href="https://spring.io/blog/2022/04/05/spring-cloud-2022-0-0-m2-codename-kilburn-has-been-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Marcin Grzejszczak</name>
+    </author>
+    <id>tag:spring.io,2022-04-01:4759</id>
+    <updated>2022-04-05T19:09:42Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the community, I am pleased to announce that the Milestone 2 (M2) of the &lt;a href="https://cloud.spring.io"&gt;Spring Cloud 2022.0.0&lt;/a&gt; Release Train is available today. The release can be found in &lt;a href="https://repo.spring.io/milestone/"&gt;Spring Milestone&lt;/a&gt; repository. You can check out the 2022.0 &lt;a href="https://github.com/spring-cloud/spring-cloud-release/wiki/Spring-Cloud-2022.0-Release-Notes"&gt;release notes for more information&lt;/a&gt;.&lt;/p&gt;&lt;h2&gt;&lt;a href="#notable-changes-in-the-2022-0-0-m2-release-train" class="anchor" name="notable-changes-in-the-2022-0-0-m2-release-train"&gt;&lt;/a&gt;Notable Changes in the 2022.0.0-M2 Release Train&lt;/h2&gt;
+&lt;p&gt;See &lt;a href="https://github.com/orgs/spring-cloud/projects/73"&gt;the project page&lt;/a&gt; for all the issues and pull requests included in this release.&lt;/p&gt;
+&lt;p&gt;Spring Cloud 2022.0.0-M2 is compatible with Spring Boot 3.0.0-M2.&lt;/p&gt;&lt;h3&gt;&lt;a href="#spring-cloud-stream" class="anchor" name="spring-cloud-stream"&gt;&lt;/a&gt;Spring Cloud Stream&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Both Kafka and RabbitMQ binders for Spring Cloud Stream have been migrated as part of the core Spring Cloud Stream repository. With this change, Spring Cloud Stream now follows a mono-repo approach where all the framework-related codebase for Spring Cloud Stream is now part of a single repository. See more details &lt;a href="https://github.com/spring-cloud/spring-cloud-stream/tree/main/binders/kafka-binder"&gt;here&lt;/a&gt; for the Kafka binder and &lt;a href="https://github.com/spring-cloud/spring-cloud-stream/tree/main/binders/rabbit-binder"&gt;here&lt;/a&gt; for the RabbitMQ binder. We recommend filing new feature requests and bug reports for Kafka and RabbitMQ binders in the core repository.&lt;/li&gt;
+  &lt;li&gt;Introduced initial support for a new &lt;a href="https://github.com/spring-cloud/spring-cloud-stream/tree/main/binders/kafka-binder/spring-cloud-stream-binder-kafka-reactive"&gt;reactive Kafka binder&lt;/a&gt; based on &lt;a href="https://projectreactor.io/docs/kafka/release/reference/"&gt;Reactor Kafka&lt;/a&gt;. This support contains consumer and producer bindings using Reactor Kafka behind the scenes. See &lt;a href="https://github.com/spring-cloud/spring-cloud-stream/issues/2293"&gt;this issue&lt;/a&gt; for more details.&lt;/li&gt;
+  &lt;li&gt;Also, given we&amp;rsquo;ve been relying on the new test binder for 3+ years now we have also removed the old test modules&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-config" class="anchor" name="spring-cloud-config"&gt;&lt;/a&gt;Spring Cloud Config&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Try multiple URLs when error response code received (&lt;a href="https://github.com/spring-cloud/spring-cloud-config/issues/1845"&gt;#1845&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Allow specification of down health status (&lt;a href="https://github.com/spring-cloud/spring-cloud-config/pull/2056"&gt;#2056&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-kubernetes" class="anchor" name="spring-cloud-kubernetes"&gt;&lt;/a&gt;Spring Cloud Kubernetes&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Refactor configmaps and secrets implementation (&lt;a href="https://github.com/spring-cloud/spring-cloud-kubernetes/pull/917"&gt;#917&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-contract" class="anchor" name="spring-cloud-contract"&gt;&lt;/a&gt;Spring Cloud Contract&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-contract/issues/1661"&gt;Bumped Pact to 4.2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-contract/issues/1762"&gt;Bumped Groovy to 4&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-gateway" class="anchor" name="spring-cloud-gateway"&gt;&lt;/a&gt;Spring Cloud Gateway&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Add route predicate for &amp;ldquo;X-Forwarded-For&amp;rdquo; header (&lt;a href="https://github.com/spring-cloud/spring-cloud-gateway/issues/783"&gt;#2384&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-function" class="anchor" name="spring-cloud-function"&gt;&lt;/a&gt;Spring Cloud Function&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Support for adding multiple routers&lt;/li&gt;
+  &lt;li&gt;Support for case-insensitive header key evaluation&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/29/cve-report-published-for-spring-cloud-function"&gt;cve-2022-22963&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-commons" class="anchor" name="spring-cloud-commons"&gt;&lt;/a&gt;Spring Cloud Commons&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-commons/issues/1043"&gt;Added possibility to retry on specific exceptions for the LoadBalancer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The following modules were updated as part of 2022.0.0-M2:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Module &lt;/th&gt;
+      &lt;th&gt;Version &lt;/th&gt;
+      &lt;th&gt;Issues&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Stream &lt;/td&gt;
+      &lt;td&gt;4.0.0-M2 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Config &lt;/td&gt;
+      &lt;td&gt;4.0.0-M2 &lt;/td&gt;
+      &lt;td&gt;(&lt;a href="https://github.com/spring-cloud/spring-cloud-config/milestone/100?closed=1"&gt;issues&lt;/a&gt;)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Build &lt;/td&gt;
+      &lt;td&gt;4.0.0-M2 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Kubernetes &lt;/td&gt;
+      &lt;td&gt;3.0.0-M2 &lt;/td&gt;
+      &lt;td&gt;(&lt;a href="https://github.com/spring-cloud/spring-cloud-kubernetes/milestone/42?closed=1"&gt;issues&lt;/a&gt;)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Circuitbreaker &lt;/td&gt;
+      &lt;td&gt;3.0.0-M2 &lt;/td&gt;
+      &lt;td&gt;(&lt;a href="https://github.com/spring-cloud/spring-cloud-circuitbreaker/milestone/13?closed=1"&gt;issues&lt;/a&gt;)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Contract &lt;/td&gt;
+      &lt;td&gt;4.0.0-M2 &lt;/td&gt;
+      &lt;td&gt;(&lt;a href="https://github.com/spring-cloud/spring-cloud-contract/milestone/85?closed=1"&gt;issues&lt;/a&gt;)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Consul &lt;/td&gt;
+      &lt;td&gt;4.0.0-M2 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Gateway &lt;/td&gt;
+      &lt;td&gt;4.0.0-M2 &lt;/td&gt;
+      &lt;td&gt;(&lt;a href="https://github.com/spring-cloud/spring-cloud-gateway/milestone/64?closed=1"&gt;issues&lt;/a&gt;)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Starter Build &lt;/td&gt;
+      &lt;td&gt;2022.0.0-M2 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Function &lt;/td&gt;
+      &lt;td&gt;4.0.0-M2 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Vault &lt;/td&gt;
+      &lt;td&gt;4.0.0-M2 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Bus &lt;/td&gt;
+      &lt;td&gt;4.0.0-M2 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Zookeeper &lt;/td&gt;
+      &lt;td&gt;4.0.0-M2 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Task &lt;/td&gt;
+      &lt;td&gt;3.0.0-M2 &lt;/td&gt;
+      &lt;td&gt;(&lt;a href="https://github.com/spring-cloud/spring-cloud-task/milestone/56?closed=1"&gt;issues&lt;/a&gt;)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Commons &lt;/td&gt;
+      &lt;td&gt;4.0.0-M2 &lt;/td&gt;
+      &lt;td&gt;(&lt;a href="https://github.com/spring-cloud/spring-cloud-commons/milestone/99?closed=1"&gt;issues&lt;/a&gt;)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Openfeign &lt;/td&gt;
+      &lt;td&gt;4.0.0-M2 &lt;/td&gt;
+      &lt;td&gt;(&lt;a href="https://github.com/spring-cloud/spring-cloud-openfeign/milestone/51?closed=1"&gt;issues&lt;/a&gt;)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;As always, we welcome feedback on &lt;a href="https://github.com/spring-cloud/"&gt;GitHub&lt;/a&gt;, on &lt;a href="https://gitter.im/spring-cloud/spring-cloud"&gt;Gitter&lt;/a&gt;, on &lt;a href="https://stackoverflow.com/questions/tagged/spring-cloud"&gt;Stack Overflow&lt;/a&gt;, or on &lt;a href="https://twitter.com/SpringCloud"&gt;Twitter&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To get started with Maven with a BOM (dependency management only):&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint"&gt;&lt;br/&gt;    &amp;lt;repositories&amp;gt;&#xD;
+        &amp;lt;repository&amp;gt;&#xD;
+            &amp;lt;id&amp;gt;spring-milestones&amp;lt;/id&amp;gt;&#xD;
+            &amp;lt;name&amp;gt;Spring Milestones&amp;lt;/name&amp;gt;&#xD;
+            &amp;lt;url&amp;gt;https://repo.spring.io/milestone&amp;lt;/url&amp;gt;&#xD;
+            &amp;lt;snapshots&amp;gt;&#xD;
+                &amp;lt;enabled&amp;gt;false&amp;lt;/enabled&amp;gt;&#xD;
+            &amp;lt;/snapshots&amp;gt;&#xD;
+        &amp;lt;/repository&amp;gt;&#xD;
+    &amp;lt;/repositories&amp;gt;&#xD;
+&amp;lt;dependencyManagement&amp;gt;&#xD;
+    &amp;lt;dependencies&amp;gt;&#xD;
+        &amp;lt;dependency&amp;gt;&#xD;
+            &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;&#xD;
+            &amp;lt;artifactId&amp;gt;spring-cloud-dependencies&amp;lt;/artifactId&amp;gt;&#xD;
+            &amp;lt;version&amp;gt;2022.0.0-M2&amp;lt;/version&amp;gt;&#xD;
+            &amp;lt;type&amp;gt;pom&amp;lt;/type&amp;gt;&#xD;
+            &amp;lt;scope&amp;gt;import&amp;lt;/scope&amp;gt;&#xD;
+        &amp;lt;/dependency&amp;gt;&#xD;
+    &amp;lt;/dependencies&amp;gt;&#xD;
+&amp;lt;/dependencyManagement&amp;gt;&#xD;
+&amp;lt;dependencies&amp;gt;&#xD;
+    &amp;lt;dependency&amp;gt;&#xD;
+        &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;&#xD;
+        &amp;lt;artifactId&amp;gt;spring-cloud-starter-config&amp;lt;/artifactId&amp;gt;&#xD;
+    &amp;lt;/dependency&amp;gt;&#xD;
+    &amp;lt;dependency&amp;gt;&#xD;
+        &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;&#xD;
+        &amp;lt;artifactId&amp;gt;spring-cloud-starter-netflix-eureka-client&amp;lt;/artifactId&amp;gt;&#xD;
+    &amp;lt;/dependency&amp;gt;&#xD;
+    ...&#xD;
+&amp;lt;/dependencies&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;or with Gradle:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint"&gt;buildscript {&#xD;
+dependencies {&#xD;
+classpath &amp;quot;io.spring.gradle:dependency-management-plugin:1.0.2.RELEASE&amp;quot;&#xD;
+}&#xD;
+}&#xD;
+&#xD;
+repositories {&#xD;
+maven {&#xD;
+url &amp;#39;https://repo.spring.io/milestone&amp;#39;&#xD;
+}&#xD;
+}&#xD;
+&#xD;
+apply plugin: &amp;quot;io.spring.dependency-management&amp;quot;&#xD;
+&#xD;
+dependencyManagement {&#xD;
+imports {&#xD;
+mavenBom &amp;#39;org.springframework.cloud:spring-cloud-dependencies:2022.0.0-M2&amp;#39;&#xD;
+}&#xD;
+}&#xD;
+&#xD;
+dependencies {&#xD;
+compile &amp;#39;org.springframework.cloud:spring-cloud-starter-config&amp;#39;&#xD;
+compile &amp;#39;org.springframework.cloud:spring-cloud-starter-netflix-eureka-client&amp;#39;&#xD;
+...&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>This Week in Spring - April 5th, 2022</title>
+    <link rel="alternate" href="https://spring.io/blog/2022/04/05/this-week-in-spring-april-5th-2022" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2022-04-05:4761</id>
+    <updated>2022-04-05T19:00:00Z</updated>
+    <content type="html">&lt;p&gt;Hi, Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! I&amp;rsquo;m back home from the Hawaiin islands. It&amp;rsquo;s so good to be home. &lt;/p&gt;
+&lt;p&gt;First thing&amp;rsquo;s first: there&amp;rsquo;s a security vulnerability. We&amp;rsquo;ve already released guidance on how to mitigate as well as new releases of Spring Framework and Spring Boot that include the mitigation by deault. See the links below for more.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/31/spring-framework-rce-early-announcement"&gt;Spring Framework RCE, Early Announcement&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/04/01/spring-framework-rce-mitigation-alternative"&gt;Spring Framework RCE, Mitigation Alternative&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/29/cve-report-published-for-spring-cloud-function"&gt;CVE report published for Spring Cloud Function&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now, back to your regularly scheduled installment of &lt;em&gt;This Week in Spring&lt;/em&gt;: &lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/31/a-bootiful-podcast-kubernetes-cofounder-and-vice-president-of-r-d-at-vmware-craig-mcluckie"&gt;A Bootiful Podcast: Kubernetes cofounder and vice president of R&amp;amp;D at VMware, Craig McLuckie&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://kubernetes.io/blog/2022/03/31/ready-for-dockershim-removal/"&gt;Blog: Is Your Cluster Ready for v1.24?&lt;/a&gt;&lt;br/&gt;native-java-framework-comparison)&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://medium.com/geekculture/clean-architecture-in-a-spring-application-312e119ee8ec"&gt;Clean Architecture in a Spring Application&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://www.infoq.com/news/2022/03/jhipster-native-image-support/"&gt;JHipster Native Blueprint Supports GraalVM Native Image&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://www.jobrunr.io/en/blog/2022-03-30-jobrunr-v5.0.0/"&gt;JobRunr &amp;amp; JobRunr Pro v5.0.0&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://blog.jdriven.com/2022/03/major-migrations-made-easy-with-openrewrite/"&gt;Major migrations made easy with OpenRewrite&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/31/spring-boot-2-5-12-available-now"&gt;Spring Boot 2.5.12 available now&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/31/spring-boot-2-6-6-available-now"&gt;Spring Boot 2.6.6 available now&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/30/spring-cloud-azure-4-0-is-now-generally-available"&gt;Spring Cloud Azure 4.0 is Now Generally Available&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Happy April Fools! :D &lt;a href="https://twitter.com/spring_io/status/1509918390428876800?s=12&amp;t=SeB0gli2rNRzkSlKkjURFQ"&gt;Spring I/O on Twitter&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;In last week&amp;rsquo;s installment of Spring Tips, I looked at the &lt;a href="https://spring.io/blog/2022/03/31/spring-tips-brave-bold-and-boring-yugabytedb"&gt;Brave, Bold, and Boring YugabyteDB&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://youtube.com/watch?v=zvR-Oif_nxg&amp;feature=share"&gt; I haven&amp;rsquo;t watched this yet, but it&amp;rsquo;s a ten hour long tutorial on Spring Boot - there&amp;rsquo;s bound to be some good stuff in there! &lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://twitter.com/JavaAtMicrosoft/status/1511138560321142793"&gt;https://twitter.com/JavaAtMicrosoft/status/1511138560321142793 @JavaAtMicrosoft #Java has played a critical role in democratizing cross-platform development. With #Microsoft&amp;rsquo;s recent JEP 388 contribution to #OpenJDK, Java apps can now run on a wider range&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://www.tutorialworks.com/difference-docker-containerd-runc-crio-oci/#:~:text=containerd%3A%20This%20is%20a%20daemon,actually%20creates%20and%20runs%20containers"&gt;The differences between Docker, containerd, CRI-O and runc - Tutorial Works&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>Spring Framework RCE, Mitigation Alternative</title>
     <link rel="alternate" href="https://spring.io/blog/2022/04/01/spring-framework-rce-mitigation-alternative" />
@@ -353,7 +602,7 @@ public class MyApp {&#xD;
     </author>
     <id>tag:spring.io,2022-03-10:4727</id>
     <updated>2022-03-28T08:00:00Z</updated>
-    <content type="html">&lt;p&gt;We have released &lt;a href="https://spring.io/blog/2022/03/17/spring-framework-6-0-0-m3-and-5-3-17-available-now"&gt;Spring Framework 5.3.17&lt;/a&gt; to address the following CVE report.&lt;/p&gt;
+    <content type="html">&lt;p&gt;We have released &lt;a href="https://spring.io/blog/2022/03/17/spring-framework-6-0-0-m3-and-5-3-17-available-now"&gt;Spring Framework 5.3.17&lt;/a&gt; and &lt;a href="https://github.com/spring-projects/spring-framework/releases/tag/v5.2.20.RELEASE"&gt;Spring Framework 5.2.20&lt;/a&gt; to address the following CVE report.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href="https://tanzu.vmware.com/security/cve-2022-22950"&gt;CVE-2022-22950: Spring Expression DoS Vulnerability&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -485,151 +734,6 @@ public class MyApp {&#xD;
 &lt;div class="paragraph"&gt;
 &lt;p&gt;&lt;a href="https://github.com/spring-projects/spring-authorization-server"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-authorization-server/issues"&gt;GitHub Issues&lt;/a&gt; |  &lt;a href="https://app.zenhub.com/workspaces/authorization-server-5e8f3182b5e8f5841bfc4902/board?repos=248032165"&gt;ZenHub Board&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Batch 5.0 M2 available now</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/03/23/spring-batch-5-0-m2-available-now" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Mahmoud Ben Hassine</name>
-    </author>
-    <id>tag:spring.io,2022-03-23:4741</id>
-    <updated>2022-03-23T22:08:00Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I am pleased to announce that Spring Batch 5.0.0-M2 is now available from our &lt;a href="https://repo.spring.io/milestone"&gt;milestone repository&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;This second milestone comes with two major features:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Introduction of the new Observation API from Micrometer 2.0 which gives you both metrics and tracing for your batch jobs!&lt;/li&gt;
-  &lt;li&gt;Addition of SAP HANA as a supported database for the job repository&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Moreover, this release comes with a number of enhancements and dependencies updates. For more details about all the changes, please check the &lt;a href="https://github.com/spring-projects/spring-batch/releases/tag/5.0.0-M2"&gt;change log&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I would like to thank all contributors who had a role in this release! As we continue our work on Spring Batch 5, we look forward to your feedback on this second milestone!&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://spring.io/projects/spring-batch"&gt;Spring Batch Home&lt;/a&gt;|&lt;a href="https://github.com/spring-projects/spring-batch"&gt;Source on Github&lt;/a&gt;|&lt;a href="https://docs.spring.io/spring-batch/docs/5.0.0-M2/reference/html/index-single.html"&gt;Reference documentation&lt;/a&gt;&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Building Native Images with GraalVM and Spring Native on Apple's M1 Architecture</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/03/23/building-native-images-with-graalvm-and-spring-native-on-apple-s-m1-architecture" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2022-03-23:4742</id>
-    <updated>2022-03-23T20:00:00Z</updated>
-    <content type="html">&lt;p&gt;It finally happened! They did it! They did it just in time for me to get on the road and start building applications on the road with my shiny new laptop, too! JOY!! Oracle and the GraalVM team released GraalVM and the GraalVM native image capability for Apple M1! I&amp;rsquo;ve been waiting for this day for so, so, &lt;em&gt;so&lt;/em&gt; long! I bought the first Apple M1 the day of the announcement way back in 2020 (does anybody remember that far back? That was, meteorologically speaking, the early pandemic period). &lt;/p&gt;
-&lt;p&gt;Apple&amp;rsquo;s M1 devices are insanely fast, energy-efficient beasts of machines that run circles around all but the beefiest and latest-and-greatest Intel/NVidia configurations &lt;em&gt;while&lt;/em&gt; also consuming a pittance of the power that other configuration does. In short, I&amp;rsquo;m a big fan. But the move to this new architecture hasn&amp;rsquo;t been without its troubles. &lt;/p&gt;
-&lt;p&gt;Some Adobe applications (like Adobe Premiere and Adobe After Effects), Docker, and GraalVM were the biggest hurdles to making my M1 machine (which I have since upgraded from the first 13&amp;ldquo; MacBook Pro 2020 M1 to the 16&amp;rdquo; MacBook Pro 2021 M1 Max model) my daily-driver. Docker&amp;rsquo;s gotten better. Adobe Premiere&amp;rsquo;s gotten better, and After Effects isn&amp;rsquo;t too far behind (but still no joy there). And now, as of yesterday, at long last, &lt;a href="https://twitter.com/fniephaus/status/1506192466705326082?cxt=HHwWhIC51a-EiecpAAAA"&gt;GraalVM&lt;/a&gt; has gotten better. &lt;/p&gt;
-&lt;p&gt;However, it&amp;rsquo;s not yet GA, and it&amp;rsquo;s not even in the fantastic &lt;a href="https://sdkman.io/"&gt;SDKman&lt;/a&gt; project. So installing it could&amp;rsquo;ve been tedious. Do you all remember adding things to your &lt;code&gt;PATH&lt;/code&gt; manually? I do, and I don&amp;rsquo;t like it! So I Googled but came up empty. Then, just when I&amp;rsquo;d resigned myself to having to &lt;em&gt;work&lt;/em&gt;, I realized my incredible friend and community legend &lt;a href="https://twitter.com/mraible"&gt;Matt Raible (@mraible)&lt;/a&gt; had already figured it out. So I pinged him, and he sent me this &lt;a href="https://github.com/spring-projects-experimental/spring-native/issues/1538#issue-1177367637"&gt;ticket he&amp;rsquo;d filed against the M1 build and Spring Native&lt;/a&gt; detailing how he got it working and how to verify the break. &lt;/p&gt;
-&lt;p&gt;Here are his steps as they applied to me. NB: I think they&amp;rsquo;ve since released a newer version of GraalVM even since one day ago when Matt wrote the blog, so as a result, my version numbers are &lt;code&gt;.1&lt;/code&gt; off from his. &lt;/p&gt;
-&lt;p&gt;First, you&amp;rsquo;ll need &lt;a href="https://github.com/graalvm/graalvm-ce-dev-builds/releases/tag/22.2.0-dev-20220323_0052"&gt;to download the developer preview build&lt;/a&gt;. I&amp;rsquo;m using &lt;code&gt;22.2.0-dev&lt;/code&gt; for Java 17. So I chose to &lt;a href="https://github.com/graalvm/graalvm-ce-dev-builds/releases/download/22.2.0-dev-20220323_0052/graalvm-ce-java17-darwin-aarch64-dev.tar.gz"&gt;download this binary&lt;/a&gt;. &lt;/p&gt;
-&lt;p&gt;I put that &lt;code&gt;.tgz&lt;/code&gt; file on my &lt;code&gt;$HOME/Desktop&lt;/code&gt; and then ran this script to get it installed and usable for &lt;code&gt;SDKMan&lt;/code&gt;. These are the same steps as Matt details in his original ticket. &lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint shell"&gt;#!/usr/bin/env bash &#xD;
-BUILD=22.2.0&#xD;
-INSTALLED_PATH=$HOME/.sdkman/candidates/java/${BUILD}.dev.r17-grl&#xD;
-cd $HOME/Desktop/  &#xD;
-rm -rf graalvm-ce-java17-${BUILD}-dev  || echo &amp;quot;no directory to delete.&amp;quot;&#xD;
-tar zxpf graalvm-ce-java17-darwin-aarch64-dev.tar.gz &#xD;
-rm -rf $INSTALLED_PATH || echo &amp;quot;no directory to delete.&amp;quot;&#xD;
-mv $HOME/Desktop/graalvm-ce-java17-${BUILD}-dev/Contents/Home $INSTALLED_PATH&#xD;
-sudo xattr -r -d com.apple.quarantine ~/.sdkman/candidates/java/${BUILD}.dev.r17-grl
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Put all of those instructions in a text file called &lt;code&gt;install.sh&lt;/code&gt; on your &lt;code&gt;$HOME/Desktop&lt;/code&gt;, then run &lt;code&gt;chmod a+x $HOME/Desktop/install.sh&lt;/code&gt; to make it executable and then run it with &lt;code&gt;$HOME/Desktop/install.sh&lt;/code&gt;. &lt;/p&gt;
-&lt;p&gt;Youll need to make this newly installed version the default one for your operating system, so issue the following command:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint shell"&gt;BUILD=22.2.0 &#xD;
-sdk default java ${BUILD}.dev.r17-grlz&#xD;
-````&#xD;
-&#xD;
-Once that&amp;#39;s done, you&amp;#39;ll need to install the `native-image` compiler command with the `gu` utility in the GraalVM distribution:&#xD;
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;gu install native-image&lt;br/&gt;````&lt;/p&gt;
-&lt;p&gt;Open a new shell and verify that everything&amp;rsquo;s working: &lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint shell "&gt;?  java --version &#xD;
-openjdk 17.0.3 2022-04-19&#xD;
-OpenJDK Runtime Environment GraalVM CE 22.2.0-dev (build 17.0.3+4-jvmci-22.1-b03)&#xD;
-OpenJDK 64-Bit Server VM GraalVM CE 22.2.0-dev (build 17.0.3+4-jvmci-22.1-b03, mixed mode, sharing)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;With that, you should be all set. Then you need an application against which to test. So go to my second favorite place on the internet, &lt;a href="https://start.spring.io"&gt;start dot spring dot io&lt;/a&gt;, and generate a new application &lt;a href="https://start.spring.io/#!type=maven-project&amp;language=java&amp;platformVersion=2.6.4&amp;packaging=jar&amp;jvmVersion=17&amp;groupId=com.example&amp;artifactId=m1native&amp;name=m1native&amp;description=Demo%20project%20for%20Spring%20Boot&amp;packageName=com.example.m1native&amp;dependencies=h2,postgresql,webflux,data-r2dbc,native"&gt;with everything pre-configured&lt;/a&gt;. Click &lt;code&gt;Generate&lt;/code&gt; and then unzip and open the resulting &lt;code&gt;pom.xml&lt;/code&gt; in your Java IDE of choice.&lt;/p&gt;
-&lt;p&gt;Replace the &lt;code&gt;M1NativeApplication.java&lt;/code&gt; with the following contents: &lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint java"&gt;package com.example.m1native;&#xD;
-&#xD;
-import org.springframework.boot.ApplicationRunner;&#xD;
-import org.springframework.boot.SpringApplication;&#xD;
-import org.springframework.boot.autoconfigure.SpringBootApplication;&#xD;
-import org.springframework.context.annotation.Bean;&#xD;
-import org.springframework.data.annotation.Id;&#xD;
-import org.springframework.data.repository.reactive.ReactiveCrudRepository;&#xD;
-import org.springframework.web.reactive.function.server.RouterFunction;&#xD;
-import org.springframework.web.reactive.function.server.ServerResponse;&#xD;
-&#xD;
-import static org.springframework.web.reactive.function.server.RouterFunctions.route;&#xD;
-import static org.springframework.web.reactive.function.server.ServerResponse.ok;&#xD;
-&#xD;
-@SpringBootApplication&#xD;
-public class M1nativeApplication {&#xD;
-&#xD;
-    public static void main(String[] args) {&#xD;
-        SpringApplication.run(M1nativeApplication.class, args);&#xD;
-    }&#xD;
-&#xD;
-    @Bean&#xD;
-    RouterFunction&amp;lt;ServerResponse&amp;gt; routes(CustomerRepository repository) {&#xD;
-        return route()&#xD;
-                .GET(&amp;quot;/customers&amp;quot;, request -&amp;gt; ok().body(repository.findAll(), Customer.class))&#xD;
-                .build();&#xD;
-    }&#xD;
-&#xD;
-    @Bean&#xD;
-    ApplicationRunner runner(CustomerRepository repository) {&#xD;
-        return args -&amp;gt; repository.findAll().subscribe(System.out::println);&#xD;
-    }&#xD;
-}&#xD;
-&#xD;
-interface CustomerRepository extends ReactiveCrudRepository&amp;lt;Customer, Integer&amp;gt; {&#xD;
-}&#xD;
-&#xD;
-record Customer(@Id Integer id, String name) {&#xD;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Add &lt;code&gt;src/main/resources/data.sql&lt;/code&gt;: &lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint sql"&gt;insert into customer (name ) values(&amp;#39;Josh&amp;#39;);&#xD;
-insert into customer (name ) values(&amp;#39;Mario&amp;#39;);&#xD;
-insert into customer (name ) values(&amp;#39;Amey&amp;#39;);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Add &lt;code&gt;src/main/resources/schema.sql&lt;/code&gt;: &lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint sql "&gt;create table if not exists customer&#xD;
-(&#xD;
-    id   serial primary key,&#xD;
-    name varchar(255) not null&#xD;
-);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;There ya go: you have a reactive, non-blocking web application talking to an embedded, in-memory SQL database. Let&amp;rsquo;s turn this thing into a native image. On the command line, run the following incantation:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint shell"&gt;mvn -Pnative -DskipTests clean package 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;That&amp;rsquo;ll take about 45 seconds to finish. Have a few sips of coffee and then run the application in your target/ directory: &lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint shell "&gt;? target/m1native&#xD;
-...&#xD;
-2022-03-23 16:24:15.063  INFO 13901 --- [ ... ] Started M1nativeApplication in 0.036 seconds (JVM running for 0.038)&#xD;
-Customer[id=1, name=Josh]&#xD;
-Customer[id=2, name=Mario]&#xD;
-Customer[id=3, name=Amey]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Hell yeah! Rock on GraalVM! This is amazing! I know there are bound to be bugs or issues, but the fact that this works so well for nothing but a developer preview build? That&amp;rsquo;s dope. &lt;/p&gt;
-&lt;p&gt;Now to figure out what to do with my creakingly old and irrelevant Intel MacBook Pro&amp;hellip;&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Tips: Multitenant JDBC</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/03/23/spring-tips-multitenant-jdbc" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2022-03-23:4740</id>
-    <updated>2022-03-23T07:00:00Z</updated>
-    <content type="html">&lt;p&gt;Hi, Spring fans! In this installment we look at how to use Spring&amp;rsquo;s &lt;code&gt;AbstractRoutingDataSource&lt;/code&gt; to build multi-tenant JDBC database code. &lt;/p&gt;
-&lt;p&gt;code: &lt;a href="https://github.com/spring-tips/multitenant-jdbc"&gt;https://github.com/spring-tips/multitenant-jdbc&lt;/a&gt;&lt;br/&gt;speaker: &lt;a href="https://twitter.com/starbuxman"&gt;Josh Long (@starbuxman)&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/hjJ6ODxgYqE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&amp;lt;/iframe&lt;/p&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>

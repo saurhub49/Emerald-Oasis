@@ -56,7 +56,8 @@
   }
 
   .descr{
-    position: relative;
+    position: absolute;
+    top: 50px;
     font-family: 'Dhyana';
     font-weight: 500;
     font-style: normal;
@@ -71,8 +72,8 @@
   }
 
   .nam{
-    position: relative;
-    left: 400px;
+    position: absolute;
+    left: 300px;
     padding: 10px;
     font-family: 'David Libre';
     font-style: normal;
@@ -80,8 +81,7 @@
     font-size: 40px;
     line-height: 39px;
     display: flex;
-    align-items: center;
-    text-align: right;
+    
     
     color: #000000;
   }

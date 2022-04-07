@@ -33,7 +33,6 @@ li{
 }
 .nav-link:hover{
     color: #3EF11C!important;
-    /* border-bottom:  solid #3EF11C; */
 }
 
 
@@ -50,12 +49,10 @@ li{
 
 .employee-icon{
     text-align: right;
-    font-size: 1.5vw;
-    margin-bottom: 5%;
+    font-size: 20px;
+    margin-bottom: 50px;
     font-family: roboto;
-
     color:  #FFFFFF;
-
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 500);
 }
 
@@ -72,10 +69,13 @@ li{
     text-align: center!important;
     box-sizing: border-box;
     position: relative;
-    height: 100%;
+    /* height: 100%; */
     display: flex;
     align-items: center;
     text-align: center;
+
+    left: 50px;
+    top: -200px;
 }
 
 .how-it-works-1{
@@ -86,7 +86,7 @@ li{
     
 font-style: normal;
 font-weight: 600;
-font-size: 70px;
+font-size: 60px;
 line-height: initial !important;
 box-sizing: border-box;
 display: flex;
@@ -113,18 +113,18 @@ color: black;
     padding-bottom: 30px;
     margin-block-end: 0.67em;
     box-sizing: border-box;
-    font-style: oblique;
+    font-style: normal;
     font-size: 23px;
     font-family: 'AvantGardeBk';
     box-sizing: border-box;
-    font-weight: 550;
+    font-weight: bolder;
     line-height: initial!important;
     color: #24262f!important;
 }
 
 .contactUs{
     margin-bottom: 1vw;
-    font-size: 40px;
+    font-size: 60px;
     position: relative;
     text-transform: uppercase;
     font-weight: 600;
@@ -136,8 +136,6 @@ color: black;
 }
 
 .img-home{
-    background: url("../../../images/welcome2.jpg");   
-   
     top: auto;
     position: absolute;
     vertical-align: middle;
@@ -145,20 +143,20 @@ color: black;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     width: 100%;
     height: 100%;
+    z-index: 2;
 }
 
 .img-about{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    position: absolute;
+    position: relative;
     top: 100%;
     left: 0;
     right: 0;
@@ -174,12 +172,30 @@ color: black;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    top: 60;
     left: 0;
     right: 0;
-    bottom: 0;
+    margin-bottom: 0;
     width: 100%;
-    height: 100%;
+    height: 500px;
     padding: 35px;
-    background-color:bisque
+    background-color: rgba(235, 194, 60, 0.815);
+}
+
+.works{
+    color: white;
+}
+
+.deliv{
+    width: 50px;
+    height: 50px;
+}
+
+.contact-icon{
+    position: relative;
+    left: 35%;
+    margin-top: 100px;
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
 }

@@ -36,7 +36,10 @@ const Header1 = () => {
     return <div>
         <nav id="navbar-example2" className="navbar fixed-top navbar-expand-lg  navbar2">
             <div className="container-fluid navbar-items">
-                <label className="navbar-brand  mb-0 h1" href="/"><img src={logo} className="eologo" /><span className="oasis">Emerald Oasis</span></label>
+               <a href="/homepage"> <label className="navbar-brand  mb-0 h1">
+                    <img src={logo} className="eologo" />
+                    <span className="oasis">Emerald Oasis</span>
+                </label> </a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo2" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -53,9 +56,9 @@ const Header1 = () => {
                         </li>
                         <li className="nav-item">
                             <Link to="/cart">
-                                <span className="badge bg-secondary">
+                                {/* <span className="badge bg-secondary">
                                     {countNo}
-                                </span>
+                                </span> */}
                                 <img className="nav-link items cart " src={cart}></img>
                             </Link>
                         </li>
@@ -64,8 +67,8 @@ const Header1 = () => {
                                 <label className="items">{firstName}</label>
                             </a>
                             <ul className="dropdown-menu dropdown-menu-dark items" aria-labelledby="navbarDarkDropdownMenuLink">
-                                <li><a className="dropdown-item" href="/profile">Profile</a></li>
-                                <li><a className="dropdown-item" href="#" onClick={logoutUser}>Logout</a></li>
+                                <li><a className="dropdown-item" href="/profile">PROFILE</a></li>
+                                <li><a className="dropdown-item" href="#" onClick={logoutUser}>LOGOUT</a></li>
                             </ul>
                         </li>
                     </ul>

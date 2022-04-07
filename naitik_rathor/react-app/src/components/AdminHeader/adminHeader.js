@@ -24,7 +24,10 @@ const AdminHeader = () => {
     return <div>
         <nav id="navbar-example2" className="navbar fixed-top navbar-expand-lg  navbar2">
             <div className="container-fluid navbar-items">
-                <label className="navbar-brand  mb-0 h1" href="/"><img src={logo} className="eologo" /><span className="oasis">Emerald Oasis</span></label>
+                <a href="/homepage"> <label className="navbar-brand  mb-0 h1" >
+                    <img src={logo} className="eologo" />
+                    <span className="oasis">Emerald Oasis</span>
+                </label></a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo2" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>

@@ -4,6 +4,7 @@ import { useLocation } from "react-router"
 import { toast } from "react-toastify"
 import AdminHeader from "../../../../components/AdminHeader/adminHeader"
 import { URL } from "../../../../config"
+import { formatDate } from "../../../../utils"
 
 const EmpAllOrders = () => {
     const [allOrders, setAllorders] = useState([])
@@ -54,8 +55,8 @@ const EmpAllOrders = () => {
                                 return (
                                     <tr>
                                         <td>{allOrder.orderId}</td>
-                                        <td>{allOrder.orderedTimeStamp}</td>
-                                        <td>{allOrder.deliveredTimeStamp}</td>
+                                        <td>{formatDate(allOrder.orderedTimeStamp)}</td>
+                                        <td>{formatDate(allOrder.deliveredTimeStamp)}</td>
                                         <td>{allOrder.totalAmount}</td>
                                         <td>{allOrder.address}</td>
                                         <td>{allOrder.orderStatus}</td>

@@ -82,7 +82,7 @@ const Cart = () => {
                 console.log(fooditems)
             } else {
                 console.log(result.error)
-                toast.error(result['error'])
+                // toast.error(result['error'])
             }
         })
     }

@@ -33,7 +33,7 @@ const HomePage = () => {
     <div className="container">
       <Header1></Header1>
       <div className="row">
-        <div className="col-6 rect1">
+        <div className="col-md-4 rect1">
           <div className="delicious">Delicous</div>
           <div className="quench-the-hunger">Quench The Hunger</div>
           <div className="quote-1">Pull up a chair. Take a taste. Come Join Us. Life is so endlessly delicious.</div>
@@ -43,14 +43,10 @@ const HomePage = () => {
         </div>
         <div className="col-8">
           <img className="eclipse1" src={eclipse}></img>
-          {/* <div className="">
-            {cuisines.map((cuisine) => {
-              return <Carousel cuisine={cuisine}></Carousel>
-            })}
-          </div> */}
+
         </div>
       </div>
-      <div className="main-div">
+      <div className="cuis-div">
         {cuisines.map((cuisine) => {
           return <Cuisine cuisine={cuisine}></Cuisine>
         })}

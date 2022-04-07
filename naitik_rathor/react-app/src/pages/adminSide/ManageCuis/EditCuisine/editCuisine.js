@@ -7,23 +7,20 @@ import { URL } from "../../../../config"
 
 const EditCuisine = () => {
     const { state } = useLocation()
-    const [name, setName] = useState('')
-    const [image, setImage] = useState('')
-    const [description, setDescription] = useState('')
     const { cuisine } = state
+    const [name, setName] = useState(cuisine.name)
+    const [image, setImage] = useState(cuisine.image)
+    const [description, setDescription] = useState(cuisine.description)
+    
 
-    // console.log(cuisine.cuisineId);
+    // console.log(cuisine);
+    // console.log(cuisine.name);
+
 
     const navigate = useNavigate()
 
     const updateCuisine = () => {
-        if (name.length==0) {
-            toast.error("Enter Cuisine Name")
-        }else if(image.length==0){
-            toast.error("Enter Image Link")
-        }else if(description.length==0){
-            toast.error("Enter Description")
-        }else {
+
             const body = {
                 cuisineId: cuisine.cuisineId,
                 name,
@@ -46,7 +43,6 @@ const EditCuisine = () => {
                     toast.error(result['error'])
                 }
             })
-        }
     }
 
     return <div className="container">
@@ -60,7 +56,7 @@ const EditCuisine = () => {
                         (e) => {
                             setName(e.target.value)
                         }
-                    } defaultValue={cuisine.name} type="text" className="form-control" ></input>
+                    } type="text" className="form-control" defaultValue={cuisine.name}></input>
                 </div>
                 <div className="col mb-3">
                     <label className="form-label">Cuisine Image Link</label>
