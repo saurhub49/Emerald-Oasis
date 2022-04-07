@@ -13,6 +13,7 @@ const Cart = () => {
     const [fooditems, setFoodItems] = useState([])
     const [cart, setCart] = useState()
     const [employee, setEmployee] = useState()
+    const [address, setAddress] = useState('')
 
     
     useEffect(() => {
@@ -86,6 +87,31 @@ const Cart = () => {
             }
         })
     }
+
+    const addAddress = () => {
+        if (address.length == 0) {
+            toast.warning('Address cannot be empty')
+        }
+        else {
+            const body = {
+                addressLine : address
+            }
+            const url = `${URL}/user/profile/address/${userId}`
+
+            axios.put(url, body).then((response) => {
+                const result = response.data
+
+                console.log(result)
+
+                if (result['status'] === 'success') {
+                    toast.success('Address added')
+                    setCart(result.data)
+                }
+            })
+        }
+        
+    }
+
     return (
         <div className="container">
             <Header1></Header1>
@@ -126,6 +152,21 @@ const Cart = () => {
                         <div className="row">
                             <div className="col"><h5>Delivery Address : </h5>{cart.address}</div>
                         </div>
+                        {!cart.address && 
+                        <div>
+                            <div className="row">
+                            <div className="mb-3">
+                                                <input
+                                                    onChange={(e) => {
+                                                        setAddress(e.target.value)
+                                                    }}
+                                                    type="text" class="form-control" />
+                                            </div>
+                            </div>
+                            <div className="col">
+                                    <button onClick={addAddress} className="btn btn-primary">Add address</button>
+                            </div>
+                        </div>}
                         <br />
                         <div className="row">
                             <div className="col"><h5>Order Status : </h5>{cart.orderStatus}</div>

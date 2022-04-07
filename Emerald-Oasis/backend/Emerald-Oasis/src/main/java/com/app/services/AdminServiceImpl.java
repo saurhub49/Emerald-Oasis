@@ -139,7 +139,7 @@ public class AdminServiceImpl {
 		User user = userDao.getById(userId);
 		userDao.deleteById(userId);
 		UserDTO dto = converter.toUserDTO(user);
-		dto.setPanCard("*******");
+		dto.setPassword("*******");
 		return dto;
 	}
 	
