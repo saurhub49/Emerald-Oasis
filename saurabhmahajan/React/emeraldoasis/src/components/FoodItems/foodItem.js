@@ -18,6 +18,16 @@ const FoodItem = (props) => {
         })
     }
 
+    // let count = 0
+    // const addItem = () => {
+    //     count = count + 1
+    //     toast.success("Added To Cart")
+    //     sessionStorage['count'] = count
+    //     // window.location.reload(false);
+    // }
+
+    // console.log(foodItem.name)
+
     return (
         <div className="food-tab">
             <div className="food-cont">
@@ -25,7 +35,7 @@ const FoodItem = (props) => {
                     <img className="image" src={foodItem.image}></img>
                 </div>
                 <div className="txt-cont">
-                    <div class="row">
+                    <div className="row">
                         <span className="col title">{foodItem.name}</span>
                         <span className="col price">Price: ${foodItem.price}</span>
                     </div>
@@ -36,8 +46,9 @@ const FoodItem = (props) => {
                 </div>
             </div>
             <button className="add-cart" onClick={() => {
-                    addItem(foodItem.foodItemId)
-                  }}>Add to Cart</button>
+                addItem(foodItem.foodItemId)
+            }}
+            >Add to Cart</button>
         </div>
     )
 }
