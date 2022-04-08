@@ -1,0 +1,24 @@
+.cust-details{
+    position: relative;
+font-family: 'Domine';
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+line-height: 46px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+box-sizing: border-box;
+padding-bottom: 20px;
+}
+
+.main-div{
+    position: relative;
+    margin-top: 100px;
+}
+
+tr:hover{
+    background-color:  #C4C4C4;
+}

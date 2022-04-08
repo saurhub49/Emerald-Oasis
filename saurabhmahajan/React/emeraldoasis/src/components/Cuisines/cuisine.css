@@ -1,43 +1,87 @@
-.cuisine{
+/* ################################################### */
+
+.container1 {
+    position: relative;
+    width: 30%;
+    height: 220px;
+  }
+  
+  .image1 {
+    display: block;
     width: 100%;
-    height: 228px;
-    margin-top: 20px;
-    background: rgba(125, 137, 149, 0.17);
-   
-    border-radius: 0px 0px 30px 0px;
-}
+    height: 220px;
+  }
+  
+  .overlay1 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #9BD490;
+  }
+  
+  .container1:hover .overlay1 {
+    opacity: 1;
+  }
+  
+  .text1 {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
 
-.cuisine:hover{
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.76);
-    background: rgba(1, 201, 187, 0.17);
-}
-.tag{
-    padding-right: 10px;
-    width: 77.87px;
-    height: 71px;
-}
+  .div-main{
+      padding: 10px;
+  }
 
-.cuisine-image{
-width: 378.06px;
-height: 228px;
-}
+  .col2{
+      position: absolute;
+      width: 50%;
+      height: 220px;
+      margin-left: 450px;
+      /* border: solid 1px black; */
+      background: rgba(155, 212, 144, 0.2);
+      border-radius: 80px 0px;
+  }
 
-.cuisine-image:hover{
-    size: 10%;
-}
+  .descr{
+    position: absolute;
+    top: 50px;
+    font-family: 'Dhyana';
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 31px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    
+    color: #000000;
+  }
 
-.cuisine-name{
-width: 197.49px;
-height: 52px;
-left: 979.99px;
-top: 517px;
-align-items: flex-end;
-
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 500;
-font-size: 36px;
-line-height: 54px;
-
-color: #379825;
-}
+  .nam{
+    position: absolute;
+    left: 300px;
+    padding: 10px;
+    font-family: 'David Libre';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 39px;
+    display: flex;
+    
+    
+    color: #000000;
+  }

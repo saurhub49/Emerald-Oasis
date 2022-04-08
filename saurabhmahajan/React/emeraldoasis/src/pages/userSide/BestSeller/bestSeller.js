@@ -1,4 +1,4 @@
-import Header1 from "../../../components/Header1/header1"
+import Header1 from "../../../components/UserHeader/header1"
 
 const BestSeller=()=>{
     return <div>

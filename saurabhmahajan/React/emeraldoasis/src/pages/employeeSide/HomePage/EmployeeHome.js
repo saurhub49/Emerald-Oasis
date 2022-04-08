@@ -1,11 +1,11 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-import Header1 from "../../../components/Header1/header1"
 import PlacedOrder from "../../../components/PlacedOrders/placedOrders"
 import { URL } from "../../../config"
 import '../../employeeSide/HomePage/EmployeeHome.css'
 import { formatDate } from "../../../utils"
 import { toast } from "react-toastify"
+import Header1 from "../../../components/UserHeader/header1"
 
 
 const EmployeeHome = () => {

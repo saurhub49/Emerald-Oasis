@@ -1,10 +1,10 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-import Header1 from "../../../components/Header1/header1"
+import Header1 from "../../../components/UserHeader/header1"
 import { toast } from "react-toastify"
 import { URL } from "../../../config"
-import CartItem from "../../../components/Cart/CartComp"
-import '../../userSide/Cart/cart.css'
+import CartItem from "../../../components/Cart/cartComp"
+import './cart.css'
 
 
 
@@ -167,7 +167,7 @@ const Cart = () => {
                                     <button onClick={addAddress} className="btn btn-primary">Add address</button>
                             </div>
                         </div>}
-                        <br />
+                        <br /> 
                         <div className="row">
                             <div className="col"><h5>Order Status : </h5>{cart.orderStatus}</div>
                         </div>
