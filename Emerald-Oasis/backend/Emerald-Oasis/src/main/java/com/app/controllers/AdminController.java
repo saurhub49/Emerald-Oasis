@@ -22,6 +22,7 @@ import com.app.dtos.OrderDTO;
 import com.app.dtos.UserDTO;
 import com.app.entities.constants.RoleName;
 import com.app.services.AdminServiceImpl;
+import com.app.services.UserServiceImpl;
 
 @CrossOrigin(origins = "*")
 @RestController
@@ -29,6 +30,16 @@ public class AdminController {
 	
 	@Autowired
 	private AdminServiceImpl adminService;
+	@Autowired
+	private UserServiceImpl userService;
+	
+	@PostMapping("/admin/signup")
+	public ResponseEntity<?> signUp(@RequestBody UserDTO userDto) {
+		userDto.setRoleId(userService.getUserRoleId(RoleName.MANAGER));
+		UserDTO result = userService.saveUser(userDto);
+		
+		return Response.success(result);
+	}
 	
 	
 	@PostMapping("/admin/addcuisine")
