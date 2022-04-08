@@ -7,7 +7,6 @@ import SignupEmployee from './pages/employeeSide/Signup/employeeSignup'
 import Welcome from './pages/userSide/Welcome Page/welcome'
 import HomePage from './pages/userSide/HomePage/homePage'
 import CuisineFood from './pages/userSide/CuisineFood/cuisineFood'
-import BestSeller from './pages/userSide/BestSeller/bestSeller'
 import Demo from './pages/demo/demo'
 import AdminHome from './pages/adminSide/HomePage/adminHome'
 import EmployeeHome from './pages/employeeSide/HomePage/employeeHome'
@@ -34,7 +33,8 @@ const AuthorizeUser = () => {
 
 }
 
-console.log(sessionStorage)
+// console.log(sessionStorage)
+
 function App() {
   return (
     <div className="">
@@ -46,7 +46,6 @@ function App() {
           <Route path="/signupEmployee" element={<SignupEmployee />} />
           <Route path="/homepage" element={<AuthorizeUser />} />
           <Route path="/foodItems" element={<CuisineFood />} />
-          <Route path="/bestSeller" element={<BestSeller />} />
           <Route path="/demo" element={<Demo />} />
           <Route path="/employees" element={<Employees />} />
           <Route path="/customers" element={<Customers />} />

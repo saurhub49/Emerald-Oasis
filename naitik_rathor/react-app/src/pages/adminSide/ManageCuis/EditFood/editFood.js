@@ -13,7 +13,7 @@ const EditFood = () => {
     const [description, setDescription] = useState(food.description)
     const [price, setPrice] = useState(food.price)
     const [quantity, setQuantity] = useState(food.quantity)
-    
+
     // console.log(food.name)
 
     // console.log(cuisineId)
@@ -21,7 +21,10 @@ const EditFood = () => {
     const navigate = useNavigate()
 
     const updateFoodItem = () => {
-
+        console.log(description.length);
+        if (description.length > 150) {
+            toast.warn("Description is too long")
+        } else {
             const body = {
                 foodItemId: food.foodItemId,
                 name,
@@ -45,6 +48,7 @@ const EditFood = () => {
                     toast.error(result['error'])
                 }
             })
+        }
     }
 
 
@@ -92,7 +96,7 @@ const EditFood = () => {
                     <div class="col form-floating mb-4">
                         <textarea onChange={(e) => {
                             setDescription(e.target.value)
-                        }} defaultValue={food.description} type="text" class="form-control" id="floatingInput" defaultValue="description" />
+                        }} defaultValue={food.description} type="text" class="form-control" id="floatingInput" />
                         <label for="floatingInput"> description</label>
                     </div>
                     <div className="col"></div>

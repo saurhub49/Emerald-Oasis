@@ -40,7 +40,10 @@ const CuisinesAll = () => {
             <br />
             <br />
             <label className="emp-details">Manage Cuisines</label>
-            {
+            {cuisines.length < 1 &&
+                <div className="text-center fs-3 fw-light">You have not added any cuisine yet</div>
+            }
+            {cuisines.length > 0 &&
                 cuisines.map((cuisine) => {
                     return (
                         <div className="cui-box float-start" >

@@ -16,10 +16,18 @@ const SignupEmployee = () => {
     const [phoneNo, setPhoneNo] = useState('')
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
+    const [birthdate, setBirthdate] = useState('')
+    const [gender, setGender] = useState('')
+    const [panCard, setPanCard] = useState('')
+    const [uid, setUid] = useState('')
+    const [addressLine, setAddressLine] = useState('')
 
     const navigate = useNavigate()
 
     const signupEmployee = () => {
+        console.log(panCard)
+        console.log(uid)
+        console.log(addressLine)
         if (firstName.length == 0) {
             toast.warning('Enter First Name')
         }
@@ -41,13 +49,33 @@ const SignupEmployee = () => {
         else if (password != confirmPassword) {
             toast.error('Passwords do not match')
         }
+        else if (birthdate.length == 0) {
+            toast.warning('Enter Birth date')
+        }
+        else if (gender.length == 0) {
+            toast.warning('Enter gender')
+        }
+        else if (panCard.length == 0) {
+            toast.warning('Enter pan card')
+        }
+        else if (uid.length == 0) {
+            toast.warning('Enter uid')
+        }
+        else if (addressLine.length == 0) {
+            toast.warning('Enter address')
+        }
         else {
             const body = {
                 firstName,
                 lastName,
                 email,
                 password,
-                phoneNo
+                phoneNo,
+                birthdate,
+                gender,
+                panCard,
+                uid,
+                addressLine
             }
 
             const url = `${URL}/employee/signup`
@@ -96,14 +124,12 @@ const SignupEmployee = () => {
                         <div className="empdiv">
                             <div className="form formmargin">
                                 <div className="row">
-                                    <h1 className="textheader">Sign up</h1>
+                                    <h3 className="textheader">Sign up</h3>
                                 </div>
                                 <hr />
 
-
                                 <div className="row">
                                     <div className="col">
-                                        <div className="mb-3"></div>
                                         <div>
                                             <label htmlFor="" className="label-control textbody">First Name</label>
                                         </div>
@@ -116,7 +142,6 @@ const SignupEmployee = () => {
                                         </div>
                                     </div>
                                     <div className="col">
-                                        <div className="mb-3"></div>
                                         <div>
                                             <label htmlFor="" className="label-control textbody">Last Name</label>
                                         </div>
@@ -132,7 +157,6 @@ const SignupEmployee = () => {
 
                                 <div className="row">
                                     <div className="col">
-                                        <div className="mb-3"></div>
                                         <div>
                                             <label htmlFor="" className="label-control textbody">Email</label>
                                         </div>
@@ -145,7 +169,6 @@ const SignupEmployee = () => {
                                         </div>
                                     </div>
                                     <div className="col">
-                                        <div className="mb-3"></div>
                                         <div>
                                             <label htmlFor="" className="label-control textbody">Phone number</label>
                                         </div>
@@ -161,7 +184,6 @@ const SignupEmployee = () => {
 
                                 <div className="row">
                                     <div className="col">
-                                        <div className="mb-3"></div>
                                         <div>
                                             <label htmlFor="" className="label-control textbody">Password</label>
                                         </div>
@@ -174,7 +196,6 @@ const SignupEmployee = () => {
                                         </div>
                                     </div>
                                     <div className="col">
-                                        <div className="mb-3"></div>
                                         <div>
                                             <label htmlFor="" className="label-control textbody">Confirm password</label>
                                         </div>
@@ -182,6 +203,81 @@ const SignupEmployee = () => {
                                             <input onChange={(e) => {
                                                 setConfirmPassword(e.target.value)
                                             }} type="password" class="form-control inputbox" />
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div className="row">
+                                    <div className="col">
+                                        <div>
+                                            <label htmlFor="" className="label-control textbody">Birth Date</label>
+                                        </div>
+                                        <div className="mb-3">
+                                            <input
+                                                onChange={(e) => {
+                                                    setBirthdate(e.target.value)
+                                                }}
+                                                type="date" class="form-control inputbox" />
+                                        </div>
+                                    </div>
+                                    <div className="col">
+                                        <div>
+                                            <label htmlFor="" className="label-control textbody">Gender</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input onClick={() => {
+                                                setGender("male")
+                                            }} class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="male" />
+                                            <label class="form-check-label" for="inlineRadio1">Male</label>
+                                        </div>
+
+                                        <div class="form-check form-check-inline">
+                                            <input onClick={() => {
+                                                setGender("female")
+                                            }} class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="female" />
+                                            <label class="form-check-label" for="inlineRadio2">Female</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div className="row">
+                                    <div className="col">
+                                        <div>
+                                            <label htmlFor="" className="label-control textbody">Pan Card</label>
+                                        </div>
+                                        <div className="mb-3">
+                                            <input
+                                                onChange={(e) => {
+                                                    setPanCard(e.target.value)
+                                                }}
+                                                type="email" class="form-control inputbox" />
+                                        </div>
+                                    </div>
+                                    <div className="col">
+                                        <div>
+                                            <label htmlFor="" className="label-control textbody">UID</label>
+                                        </div>
+                                        <div className="mb-3">
+                                            <input onChange={(e) => {
+                                                setUid(e.target.value)
+                                            }} type="text" class="form-control inputbox" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="row">
+                                    <div className="col">
+                                        <div>
+                                            <label htmlFor="" className="label-control textbody">Address</label>
+                                        </div>
+                                        <div className="mb-3">
+                                            <input onChange={(e) => {
+                                                setAddressLine(e.target.value)
+                                            }} type="text" class="form-control inputbox" />
                                         </div>
                                     </div>
                                 </div>

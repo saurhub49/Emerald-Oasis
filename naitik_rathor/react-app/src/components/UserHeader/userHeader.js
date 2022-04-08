@@ -2,10 +2,10 @@ import { useNavigate } from 'react-router'
 import { Link } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import logo from '../../assets/logo.png'
-import "./header1.css"
+import "./userHeader.css"
 import cart from '../../assets/cart.png'
 
-const Header1 = () => {
+const UserHeader = () => {
 
     const { firstName } = sessionStorage
     // console.log(firstName)
@@ -48,11 +48,8 @@ const Header1 = () => {
                         <li className="nav-item ">
                             <Link className="nav-link items" to="/homepage">HOME</Link>
                         </li>
-                        <li className="nav-item ">
-                            <Link className="nav-link items" to="/bestseller">BEST SELLER</Link>
-                        </li>
                         <li className="nav-item">
-                            <Link className="nav-link items" to="/offers">OFFERS</Link>
+                            <Link className="nav-link items" to="/#">FAQs</Link>
                         </li>
                         <li className="nav-item">
                             <Link to="/cart">
@@ -77,4 +74,4 @@ const Header1 = () => {
         </nav>
     </div>
 }
-export default Header1
+export default UserHeader

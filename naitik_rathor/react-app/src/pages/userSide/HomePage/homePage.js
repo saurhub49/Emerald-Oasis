@@ -2,10 +2,10 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 import { toast } from "react-toastify"
 import Cuisine from "../../../components/Cuisines/Cuisine"
-import Header1 from "../../../components/UserHeader/header1"
 import { URL } from "../../../config"
 import eclipse from "../../../assets/eclipse2.png"
 import '../HomePage/homePage.css'
+import UserHeader from "../../../components/UserHeader/userHeader"
 
 const HomePage = () => {
   const [cuisines, setCuisines] = useState([])
@@ -31,7 +31,7 @@ const HomePage = () => {
 
   return (<>
     <div className="container">
-      <Header1></Header1>
+      <UserHeader></UserHeader>
       <div className="row">
         <div className="col-md-4 rect1">
           <div className="delicious">Delicous</div>

@@ -15,7 +15,7 @@ const UserAllOrders = () => {
 
 
     const getUserAllOrders = () => {
-    // /user/order/history/{userId}
+        // /user/order/history/{userId}
         const url = `${URL}/user/order/history/${userId}`
         axios.get(url).then((response) => {
             const result = response.data
@@ -25,53 +25,58 @@ const UserAllOrders = () => {
                 toast.error(result['error'])
             }
         })
-        }
+    }
 
 
 
-        useEffect(() => {
-            getUserAllOrders()
-        }, [])
-        
-    
+    useEffect(() => {
+        getUserAllOrders()
+    }, [])
 
-    return(
+
+
+    return (
         <div className="container">
-        <AdminHeader></AdminHeader>
-        <div className="main-div">
-            <label className="cust-details">All Orders</label>
-            <table class="table">
-                <thead class="table-dark">
-                    <tr>
-                        <td>Order Id</td>
-                        <td>Ordered On</td>
-                        <td>Delivered On</td>
-                        <td>Total Amount</td>
-                        <td>Order Status</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        userOrders.map((userOrder) => {
-                            return (
-                                <tr onClick={() => {
-                                    // console.log("onclick")
-                                    navigate('/userOrderDetails', { state: { custId : userOrder.userId, orderId : userOrder.orderId}})
-                                }}>
-            
-                                    <td>{userOrder.orderId}</td>
-                                    <td>{formatDate(userOrder.orderedTimeStamp)}</td>
-                                    <td>{formatDate(userOrder.deliveredTimeStamp)}</td>
-                                    <td>{userOrder.totalAmount}</td>
-                                    <td>{userOrder.orderStatus}</td>
-                                </tr>
-                            )
-                        })
-                    }
-                </tbody>
-            </table>
+            <AdminHeader></AdminHeader>
+            <div className="main-div">
+                <label className="emp-details">All Orders</label>
+                {userOrders.length < 1 &&
+                    <div className="text-center fs-3 fw-light">There is no Order to show</div>
+                }
+                {userOrders.length > 0 &&
+                    <table class="table">
+                        <thead class="table-dark">
+                            <tr>
+                                <td>Order Id</td>
+                                <td>Ordered On</td>
+                                <td>Delivered On</td>
+                                <td>Total Amount</td>
+                                <td>Order Status</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                userOrders.map((userOrder) => {
+                                    return (
+                                        <tr onClick={() => {
+                                            // console.log("onclick")
+                                            navigate('/userOrderDetails', { state: { custId: userOrder.userId, orderId: userOrder.orderId } })
+                                        }}>
+
+                                            <td>{userOrder.orderId}</td>
+                                            <td>{formatDate(userOrder.orderedTimeStamp)}</td>
+                                            <td>{formatDate(userOrder.deliveredTimeStamp)}</td>
+                                            <td>{userOrder.totalAmount}</td>
+                                            <td>{userOrder.orderStatus}</td>
+                                        </tr>
+                                    )
+                                })
+                            }
+                        </tbody>
+                    </table>
+                }
+            </div>
         </div>
-    </div>
     )
 }
 export default UserAllOrders
