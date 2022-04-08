@@ -21,6 +21,8 @@ const AddCuisine = () => {
         }
         else if (description.length == 0) {
             toast.error("Enter Description")
+        } else if (description.length > 250) {
+            toast.warn("Description is too long")
         }
         else {
             const body = {

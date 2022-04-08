@@ -10,54 +10,56 @@ import { formatDate } from "../../../../utils"
 
 const UserOrderDetails = () => {
     const { state } = useLocation()
-    
+
     const [orderDetails, setOrderDetails] = useState([])
     const navigate = useNavigate()
 
     const { orderId } = state
-    
+
 
     const getOrderDetailsByUserId = () => {
         // /user/order/history/{userId}
-            const url = `${URL}/admin/order/${orderId}`
-            axios.get(url).then((response) => {
-                const result = response.data
-                if (result['status'] == 'success') {
-                    setOrderDetails(result['data'])
-                    console.log(result)
-                } else {
-                    toast.error(result['error'])
-                }
-            })
-            }
-
-    const deleteOrder = () => {
-        const url2 = `${URL}/admin/deleteorder/${orderId}`
-
-        axios.delete(url2).then((response) => {
+        const url = `${URL}/admin/order/${orderId}`
+        axios.get(url).then((response) => {
             const result = response.data
-            if(result['status'] == 'success') {
-                toast.success('Order deleted successfully')
+            if (result['status'] == 'success') {
+                setOrderDetails(result['data'])
+                console.log(result)
             } else {
                 toast.error(result['error'])
             }
-            navigate('/customers')
         })
     }
 
-            useEffect(() => {
-                getOrderDetailsByUserId()
-            }, [])
+    const deleteOrder = () => {
+        if (window.confirm("This Customer Order will be Deleted\nAre You Sure?")) {
+            const url2 = `${URL}/admin/deleteorder/${orderId}`
 
-                
-            
-    
-  
-    return(
+            axios.delete(url2).then((response) => {
+                const result = response.data
+                if (result['status'] == 'success') {
+                    toast.success('Order deleted successfully')
+                } else {
+                    toast.error(result['error'])
+                }
+                navigate('/customers')
+            })
+        }
+    }
+
+    useEffect(() => {
+        getOrderDetailsByUserId()
+    }, [])
+
+
+
+
+
+    return (
         <div className="container">
             <AdminHeader></AdminHeader>
             <div className="main-div">
-            <label className="cust-details">Order Details</label>
+                <label className="emp-details">Order Details</label>
 
                 <form>
                     <div className="row">

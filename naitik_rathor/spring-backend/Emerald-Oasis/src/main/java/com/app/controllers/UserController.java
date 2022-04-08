@@ -3,11 +3,9 @@ package com.app.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -82,9 +80,15 @@ public class UserController {
 		result = userService.getOngoingOrder(userId);
 		if(result != null)
 			return Response.success(result);
-		
 		return Response.error("Cart is empty !");
-		
+	}
+	
+	@PutMapping("/user/profile/address/{id}")
+	public ResponseEntity<?> addAddress(@PathVariable("id") int userId, @RequestBody UserDTO dto) {
+		OrderDTO result = userService.addAddress(userId, dto.getAddressLine());
+		if(result == null)
+			return Response.error("Unexpected error !");
+		return Response.success(result);
 	}
 	
 	@PutMapping("/user/order/placeorder/{id}")
@@ -107,11 +111,6 @@ public class UserController {
 			if(result == null)
 				return Response.error("Unexpected error !");
 			return Response.success(result);
-	}
-	
-	@ExceptionHandler(DataIntegrityViolationException.class)
-	public ResponseEntity<?> userExistsHandler(DataIntegrityViolationException ex){
-		return Response.error("Email or Phone Already Exists");
 	}
 	
 }

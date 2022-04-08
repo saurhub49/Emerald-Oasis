@@ -3,10 +3,10 @@ import { useEffect, useState } from "react"
 import { useLocation } from "react-router"
 import { toast } from "react-toastify"
 import FoodItem from "../../../components/FoodItems/foodItem"
-import Header1 from "../../../components/UserHeader/header1"
 import HorizonCuisine from "../../../components/HorizontalCuisines/horizonCuisine"
 import { URL } from "../../../config"
 import "./cuisineFood.css"
+import UserHeader from "../../../components/UserHeader/userHeader"
 
 const CuisineFood = () => {
     const { state } = useLocation()
@@ -50,7 +50,7 @@ const CuisineFood = () => {
 
 
     return (<div className="container">
-        <Header1></Header1>
+        <UserHeader></UserHeader>
         <div className="cuisine-tabs">
             {cuisines.map((cuisine) => {
                 return <HorizonCuisine cuisine={cuisine}></HorizonCuisine>

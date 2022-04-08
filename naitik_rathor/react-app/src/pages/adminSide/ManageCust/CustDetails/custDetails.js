@@ -35,7 +35,7 @@ const CustDetails = () => {
         <div className="container">
             <AdminHeader></AdminHeader>
             <div className="main-div">
-                <label className="cust-details">Customer Details</label>
+                <label className="emp-details">Customer Details</label>
 
                 <form>
                     <div className="row">

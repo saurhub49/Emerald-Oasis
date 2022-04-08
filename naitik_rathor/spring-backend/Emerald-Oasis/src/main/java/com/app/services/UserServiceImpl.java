@@ -197,6 +197,17 @@ public class UserServiceImpl {
 		return converter.toOrderDTO(order);
 	}
 	
+	public OrderDTO addAddress(int userId, String address) {
+		User user = userDao.getById(userId);
+		user.setAddressLine(address);
+		user = userDao.save(user);
+		
+		Order order = getCart(userId);
+		if(order != null)
+			order.setAddress(address);
+		return converter.toOrderDTO(order);
+	}
+	
 	public OrderDTO placeOrder(int userId) {
 		User user = userDao.getById(userId);
 		if(user.getAddressLine() == null)

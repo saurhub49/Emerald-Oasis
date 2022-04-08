@@ -4,10 +4,8 @@ package com.app.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -120,11 +118,6 @@ public class EmployeeController {
 		if(result == null)
 			return Response.error("Unexpected error !");
 		return Response.success(result);
-	}
-	
-	@ExceptionHandler(DataIntegrityViolationException.class)
-	public ResponseEntity<?> empExistsHandler(DataIntegrityViolationException ex){
-		return Response.error("Email or Phone Already Exists");
 	}
 
 }

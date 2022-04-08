@@ -20,7 +20,10 @@ const EditCuisine = () => {
     const navigate = useNavigate()
 
     const updateCuisine = () => {
-
+        // console.log(description.length);
+        if(description.length>250){
+            toast.warn("Description is too long")
+        }else{
             const body = {
                 cuisineId: cuisine.cuisineId,
                 name,
@@ -43,6 +46,7 @@ const EditCuisine = () => {
                     toast.error(result['error'])
                 }
             })
+        }
     }
 
     return <div className="container">
