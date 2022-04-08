@@ -80,9 +80,15 @@ public class UserController {
 		result = userService.getOngoingOrder(userId);
 		if(result != null)
 			return Response.success(result);
-		
 		return Response.error("Cart is empty !");
-		
+	}
+	
+	@PutMapping("/user/profile/address/{id}")
+	public ResponseEntity<?> addAddress(@PathVariable("id") int userId, @RequestBody UserDTO dto) {
+		OrderDTO result = userService.addAddress(userId, dto.getAddressLine());
+		if(result == null)
+			return Response.error("Unexpected error !");
+		return Response.success(result);
 	}
 	
 	@PutMapping("/user/order/placeorder/{id}")
