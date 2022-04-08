@@ -43,7 +43,7 @@ const Signin = () => {
 
           navigate('/homepage')
         } else {
-          toast.error('Invalid user name or password')
+          toast.error(result['error'])
         }
       })
     }
