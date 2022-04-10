@@ -1,13 +1,9 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-import Signin from './pages/userSide/Signin/signin'
-import SignupUser from './pages/userSide/Signup/userSignup'
-import SignupEmployee from './pages/employeeSide/Signup/employeeSignup'
 import Welcome from './pages/userSide/Welcome Page/welcome'
 import HomePage from './pages/userSide/HomePage/homePage'
 import CuisineFood from './pages/userSide/CuisineFood/cuisineFood'
-import Demo from './pages/demo/demo'
 import AdminHome from './pages/adminSide/HomePage/adminHome'
 import EmployeeHome from './pages/employeeSide/HomePage/employeeHome'
 import Customers from './pages/adminSide/ManageCust/Customers/customers'
@@ -25,11 +21,13 @@ import UserAllOrders from './pages/adminSide/ManageCust/UserAllOrders/userAllOrd
 import UserOrderDetails from './pages/adminSide/ManageCust/UserOrderDetails/userOrderDetails'
 import EditCuisine from './pages/adminSide/ManageCuis/EditCuisine/editCuisine'
 import EditFood from './pages/adminSide/ManageCuis/EditFood/editFood'
+import SignupEmployee from './pages/employeeSide/Signup/employeeSignup'
+
 
 const AuthorizeUser = () => {
   const loginStatus = sessionStorage['loginStatus']
   const roleId = sessionStorage['roleId']
-  return loginStatus == '1' ? roleId == '1' ? <AdminHome /> : roleId == '2' ? <EmployeeHome /> : <HomePage /> : <Welcome />
+  return loginStatus === '1' ? roleId === '1' ? <AdminHome /> : roleId === '2' ? <EmployeeHome /> : <HomePage /> : <Welcome />
 
 }
 
@@ -41,12 +39,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Welcome />} />
-          <Route path="/signin" element={<Signin />} />
-          <Route path="/signupUser" element={<SignupUser />} />
-          <Route path="/signupEmployee" element={<SignupEmployee />} />
           <Route path="/homepage" element={<AuthorizeUser />} />
+          <Route path="/signupEmployee" element={<SignupEmployee />} />
           <Route path="/foodItems" element={<CuisineFood />} />
-          <Route path="/demo" element={<Demo />} />
           <Route path="/employees" element={<Employees />} />
           <Route path="/customers" element={<Customers />} />
           <Route path="/empDetails" element={<EmpDetails />} />
