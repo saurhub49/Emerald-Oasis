@@ -112,4 +112,16 @@ public class UserController {
 			return Response.success(result);
 	}
 	
+//	#####
+	
+	@PutMapping("/user/profile/{userId}")
+	public ResponseEntity<?> getProfileDetails(@PathVariable("userId") int userId) {
+		UserDTO result = userService.getProfileDetails(userId);
+		if(result == null)
+		{
+			return Response.error("Unexpected error !");
+		}
+		return Response.success(result);
+	}
+	
 }
