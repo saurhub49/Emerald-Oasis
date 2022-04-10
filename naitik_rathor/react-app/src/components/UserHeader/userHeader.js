@@ -64,7 +64,7 @@ const UserHeader = () => {
                                 <label className="items">{firstName}</label>
                             </a>
                             <ul className="dropdown-menu dropdown-menu-dark items" aria-labelledby="navbarDarkDropdownMenuLink">
-                                <li><a className="dropdown-item" href="/profile">PROFILE</a></li>
+                                <li><a className="dropdown-item" href="/user/profile">PROFILE</a></li>
                                 <li><a className="dropdown-item" href="#" onClick={logoutUser}>LOGOUT</a></li>
                             </ul>
                         </li>
