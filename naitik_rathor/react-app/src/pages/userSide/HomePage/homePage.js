@@ -9,9 +9,8 @@ import UserHeader from "../../../components/UserHeader/userHeader"
 
 const HomePage = () => {
   const [cuisines, setCuisines] = useState([])
-
+  
   const getCuisines = () => {
-
     const url = `${URL}/user/cuisines`
 
     axios.get(url).then((response) => {
