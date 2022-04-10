@@ -21,7 +21,6 @@ const EditFood = () => {
     const navigate = useNavigate()
 
     const updateFoodItem = () => {
-        console.log(description.length);
         if (description.length > 150) {
             toast.warn("Description is too long")
         } else {
