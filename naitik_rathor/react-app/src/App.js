@@ -22,7 +22,10 @@ import UserOrderDetails from './pages/adminSide/ManageCust/UserOrderDetails/user
 import EditCuisine from './pages/adminSide/ManageCuis/EditCuisine/editCuisine'
 import EditFood from './pages/adminSide/ManageCuis/EditFood/editFood'
 import SignupEmployee from './pages/employeeSide/Signup/employeeSignup'
-
+import CustomerProfile from './pages/userSide/CustomerProfile/customerProfile'
+import EmployeeProfile from './pages/employeeSide/EmployeeProfile/employeeProfile'
+import ChangePassword from './pages/userSide/ChangePassword/changePassword'
+import MyOrders from './pages/userSide/MyOrders/MyOrders'
 
 const AuthorizeUser = () => {
   const loginStatus = sessionStorage['loginStatus']
@@ -57,6 +60,10 @@ function App() {
           <Route path="/userOrderDetails" element={<UserOrderDetails />} />
           <Route path="/editCuisine" element={<EditCuisine />} />
           <Route path="/editFood" element={<EditFood />} />
+          <Route path="/user/profile" element={<CustomerProfile />} />
+          <Route path="/employee/profile" element={<EmployeeProfile />} />
+          <Route path="/user/changepassword" element={<ChangePassword />} />
+          <Route path="/user/myorders" element={<MyOrders />} />
         </Routes>
       </BrowserRouter>
       <ToastContainer theme="colored"
@@ -69,7 +76,7 @@ function App() {
         pauseOnFocusLoss={false}
         draggable
         pauseOnHover />
-    </div>
+    </div >
   )
 }
 

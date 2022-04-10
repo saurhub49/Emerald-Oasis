@@ -234,4 +234,12 @@ public class UserServiceImpl {
 		User user = userDao.getById(employeeId);
 		return converter.toUserContactDetailsDTO(user);
 	}
+	
+//	###
+	
+	public UserDTO getProfileDetails(int userId) {
+		// TODO Auto-generated method stub
+		User dbUser = userDao.findByUserId(userId);
+		return converter.toUserDTO(dbUser);
+	}
 }
