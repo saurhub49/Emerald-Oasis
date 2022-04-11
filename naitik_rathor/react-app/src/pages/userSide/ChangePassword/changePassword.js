@@ -23,13 +23,14 @@ const styles = {
 };
 
 const ChangePassword = () => {
-  //  const { userId } = sessionStorage;
-  const userId = 3; //get this value from session storage this is for testing purpose
+  //added email in session storage after signin
+  const { userId } = sessionStorage;
 
   const [OldPassword, setOldPassword] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [verifiedOldPswd, setVerifiedOldPswd] = useState();
+  const credentials = { password: confirmPassword };
   const navigate = useNavigate();
 
   const enterNewPswd = () => {
@@ -45,16 +46,15 @@ const ChangePassword = () => {
     } else if (password != confirmPassword) {
       toast.warning("Password Mismatch");
     } else {
-      const url = `${URL}/user/${userId}/changepassword/${confirmPassword}`;
+      const url = `${URL}/user/${userId}/changepassword`;
       console.log("URL constructed is : " + url);
-      axios.put(url).then((response) => {
+      axios.post(url, credentials).then((response) => {
         const result = response.data;
         if (result["status"] == "success") {
           toast.success("Password Successfully Modified");
-          logoutUser();
         } else {
           toast.error(result["error"]);
-          navigate("/profile");
+          navigate("/user/profile");
         }
       });
     }
@@ -65,20 +65,17 @@ const ChangePassword = () => {
     if (OldPassword.length == 0) {
       toast.warning("Please enter your last password");
     } else {
-      const url = `${URL}/user/${userId}/verifypassword/${OldPassword}`;
-      axios.put(url).then((response) => {
-        setVerifiedOldPswd(response.data.data);
-        const result1 = response.data.data
+      const url = `${URL}/user/${userId}/verifypassword`;
+      console.log("Hit with the url : " + url);
+      axios.post(url, credentials).then((response) => {
+        setVerifiedOldPswd(response.data.data); // the boolean value true indicates the verificatin is completed
+        const result1 = verifiedOldPswd
           ? enterNewPswd()
           : toast.warning("InCorrect Old Password");
       });
     }
   };
 
-  const logoutUser = () => {
-    sessionStorage.removeItem("userId");
-    navigate("/signin");
-  };
 
   return (
     <>
@@ -106,7 +103,7 @@ const ChangePassword = () => {
                     type="text"
                     className="form-control"
                     id="inputOldPassword"
-                    placeholder="***********"
+                    placeholder="*****"
                   />
                 </div>
               </div>
