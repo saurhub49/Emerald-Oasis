@@ -37,7 +37,8 @@ public class AdminController {
 	public ResponseEntity<?> signUp(@RequestBody UserDTO userDto) {
 		userDto.setRoleId(userService.getUserRoleId(RoleName.MANAGER));
 		UserDTO result = userService.saveUser(userDto);
-		
+		if(result == null)
+			return Response.error("Email already exists !");
 		return Response.success(result);
 	}
 	

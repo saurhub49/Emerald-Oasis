@@ -130,7 +130,7 @@ public class AdminServiceImpl {
 		EmployeeDetails empDetails = getEmployee(employeeId);
 		if(empDetails == null)
 			return null;
-		empDetails.setEmployeeStatus(EmployeeStatus.PENDING);
+		empDetails.setEmployeeStatus(EmployeeStatus.REVOKED);
 		employeeDetailsDao.save(empDetails);
 		return converter.toEmployeeDetailsDTO(empDetails);
 	}

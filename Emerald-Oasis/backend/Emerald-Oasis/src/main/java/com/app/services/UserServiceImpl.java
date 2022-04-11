@@ -57,6 +57,9 @@ public class UserServiceImpl {
 	private PasswordEncoder passwordEncoder;
 
 	public UserDTO saveUser(UserDTO userDto) {
+		User dbUser = userDao.findByEmail(userDto.getEmail());
+		if(dbUser != null)
+			return null;
 		String rawPassword = userDto.getPassword();
 		String encPassword = passwordEncoder.encode(rawPassword);
 		userDto.setPassword(encPassword);
@@ -65,6 +68,19 @@ public class UserServiceImpl {
 		userDto = converter.toUserDTO(user);
 		userDto.setPassword("*******");
 		return userDto;
+	}
+	
+	public boolean verifyOldPassword(int userId, String oldPassword) {
+		User user = userDao.getById(userId);
+		return (user != null && passwordEncoder.matches(oldPassword, user.getPassword()));
+	}
+	
+	public UserDTO changePassword(int userId, String newPassword) {
+		User user = userDao.getById(userId);
+		String encPassword = passwordEncoder.encode(newPassword);
+		user.setPassword(encPassword);
+		user = userDao.save(user);
+		return converter.toUserDTO(user);
 	}
 	
 	public UserDTO saveEditedProfile(UserDTO userDTO) {
@@ -82,6 +98,11 @@ public class UserServiceImpl {
 			return result;
 		}
 		return null;
+	}
+	
+	public UserDTO getUserDetails(int userId) {
+		User user = userDao.getById(userId);
+		return converter.toUserDTO(user);
 	}
 	
 	public RoleDTO getRole(int roleId) {
@@ -206,6 +227,12 @@ public class UserServiceImpl {
 		if(order != null)
 			order.setAddress(address);
 		return converter.toOrderDTO(order);
+	}
+	
+	public void changeOrderAddress(int userId, String address) {
+		Order order = getCart(userId);
+		if(order != null)
+			order.setAddress(address);
 	}
 	
 	public OrderDTO placeOrder(int userId) {

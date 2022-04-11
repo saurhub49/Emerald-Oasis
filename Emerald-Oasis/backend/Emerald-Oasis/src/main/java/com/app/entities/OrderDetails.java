@@ -15,12 +15,13 @@ public class OrderDetails {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
 	private int orderDetailsId;
-	@OneToOne
+	@ManyToOne
 	@JoinColumn(name = "foodItemId")
 	private FoodItem foodItem;
 	@ManyToOne
 	@JoinColumn(name = "orderId")
 	private Order order;
+	
 	public OrderDetails() {
 		super();
 	}

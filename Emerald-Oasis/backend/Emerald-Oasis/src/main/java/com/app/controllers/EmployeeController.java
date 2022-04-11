@@ -38,9 +38,10 @@ public class EmployeeController {
 		employeeDetailsDTO.setPanCard(userDto.getPanCard());
 		userDto.setRoleId(userService.getUserRoleId(RoleName.EMPLOYEE));
 		UserDTO result = userService.saveUser(userDto);
+		if(result == null)
+			return Response.error("Email already exists !");
 		employeeDetailsDTO.setEmployeeId(result.getUserId());
 		employeeService.addEmployeeDetails(employeeDetailsDTO);
-		
 		return Response.success(result);
 	}
 	

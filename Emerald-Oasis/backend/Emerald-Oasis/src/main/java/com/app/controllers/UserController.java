@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.app.config.Response;
 import com.app.dtos.UserContactDetailsDTO;
+import com.app.dtos.Credentials;
 import com.app.dtos.FoodItemDTO;
 import com.app.dtos.OrderDTO;
 import com.app.dtos.UserDTO;
@@ -33,16 +34,42 @@ public class UserController {
 	public ResponseEntity<?> signUp(@RequestBody UserDTO userDto) {
 		userDto.setRoleId(userService.getUserRoleId(RoleName.CUSTOMER));
 		UserDTO result = userService.saveUser(userDto);
-		
+		if(result == null)
+			return Response.error("Email already exists !");
+		return Response.success(result);
+	}
+	
+	@GetMapping("/user/profile/{id}")
+	public ResponseEntity<?> getProfile(@PathVariable("id") int userId) {
+		UserDTO result = userService.getUserDetails(userId);
+		if(result == null)
+			return Response.error("Unexpected error !");
 		return Response.success(result);
 	}
 	
 	@PutMapping("/user/profile")
 	public ResponseEntity<?> editProfile(@RequestBody UserDTO userDTO) {
 		UserDTO result = userService.saveEditedProfile(userDTO);
+		userService.changeOrderAddress(userDTO.getUserId(), userDTO.getAddressLine());
 		if(result == null)
 			return Response.error("Unexpected error !");
 		return Response.success(result);
+	}
+	
+	@PutMapping("/user/profile/verifypassword/{id}")
+	public ResponseEntity<?> verifyPassword(@PathVariable("id") int userId, @RequestBody Credentials cred) {
+		boolean result = userService.verifyOldPassword(userId, cred.getPassword());
+		if(!result)
+			return Response.error("Unexpected error !");
+		return Response.success(result);
+	}
+	
+	@PutMapping("/user/profile/changepassword/{id}")
+	public ResponseEntity<?> changePassword(@PathVariable("id") int userId, @RequestBody Credentials cred) {
+		UserDTO result = userService.changePassword(userId, cred.getPassword());
+		if(result == null)
+			return Response.error("Unexpected error !");
+		return Response.success("Password changed successfully");
 	}
 	
 	@PutMapping("/user/{userid}/order/additem/{itemid}")
