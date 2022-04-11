@@ -116,7 +116,6 @@ const AddFood = () => {
                 <div className="col-md-6 btn-group">
                     <button type="button" class="btn btn-outline-success" onClick={addFoodItem}>ADD FOOD</button>
                     <button type="button" class="btn btn-outline-secondary" onClick={() => {
-                        toast.warn("No Changes")
                         navigate('/allFoods', { state: { id: cuisineId, cuisName: cuisName } })
                     }}>CANCEL</button>
                 </div>

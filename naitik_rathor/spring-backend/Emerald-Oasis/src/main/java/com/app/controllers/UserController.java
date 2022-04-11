@@ -33,7 +33,6 @@ public class UserController {
 	public ResponseEntity<?> signUp(@RequestBody UserDTO userDto) {
 		userDto.setRoleId(userService.getUserRoleId(RoleName.CUSTOMER));
 		UserDTO result = userService.saveUser(userDto);
-		
 		return Response.success(result);
 	}
 	
@@ -111,6 +110,18 @@ public class UserController {
 			if(result == null)
 				return Response.error("Unexpected error !");
 			return Response.success(result);
+	}
+	
+//	#####
+	
+	@PutMapping("/user/profile/{userId}")
+	public ResponseEntity<?> getProfileDetails(@PathVariable("userId") int userId) {
+		UserDTO result = userService.getProfileDetails(userId);
+		if(result == null)
+		{
+			return Response.error("Unexpected error !");
+		}
+		return Response.success(result);
 	}
 	
 }

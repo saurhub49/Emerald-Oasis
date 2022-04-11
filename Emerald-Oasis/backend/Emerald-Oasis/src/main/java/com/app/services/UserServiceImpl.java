@@ -84,7 +84,9 @@ public class UserServiceImpl {
 	}
 	
 	public UserDTO saveEditedProfile(UserDTO userDTO) {
+		User u = userDao.getById(userDTO.getUserId());
 		User user = converter.toUserEntity(userDTO);
+		user.setPassword(u.getPassword());
 		user = userDao.save(user);
 		return converter.toUserDTO(user);
 	}

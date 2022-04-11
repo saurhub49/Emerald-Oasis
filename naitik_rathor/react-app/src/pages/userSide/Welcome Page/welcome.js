@@ -6,6 +6,8 @@ import mail from '../../../assets/mail.png'
 import faq from '../../../assets/faq.png'
 import call from '../../../assets/call.png'
 import WelcomeCarousel from "../../../components/WelcomeCarousel/welcomeCarousel"
+import SigninModal from "../../../components/SigninModal/signinModal"
+import SignupModal from "../../../components/SignupModal/signupModal"
 
 const Welcome = () => {
 
@@ -33,17 +35,35 @@ const Welcome = () => {
                                 <a className="nav-link" href="#scrollspyHeading3">CONTACT US</a>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/signupUser">SIGNUP</Link>
+                                <Link className="nav-link" to="/signupUser" data-bs-toggle="modal" data-bs-target="#modalBackdrop">SIGNUP</Link>
                             </li>
                             <li className="nav-item">
-                                <a href="./signin"><button className="btn btn-outline-primary"  >Login</button></a>
+                                <button className="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">LOGIN</button>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
 
+            <div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" aria-labelledby="staticBackdropLabel" aria-hidden="true" tabindex="-1" >
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <SigninModal></SigninModal>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <div class="modal fade" id="modalBackdrop" data-bs-keyboard="false" aria-labelledby="modalBackdropLabel" aria-hidden="true" tabindex="-1" >
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <SignupModal></SignupModal>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" className="scrollspy-example" tabIndex="0">
                 <div id="scrollspyHeading1" className="img-home">

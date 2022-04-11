@@ -1,0 +1,32 @@
+.sidenav {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(80, 200, 120, 0.4);
+    /* background-image: url("../../images/welcomeDish.jpg"); */
+    overflow-x: hidden;
+    margin-top: 75px;
+    box-shadow: 2px 10px 30px 0 rgb(0 0 0 / 42%), 0 4px 25px 0 rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(0 0 0 / 20%);
+    transition: 0.5s;
+}
+
+.sidenavfont {
+    padding: 12px 6px 6px 75px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+}
+
+.fonthover:hover {
+    color: #FFF;
+    ;
+}
+
+.fontborder:hover {
+    border-bottom: 1px;
+    border: solid 1px green;
+}
