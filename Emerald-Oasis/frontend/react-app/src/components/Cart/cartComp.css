@@ -1,0 +1,13 @@
+.cartimage{
+    height: 100px;
+    width: 120px;
+    padding: 10px;
+}
+
+.itemname{
+    padding-left: 40px;
+}
+
+.itemprice{
+    padding-left: 20px;
+}

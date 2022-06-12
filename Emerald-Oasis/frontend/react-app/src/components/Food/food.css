@@ -1,0 +1,22 @@
+.containerr {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: inline-block;
+  }
+  
+  .imagee {
+    display: block;
+    width: 200px;
+    height: 200px;
+    transition: .5s ease;
+    padding: 10px;
+  }
+  
+  .textt {
+    background-color: #04AA6D;
+    color: white;
+    font-size: 18px;
+    padding: 16px ;
+    text-align: center;
+  }

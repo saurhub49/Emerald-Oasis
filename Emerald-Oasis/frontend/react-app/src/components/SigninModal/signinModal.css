@@ -1,0 +1,21 @@
+.login-txt{
+    /* Login */
+
+height: 64px;
+font-family: 'Inria Serif';
+font-style: normal;
+font-size: 40px;
+color: #5daa4d;
+}
+
+.md-div{
+    padding: 30px;
+}
+
+.btn1{
+    background-color: #7fc072;
+}
+
+.login-btn{
+    color: white;
+}

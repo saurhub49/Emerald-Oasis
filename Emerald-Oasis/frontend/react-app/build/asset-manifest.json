@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4cc9201a.css",
+    "main.js": "/static/js/main.37cc3fbf.js",
+    "static/js/787.b701888c.chunk.js": "/static/js/787.b701888c.chunk.js",
+    "static/media/welcome2.jpg": "/static/media/welcome2.4888d609470be786661b.jpg",
+    "static/media/faq.png": "/static/media/faq.27c2965870394b4d9b65.png",
+    "static/media/mail.png": "/static/media/mail.198ff257c93432d41ee0.png",
+    "static/media/call.png": "/static/media/call.98d2062cce17a956ab72.png",
+    "static/media/welcome3.jpg": "/static/media/welcome3.fa941b28512be0d0c73e.jpg",
+    "static/media/welcome1.jpg": "/static/media/welcome1.ca6e2c3e9dca021ee741.jpg",
+    "static/media/deliverybg.png": "/static/media/deliverybg.7163684d02530b3c390d.png",
+    "static/media/help-circle.png": "/static/media/help-circle.ab6a1cae292db4579905.png",
+    "static/media/cart.png": "/static/media/cart.cdb42428c8cbb30338ea.png",
+    "static/media/logo.png": "/static/media/logo.9fcf3f6c8307de896267.png",
+    "static/media/eclipse2.png": "/static/media/eclipse2.4fa52929412a6c98c9ce.png",
+    "index.html": "/index.html",
+    "main.4cc9201a.css.map": "/static/css/main.4cc9201a.css.map",
+    "main.37cc3fbf.js.map": "/static/js/main.37cc3fbf.js.map",
+    "787.b701888c.chunk.js.map": "/static/js/787.b701888c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4cc9201a.css",
+    "static/js/main.37cc3fbf.js"
+  ]
+}

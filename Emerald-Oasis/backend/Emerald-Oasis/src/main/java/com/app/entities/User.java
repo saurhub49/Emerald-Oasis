@@ -1,6 +1,7 @@
 package com.app.entities;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -9,6 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -35,6 +37,8 @@ public class User {
 	private Role role;
 	@OneToOne(mappedBy = "employee", cascade = CascadeType.ALL)
 	private EmployeeDetails employeeDetails;
+	@OneToMany(mappedBy = "employee", cascade = CascadeType.ALL)
+	private List<Order> employeeOrderList;
 	
 	public User() {
 		super();

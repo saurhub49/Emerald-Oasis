@@ -1,0 +1,40 @@
+.navbar2{
+    background-color: #9bd490!important;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.navbar-toggler-icon{
+    color: black !important;
+}
+
+.oasis{
+font-family: 'DM Mono';
+font-style: normal;
+font-weight: 500;
+font-size: 30px;
+text-align: center;
+padding: 10px;
+color: #000000;
+}
+
+.navbar-toggler{
+    background-color:  #C4C4C4;
+}
+
+.items{
+    color: black !important;
+}
+
+.items:hover{
+    color:  white !important;
+}
+
+.cart{
+    height: 50px;
+    width: 50px;
+}
+
+.badge{
+    position: absolute;
+    margin-left: 30px;
+}
