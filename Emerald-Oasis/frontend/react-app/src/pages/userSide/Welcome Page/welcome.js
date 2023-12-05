@@ -17,7 +17,7 @@ const Welcome = () => {
             <nav id="navbar-example2" className="navbar fixed-top navbar-expand-lg navbar-light bg-black">
                 <div className="container-fluid navbar-items">
                     <a href="/"> <label className="navbar-brand  mb-0 h1">
-                        <img src={logo} className="eologo" />
+                        <img src={logo} className="eologo" alt="welcome" />
                         <span className="oasis1">Emerald Oasis</span>
                     </label></a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo2" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -91,9 +91,9 @@ const Welcome = () => {
                             <div className="contactUs">
                                 Contact&nbsp;<span className="works">US</span>
                             </div>
-                            <img className="contact-icon" src={mail} data-bs-toggle="collapse" href="#mail-body" aria-expanded="false"></img>
-                            <img className="contact-icon" src={call} data-bs-toggle="collapse" href="#call-body" aria-expanded="false"></img>
-                            <img className="contact-icon" src={faq} data-bs-toggle="collapse" href="#faq-body" aria-expanded="false"></img>
+                            <img className="contact-icon" alt="mail" src={mail} data-bs-toggle="collapse" href="#mail-body" ></img>
+                            <img className="contact-icon" alt="call" src={call} data-bs-toggle="collapse" href="#call-body" ></img>
+                            <img className="contact-icon" alt="faq" src={faq} data-bs-toggle="collapse" href="#faq-body" ></img>
                             <div class="collapse" id="mail-body">
                                 <div class="card card-body" >
                                     Thanks For Visiting Us...
